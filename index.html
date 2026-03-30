@@ -133,6 +133,15 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
 .intro-sphere-btn:hover{border-color:var(--sc,var(--ac));box-shadow:0 2px 8px rgba(0,0,0,.06);transform:translateY(-1px);}
 .intro-sphere-btn:active{transform:translateY(0);}
 .intro-sphere-icon{width:36px;height:36px;flex-shrink:0;}
+.continue-card{border:1px solid var(--bcard);border-radius:var(--r);overflow:hidden;margin:clamp(24px,3vw,36px) 0 clamp(18px,2vw,28px);background:var(--bg-warm);}
+.continue-card-inner{padding:clamp(22px,3vw,32px) clamp(22px,3vw,36px);border-left:4px solid var(--ac);transition:border-color .5s;}
+.continue-card-overline{font-size:8.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ac);margin-bottom:6px;transition:color .5s;}
+.continue-card-title{font-family:var(--font-serif);font-size:clamp(17px,2vw,21px);font-weight:600;color:var(--fg);line-height:1.2;margin-bottom:12px;}
+.continue-card-text{font-size:14px;font-weight:300;color:var(--fg-med);line-height:1.8;margin-bottom:10px;}
+.continue-card-text:last-of-type{margin-bottom:18px;}
+.continue-card-text strong{font-weight:600;color:var(--fg);}
+.continue-card-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,var(--ac),#88c807);color:#fff;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;padding:10px 22px;border-radius:24px;text-decoration:none;transition:opacity .2s,transform .15s;}
+.continue-card-btn:hover{opacity:.9;transform:translateY(-1px);}
 .page-footer{background:var(--bg-muted);padding:16px var(--pad-x);display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--bcard);flex-shrink:0;}
 .footer-l{font-size:10px;color:var(--fg-muted);}
 .footer-r{display:flex;align-items:center;gap:10px;}
@@ -176,6 +185,7 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
   .sphere-selector{display:none;}
   .sphere-intro{display:block!important;}
   .cta-btn{display:none;}
+  .continue-card{display:none;}
 
   .sphere-intro,.si-head,.si-names{break-inside:avoid;}
   .ph-head,.ph-context,.va{break-inside:avoid;}
@@ -910,6 +920,15 @@ function buildIntro(){
   </div>
 </div>`;
 }
+const SPHERE_URLS={
+  Family:'https://spheres-website.vercel.app/spheres/family',
+  Economics:'https://spheres-website.vercel.app/spheres/economics',
+  Government:'https://spheres-website.vercel.app/spheres/government',
+  Religion:'https://spheres-website.vercel.app/spheres/religion',
+  Education:'https://spheres-website.vercel.app/spheres/education',
+  Communication:'https://spheres-website.vercel.app/spheres/communication',
+  Celebration:'https://spheres-website.vercel.app/spheres/celebration'
+};
 function buildBody(s){
   const iconEl=document.querySelector('[data-sphere="'+currentSphere+'"] .ss-icon');
   const iconSvg=iconEl?iconEl.outerHTML.replace('class="ss-icon"','class="si-icon"'):'';
@@ -950,7 +969,16 @@ function buildBody(s){
     <button class="cta-btn" onclick="window.print()"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1.5" y="1" width="10" height="6.5" rx="1" stroke="white" stroke-width="1.2"/><path d="M1.5 7.5v3.5a1 1 0 001 1h8a1 1 0 001-1V7.5" stroke="white" stroke-width="1.2"/><rect x="3.5" y="8.5" width="6" height="1" rx=".5" fill="white"/><rect x="3.5" y="10" width="4" height="1" rx=".5" fill="white"/></svg>Print / Save PDF</button>
     </div>
   </div>
-  <div class="tags"><span class="tag">The Lord\u2019s Prayer</span><span class="tag">${s.name} Sphere</span><span class="tag">Biblical Worldview</span><span class="tag">Prayer &amp; Calling</span><span class="tag">Nelson DTS 2026</span></div>`;
+  <div class="tags"><span class="tag">The Lord\u2019s Prayer</span><span class="tag">${s.name} Sphere</span><span class="tag">Biblical Worldview</span><span class="tag">Prayer &amp; Calling</span></div>
+  <div class="continue-card">
+    <div class="continue-card-inner">
+      <div class="continue-card-overline">Go Deeper</div>
+      <h3 class="continue-card-title">52 Devotions for the ${s.name} Sphere</h3>
+      <p class="continue-card-text">This prayer practice opens your eyes to God\u2019s heart for ${s.name.toLowerCase()}. But there is more to see. <strong>Sphere Devotions</strong> offers 52 guided Scripture studies for each sphere of society \u2014 one per week for a year \u2014 designed to build a robust biblical worldview and deepen your understanding of how God\u2019s Kingdom reshapes ${s.name.toLowerCase()} from the inside out.</p>
+      <p class="continue-card-text">Each devotion pairs a key passage with video teaching and reflection questions, helping you move from prayer into sustained study and lasting transformation in your area of calling.</p>
+      <a class="continue-card-btn" href="${SPHERE_URLS[s.name]||'https://spheres-website.vercel.app'}" target="_blank" rel="noopener">Explore ${s.name} Devotions \u2192</a>
+    </div>
+  </div>`;
 }
 
 showIntro();
