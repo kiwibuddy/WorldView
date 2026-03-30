@@ -105,6 +105,28 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
 .intro-lede{font-size:15px;font-weight:300;line-height:1.8;color:var(--fg-med);margin-bottom:clamp(18px,2vw,26px);max-width:min(52rem,100%);}
 .intro-headline{font-family:var(--font-serif);font-size:clamp(19px,2.2vw,24px);font-weight:600;color:var(--fg);margin-bottom:6px;max-width:min(52rem,100%);}
 .intro-sub{font-size:14px;font-weight:300;color:var(--fg-muted);line-height:1.7;max-width:min(52rem,100%);margin-bottom:clamp(20px,2.5vw,28px);}
+.arc-badge{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ac);opacity:.7;margin-bottom:4px;}
+.intro-landing{max-width:min(52rem,100%);}
+.intro-icon-row{margin-bottom:clamp(16px,2vw,24px);}
+.intro-landing-title{font-family:var(--font-serif);font-size:clamp(24px,3.5vw,36px);font-weight:500;color:var(--fg);line-height:1.15;margin-bottom:10px;}
+.intro-landing-sub{font-size:15px;font-weight:300;color:var(--fg-muted);line-height:1.7;margin-bottom:clamp(28px,4vw,44px);}
+.intro-section{margin-bottom:clamp(24px,3vw,36px);}
+.intro-section h3{font-family:var(--font-serif);font-size:clamp(17px,2vw,21px);font-weight:600;color:var(--fg);margin-bottom:8px;}
+.intro-section p{font-size:15px;font-weight:300;color:var(--fg-med);line-height:1.8;margin-bottom:10px;}
+.intro-section p:last-child{margin-bottom:0;}
+.intro-section strong{font-weight:500;color:var(--fg);}
+.intro-section em{font-style:italic;color:var(--fg-muted);}
+.intro-movements{list-style:none;counter-reset:mv;padding:0;margin:12px 0 14px;}
+.intro-movements li{counter-increment:mv;font-size:14px;font-weight:300;color:var(--fg-med);line-height:1.65;padding:8px 0 8px 40px;position:relative;border-bottom:1px solid var(--bcard);}
+.intro-movements li:last-child{border-bottom:none;}
+.intro-movements li::before{content:counter(mv);position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;background:var(--ac-bg);color:var(--ac);font-family:var(--font-serif);font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;}
+.intro-movements li strong{font-weight:600;color:var(--fg);}
+.intro-begin{margin-top:clamp(28px,4vw,48px);padding:clamp(24px,3vw,36px);background:var(--bg-warm);border-radius:var(--r);border:1px solid var(--bcard);}
+.intro-begin-prompt{font-size:14px;font-weight:500;color:var(--fg-med);margin-bottom:16px;text-align:center;}
+.intro-sphere-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;}
+.intro-sphere-btn{background:var(--bg);border:1px solid var(--bcard);border-radius:10px;padding:14px 12px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--fg);cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .15s;text-align:center;}
+.intro-sphere-btn:hover{border-color:var(--sc,var(--ac));box-shadow:0 2px 8px rgba(0,0,0,.06);transform:translateY(-1px);}
+.intro-sphere-btn:active{transform:translateY(0);}
 .page-footer{background:var(--bg-muted);padding:16px var(--pad-x);display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--bcard);flex-shrink:0;}
 .footer-l{font-size:10px;color:var(--fg-muted);}
 .footer-r{display:flex;align-items:center;gap:10px;}
@@ -177,7 +199,7 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
   <div class="hero-cat"><span>Biblical Worldview · Prayer & Calling</span><div class="cat-line"></div></div>
   <div class="hero-title">The Lord's Prayer</div>
   <div class="hero-sub" id="heroSub">Through the Sphere God Made You For</div>
-  <div class="hero-desc">God reveals himself differently through each sphere of society — because each sphere reflects a different facet of who he is. <strong>Select your sphere below</strong> to receive a Lord's Prayer journey shaped for how God has wired you and what his Kingdom looks like through your specific calling.</div>
+  <div class="hero-desc">A daily prayer and reflection practice for those called to be incarnational ambassadors of the Kingdom — in family, economics, government, religion, education, communication, and celebration. <strong>Scroll down to begin</strong>, or select your sphere above.</div>
   <div class="sphere-selector" id="sphereSelector">
     <button class="ss-btn" data-sphere="fam" style="--btn-color:#ff3a30" onclick="selectSphere('fam')">
       <svg class="ss-icon" viewBox="0 0 231 231"><path fill="#ff3a30" d="M 5.88 88.43 C 15.90 47.82 46.54 17.67 86.21 6.38 Q 89.68 5.39 95.44 4.58 C 99.66 3.99 103.66 2.97 107.89 2.99 C 114.15 3.01 121.74 2.26 127.81 3.45 Q 129.28 3.74 131.51 3.97 Q 143.32 5.17 156.23 10.38 Q 201.39 28.58 220.14 73.53 Q 225.26 85.79 226.90 99.01 C 227.29 102.12 227.87 104.99 228.01 108.03 Q 230.36 159.98 194.77 195.52 C 178.43 211.85 153.62 224.90 129.61 227.02 C 127.64 227.19 125.83 227.96 123.95 227.97 C 117.47 228.02 110.22 228.61 103.85 227.50 C 96.32 226.19 88.91 225.39 80.58 222.62 C 43.70 210.34 17.29 181.53 6.39 144.37 Q 5.45 141.17 4.70 135.45 C 4.17 131.42 3.06 127.42 3.01 123.46 C 2.93 116.05 2.61 108.80 3.73 101.37 C 4.38 97.04 4.88 92.48 5.88 88.43 Z M 221.07 115.38 A 105.54 105.54 0.0 0 0 115.53 9.84 A 105.54 105.54 0.0 0 0 9.99 115.38 A 105.54 105.54 0.0 0 0 115.53 220.92 A 105.54 105.54 0.0 0 0 221.07 115.38 Z" /><path fill="#ffffff" d="M 221.07 115.38 A 105.54 105.54 0.0 0 1 115.53 220.92 A 105.54 105.54 0.0 0 1 9.99 115.38 A 105.54 105.54 0.0 0 1 115.53 9.84 A 105.54 105.54 0.0 0 1 221.07 115.38 Z M 216.82 115.41 A 101.31 101.31 0.0 0 0 115.51 14.10 A 101.31 101.31 0.0 0 0 14.20 115.41 A 101.31 101.31 0.0 0 0 115.51 216.72 A 101.31 101.31 0.0 0 0 216.82 115.41 Z" /><path fill="#ff3a30" d="M 216.82 115.41 A 101.31 101.31 0.0 0 1 115.51 216.72 A 101.31 101.31 0.0 0 1 14.20 115.41 A 101.31 101.31 0.0 0 1 115.51 14.10 A 101.31 101.31 0.0 0 1 216.82 115.41 Z M 155.95 78.93 C 143.22 72.75 131.45 70.96 117.65 74.43 A 1.31 1.30 -34.8 0 1 116.58 74.24 Q 95.48 59.48 72.36 65.81 C 55.16 70.51 41.80 83.16 36.97 100.50 Q 31.92 118.58 39.22 134.96 C 46.52 151.35 61.19 162.68 79.02 164.76 Q 90.01 166.05 101.05 163.18 Q 102.67 162.76 103.48 163.28 Q 112.24 168.90 122.11 170.83 Q 131.59 172.69 141.77 170.37 C 174.79 162.85 189.72 127.90 174.62 97.94 A 1.38 1.38 0.0 0 1 175.42 96.01 L 194.28 89.89 A 0.77 0.77 0.0 0 0 194.77 88.91 L 187.52 67.25 A 2.02 2.01 -89.4 0 0 186.30 66.00 Q 176.62 62.46 166.25 59.27 C 161.60 57.84 162.43 62.39 161.59 64.83 Q 159.21 71.74 156.73 78.61 Q 156.51 79.21 155.95 78.93 Z" /><path fill="#ff3a30" d="M 85.84 102.33 Q 82.05 111.46 82.02 115.25 C 81.98 121.09 81.59 127.52 82.77 132.87 C 84.47 140.59 88.37 146.31 91.99 153.16 A 1.17 1.16 -16.3 0 1 91.05 154.87 C 68.96 156.53 50.65 143.28 45.97 121.54 Q 44.68 115.55 45.70 109.46 Q 49.78 85.10 73.42 76.28 C 76.71 75.06 80.41 74.89 83.98 74.36 C 87.57 73.83 90.79 75.00 94.39 75.33 Q 98.52 75.72 104.90 79.32 Q 105.40 79.60 104.93 79.91 Q 91.37 88.98 85.84 102.33 Z" /><path fill="#ff3a30" d="M 134.28 128.81 C 138.35 113.26 135.94 96.38 125.83 83.46 Q 125.14 82.58 124.81 81.77 Q 124.60 81.23 125.18 81.17 Q 148.86 78.62 163.55 96.20 C 168.67 102.32 171.78 109.58 172.11 117.57 C 172.22 120.35 172.49 123.19 172.32 125.80 C 171.11 144.36 156.78 159.11 139.04 162.88 Q 132.30 164.32 125.37 163.13 Q 118.53 161.97 112.09 158.97 Q 111.55 158.72 112.03 158.35 C 122.61 150.24 130.92 141.62 134.28 128.81 Z" /><path fill="#ff3a30" d="M 93.25 105.10 Q 99.20 91.89 112.16 85.55 Q 112.61 85.33 113.00 85.64 Q 118.06 89.69 121.50 96.49 Q 128.74 110.85 124.23 125.72 Q 118.92 143.26 102.69 151.09 A 1.07 1.07 0.0 0 1 101.43 150.85 Q 94.16 143.05 91.06 132.80 C 89.41 127.33 89.94 121.13 90.02 115.24 Q 90.06 112.18 93.25 105.10 Z" /></svg>
@@ -194,7 +216,7 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
     <button class="ss-btn" data-sphere="edu" style="--btn-color:#25b7d6" onclick="selectSphere('edu')">
       <svg class="ss-icon" viewBox="0 0 231 231"><path fill="#25b7d6" d="M 228.11 115.37 A 112.60 112.60 0.0 0 1 115.51 227.97 A 112.60 112.60 0.0 0 1 2.91 115.37 A 112.60 112.60 0.0 0 1 115.51 2.77 A 112.60 112.60 0.0 0 1 228.11 115.37 Z M 221.07 115.39 A 105.55 105.55 0.0 0 0 115.52 9.84 A 105.55 105.55 0.0 0 0 9.97 115.39 A 105.55 105.55 0.0 0 0 115.52 220.94 A 105.55 105.55 0.0 0 0 221.07 115.39 Z" /><path fill="#ffffff" d="M 221.07 115.39 A 105.55 105.55 0.0 0 1 115.52 220.94 A 105.55 105.55 0.0 0 1 9.97 115.39 A 105.55 105.55 0.0 0 1 115.52 9.84 A 105.55 105.55 0.0 0 1 221.07 115.39 Z M 216.83 115.41 A 101.32 101.32 0.0 0 0 115.51 14.09 A 101.32 101.32 0.0 0 0 14.19 115.41 A 101.32 101.32 0.0 0 0 115.51 216.73 A 101.32 101.32 0.0 0 0 216.83 115.41 Z" /><path fill="#25b7d6" d="M 216.83 115.41 A 101.32 101.32 0.0 0 1 115.51 216.73 A 101.32 101.32 0.0 0 1 14.19 115.41 A 101.32 101.32 0.0 0 1 115.51 14.09 A 101.32 101.32 0.0 0 1 216.83 115.41 Z M 60.08 140.99 L 99.27 141.01 A 0.84 0.84 0.0 0 1 100.07 141.59 C 102.18 148.23 105.77 154.38 107.38 161.11 A 1.13 1.12 -6.2 0 0 108.47 161.98 L 126.66 162.06 A 1.28 1.28 0.0 0 0 127.84 160.28 L 89.21 69.49 Q 89.00 69.02 88.48 69.01 L 70.79 68.98 Q 70.28 68.97 70.06 69.44 C 69.21 71.24 68.46 73.86 67.95 75.07 Q 52.69 111.07 37.30 147.01 C 35.22 151.87 33.10 156.43 31.59 161.55 A 0.40 0.40 0.0 0 0 31.97 162.06 L 50.20 161.99 Q 50.79 161.99 51.01 161.44 L 59.36 141.47 Q 59.56 140.99 60.08 140.99 Z M 157.15 124.07 A 0.87 0.87 0.0 0 1 158.02 124.94 L 158.00 147.16 A 0.87 0.87 0.0 0 0 158.87 148.03 L 175.11 148.02 A 0.87 0.87 0.0 0 0 175.98 147.16 L 176.11 124.91 A 0.87 0.87 0.0 0 1 176.98 124.05 L 199.13 123.99 A 0.87 0.87 0.0 0 0 200.00 123.12 L 199.99 107.91 A 0.87 0.87 0.0 0 0 199.12 107.04 L 176.87 106.94 A 0.87 0.87 0.0 0 1 176.00 106.07 L 176.07 83.89 A 0.87 0.87 0.0 0 0 175.20 83.02 L 158.91 82.99 A 0.87 0.87 0.0 0 0 158.04 83.86 L 157.92 106.16 A 0.87 0.87 0.0 0 1 157.05 107.03 L 134.84 106.99 A 0.87 0.87 0.0 0 0 133.97 107.86 L 134.02 123.21 A 0.87 0.87 0.0 0 0 134.89 124.08 L 157.15 124.07 Z" /><path fill="#25b7d6" d="M 66.86 122.82 L 78.68 93.75 A 0.86 0.86 0.0 0 1 80.28 93.75 L 92.10 122.82 A 0.86 0.86 0.0 0 1 91.31 124.01 L 67.65 124.01 A 0.86 0.86 0.0 0 1 66.86 122.82 Z" /></svg>
       <span class="ss-label">Education</span></button>
-    <button class="ss-btn active" data-sphere="com" style="--btn-color:#595ad3" onclick="selectSphere('com')">
+    <button class="ss-btn" data-sphere="com" style="--btn-color:#595ad3" onclick="selectSphere('com')">
       <svg class="ss-icon" viewBox="0 0 231 231"><path fill="#595ad3" d="M 228.16 115.39 A 112.65 112.65 0.0 0 1 115.51 228.04 A 112.65 112.65 0.0 0 1 2.86 115.39 A 112.65 112.65 0.0 0 1 115.51 2.74 A 112.65 112.65 0.0 0 1 228.16 115.39 Z M 221.09 115.40 A 105.56 105.56 0.0 0 0 115.53 9.84 A 105.56 105.56 0.0 0 0 9.97 115.40 A 105.56 105.56 0.0 0 0 115.53 220.96 A 105.56 105.56 0.0 0 0 221.09 115.40 Z" /><path fill="#ffffff" d="M 221.09 115.40 A 105.56 105.56 0.0 0 1 115.53 220.96 A 105.56 105.56 0.0 0 1 9.97 115.40 A 105.56 105.56 0.0 0 1 115.53 9.84 A 105.56 105.56 0.0 0 1 221.09 115.40 Z M 216.80 115.41 A 101.30 101.30 0.0 0 0 115.50 14.11 A 101.30 101.30 0.0 0 0 14.20 115.41 A 101.30 101.30 0.0 0 0 115.50 216.71 A 101.30 101.30 0.0 0 0 216.80 115.41 Z" /><path fill="#595ad3" d="M 216.80 115.41 A 101.30 101.30 0.0 0 1 115.50 216.71 A 101.30 101.30 0.0 0 1 14.20 115.41 A 101.30 101.30 0.0 0 1 115.50 14.11 A 101.30 101.30 0.0 0 1 216.80 115.41 Z M 185.32 115.41 A 69.81 69.81 0.0 0 0 115.51 45.60 A 69.81 69.81 0.0 0 0 45.70 115.41 A 69.81 69.81 0.0 0 0 115.51 185.22 A 69.81 69.81 0.0 0 0 185.32 115.41 Z" /><path fill="#595ad3" d="M 94.27 71.56 L 163.24 114.68 A 0.83 0.83 0.0 0 1 163.24 116.08 L 94.27 159.20 A 0.83 0.83 0.0 0 1 93.00 158.50 L 93.00 72.26 A 0.83 0.83 0.0 0 1 94.27 71.56 Z" /></svg>
       <span class="ss-label">Comms</span></button>
     <button class="ss-btn" data-sphere="cel" style="--btn-color:#df57ad" onclick="selectSphere('cel')">
@@ -212,463 +234,568 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
 </div>
 </div>
 <script>
-const SPHERES = {
-  fam:{
-    color:'#ff3a30',colorBg:'rgba(255,58,48,0.07)',colorMid:'rgba(255,58,48,0.18)',
-    name:'Family',purpose:'To multiply life and establish God-given destiny in every individual.',
-    godNames:['Father — Abba','El Roi — The God Who Sees','Friend — Parakletos','Son — Firstborn Among Us'],
-    heroSub:'Praying Through the Sphere of Family',
-    intro:'God is the one who had the original idea of family. He instituted marriage and family so that life would be multiplied and destiny established in every individual. Because you are called to this sphere, you encounter God as Father, Son, and Friend — not as abstractions, but as the living architecture of every healthy family relationship you are called to serve.',
-    phrases:[
-      {n:'1',words:'"Our Father in heaven..."',label:'Identity · Belonging',
-       meaning:'Before you can strengthen any family, you need to know what a family was designed to feel like from the inside.',
-       context:'Jesus calls God <b class="god-name">Abba</b> — the word a child uses for their father, intimate and close. In the whole Hebrew Scriptures, God is called Father only 19 times. Jesus changes everything. You are called to create spaces where people experience something of this same intimacy. <b class="god-name">El Roi</b> — the God who sees — first appears when Hagar is alone in the desert with a child she cannot provide for. "You are the God who sees me." The family sphere is where the most invisible suffering happens.',
-       verse:'"And by him we cry, Abba, Father. The Spirit himself testifies with our spirit that we are God\'s children."',vref:'Romans 8:15–16',
-       qs:[
-         {l:'When you think about the families you are called to serve — what are they most missing? Safety, belonging, identity, unconditional love?',p:'Be specific about the gap you see...'},
-         {l:'How does knowing God as your Abba change how you walk into broken family situations?',p:'Not abstract theology — what changes practically...'},
-         {l:'Where in your own family story do you most need to receive what you are called to give to others?',p:'Your formation is part of your calling...'}
-       ],pb:"Father, I come as your child today — not as someone with all the answers about family. Let me bring that intimacy into..."},
-      {n:'2',words:'"Hallowed be your name..."',label:'Character · Revelation',
-       meaning:"Which aspect of God\'s character does the family sphere uniquely reveal? Meditate here before you plan what to do.",
-       context:'<b class="god-name">El Roi</b> first appears for the most isolated woman in the Bible. <b class="god-name">Father to the fatherless</b> (Psalm 68:5). <b class="god-name">Parakletos</b> — the one who comes alongside, the advocate, the friend who sticks closer than a brother. These names are not metaphors. They are the character of the God you are called to make visible through the families you serve. When you hallow his name, you declare: the God being made known here is this God — not a distant deity, but the one who comes and sits in the desert with the abandoned.',
-       verse:'"A father to the fatherless, a defender of widows, is God in his holy dwelling."',vref:'Psalm 68:5',
-       qs:[
-         {l:'Which of God\'s names most moves you when you think about families in your context — Father, El Roi, or Parakletos? Why that one?',p:'Sit with this before answering...'},
-         {l:'What does it look like to hallow God\'s name as Father through the specific way you work with families this week?',p:'Concrete and specific, not a principle...'},
-         {l:'Where are families in your community most invisible — the ones no one is seeing right now?',p:'El Roi sees what others pass over...'}
-       ],pb:"You are the God who sees. Help me see what you see when I look at the families around me. May your name be honoured through..."},
-      {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Mission · Transformation',
-       meaning:"What does a family that reflects God\'s design actually look like in your cultural context?",
-       context:'God designed family as the primary sphere of revelation and discipleship. <strong>The authority for education was delegated to parents, not governments or institutions</strong> (Deuteronomy 6:6–9). The first responsibility for those in poverty belongs to the family (1 Timothy 5:8). Marriage was designed to reflect the covenant love between Christ and his church (Ephesians 5:25–32). When family functions as God designed it, every other sphere is strengthened. When it breaks, every other sphere suffers.',
-       verse:'"Fix these words of mine in your hearts and minds; teach them to your children, talking about them when you sit at home and when you walk along the road."',vref:'Deuteronomy 11:18–19',
-       qs:[
-         {l:'What would a family that genuinely reflects God\'s character look like in your specific cultural context?',p:'Not a Western ideal — God\'s design for your people...'},
-         {l:'What cultural or structural patterns are most destroying families in your context — and what does the Kingdom answer look like?',p:'Name the brokenness before imagining the solution...'},
-         {l:'What is one thing you sense God asking you to do — or to become — so that the Kingdom comes more fully through you into families?',p:'Your obedience, not your plan...'}
-       ],pb:"Your kingdom come in the families I serve. Let your design for marriage, parenting, and belonging be restored — specifically in..."},
-      {n:'4',words:'"Give us today our daily bread..."',label:'Dependence · Provision',
-       meaning:"Working in the family sphere means walking into the deepest wounds people carry. You cannot give what you have not received.",
-       context:'<b class="god-name">Parakletos</b> — the one who comes alongside — is exactly what the family sphere needs. Not someone who arrives with answers, but someone who comes and sits. The families you serve need bread today, not a five-year plan. And so do you. What do you need to receive from God today in order to give to others tomorrow?',
-       verse:'"God is our refuge and strength, an ever-present help in trouble."',vref:'Psalm 46:1',
-       qs:[
-         {l:'What emotional or spiritual resource do you most need from God right now to do this work well?',p:'What runs out first when this work gets hard...'},
-         {l:'Is there a family situation you are currently carrying alone that you need to bring to God?',p:'Name it specifically...'},
-         {l:'How do you practise receiving — rest, support, community — so you have something left to give?',p:'This is not indulgence. It is sustainability...'}
-       ],pb:"Give me what I need today to serve well. I bring you the situation of... and I trust you with..."},
-      {n:'5',words:'"Forgive us our debts, as we also have forgiven our debtors..."',label:'Honesty · Reconciliation',
-       meaning:"The family sphere is where unforgiveness has the longest roots. This is both what the sphere most needs and what it most tempts you toward.",
-       context:'God\'s purpose for the family sphere includes <strong>the restoration of relationships broken by sin</strong>. The most dangerous blindspot in family work is unexamined family pain from your own story. If you carry unforgiveness from your own family of origin into the families you serve, it will shape everything you see and every decision you make — usually without you knowing it.',
-       verse:'"Bear with each other and forgive one another if any of you has a grievance against someone. Forgive as the Lord forgave you."',vref:'Colossians 3:13',
-       qs:[
-         {l:'What in your own family story might be unconsciously shaping how you see the families you serve?',p:'Not to dwell in the past — to name it honestly...'},
-         {l:'Is there someone in your own family circle you are still holding something against? How might that be affecting your capacity to serve?',p:'Forgiveness is not agreement. It is release...'},
-         {l:'Where is reconciliation specifically needed — in the families you serve, or in your own relationships right now?',p:'Name the specific gap...'}
-       ],pb:"I confess that I bring my own family story into this work. I receive your forgiveness for... and I choose to release..."},
-      {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrender · Protection',
-       meaning:"The specific warfare of the family sphere — and why you need to be led, not just motivated.",
-       context:'The family sphere is one of the most contested in society. Marriage is being legally redefined. Birth rates across nations are collapsing. <strong>Those called to work in the family sphere carry a particular target on their back</strong> — both in their own families and in their work. The temptations include compassion fatigue, a saviour complex, and carrying what was never yours to carry.',
-       verse:'"Watch and pray so that you will not fall into temptation. The spirit is willing, but the flesh is weak."',vref:'Matthew 26:41',
-       qs:[
-         {l:'What is the specific temptation you face in family work — compassion fatigue, saviour thinking, or carrying what is not yours?',p:'Name the pattern that keeps showing up...'},
-         {l:'How is your own family being shaped by the demands of this calling?',p:'The family sphere starts at home...'},
-         {l:'What protection, accountability, or covering do you need in this season to sustain the work?',p:'You were not designed to do this alone...'}
-       ],pb:"Protect me and those I love. Deliver me from the temptation to... and lead me today in..."}
-    ]
-  },
-  eco:{
-    color:'#ff9600',colorBg:'rgba(255,150,0,0.07)',colorMid:'rgba(255,150,0,0.18)',
-    name:'Economics',purpose:'To release provision and model stewardship — glorifying the Creator who works with humans as co-creators.',
-    godNames:['Elohim — Creator','Yahweh Jireh — Provider','Rapha — Healer','El Shaddai — All-Sufficient'],
-    heroSub:'Praying Through the Sphere of Economics',
-    intro:'Economics involves science, technology and business together. God\'s purpose for this sphere is to release provision and model stewardship. Because you are called here, you encounter God primarily as Creator, Provider, and Healer — not as distant supervisor, but as the innovating, generative God whose character is meant to be visible through every business, every invention, and every act of stewardship.',
-    phrases:[
-      {n:'1',words:'"Our Father in heaven..."',label:'Identity · Co-Creation',
-       meaning:"You are not just an entrepreneur or businessperson. You are a co-creator with God — and that changes the foundation everything is built on.",
-       context:'Adam\'s first vocation was a research job — naming the animals (Genesis 2:19–20). An invitation into partnership with the Creator before there was ever a business plan. <b class="god-name">Elohim</b> — the name of God in Genesis 1 — is grammatically plural, acting in united singular purpose. Father, Son, and Spirit created together. All reality is the fruit of loving creative relationship. Your work in the economic sphere is not secular maintenance. It is participation in the ongoing creativity of a God who is always doing new things.',
-       verse:'"God, the LORD, created the heavens and stretched them out. He created the earth and everything in it."',vref:'Isaiah 42:5',
-       qs:[
-         {l:'Do you experience your economic work as partnership with God — or as something separate you do for God after hours?',p:'Be honest about what it actually feels like most days...'},
-         {l:'What specific aspect of your work feels most like participating in God\'s ongoing creation?',p:'The moment that most feels like being made in his image...'},
-         {l:'What would shift for you to approach your work as co-creation rather than performance or survival?',p:'Not a theology shift — a practical daily shift...'}
-       ],pb:"Father, I come as your co-creator today. My work in... is not separate from you. I bring you the specific challenge of..."},
-      {n:'2',words:'"Hallowed be your name..."',label:'Character · Innovation',
-       meaning:"Which of God\'s names does your sphere most need to encounter? This is the source of every solution you will find.",
-       context:'<b class="god-name">Yahweh Jireh</b> — the Lord who provides — was named on a mountain where a father\'s worst fear became evidence of God\'s provision (Genesis 22:13–14). The name is rooted in the Hebrew verb ra\'ah — to see. God provides because he sees. <b class="god-name">Elohim</b> used four creation words: bara\' (create from nothing), nawtaw (stretch and amplify), raca\' (form), and nathan (give generously). Every one of these is available to you in your economic work. God wants to give you ideas. The asking is the intimacy.',
-       verse:'"I am the LORD who heals you."',vref:'Exodus 15:26 — Rapha: the God who heals, including broken economic systems',
-       qs:[
-         {l:'When you face a problem in your work with no obvious solution — where do you actually go first?',p:'The honest answer, not the spiritual-sounding one...'},
-         {l:'What problem in your sector most needs a God-given creative solution that human ingenuity alone has not found?',p:'Energy, poverty, healthcare access — what is yours specifically...'},
-         {l:'How do you practically create space to hear from God as Elohim — the innovating Creator — about your work?',p:'Not general Bible reading. A specific practice...'}
-       ],pb:"Yahweh Jireh, you see what I cannot yet see. Hallowed be your name through the work of my hands. Show me what you see about..."},
-      {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Mission · Transformation',
-       meaning:"What does economics look like when it is ordered by the character of God rather than the logic of exploitation?",
-       context:'When stewarded well, the process of creating and distributing wealth should <strong>enhance the life of people and glorify the Creator who inspires innovation</strong>. In Scripture, the first responsibility for those in poverty belongs to family, then to the economic sphere — those who can create businesses and employment. God\'s economics are fundamentally generative and distributive. The Jubilee laws (Leviticus 25), integrity in the marketplace (Leviticus 19:35–36), the warning against ungodly partnerships (2 Chronicles 20:35–37) — these are all Kingdom economics.',
-       verse:'"Work so you can be a giver. Be diligent. Be generous. Do not oppress the poor."',vref:'Ephesians 4:28; Proverbs 11:24–25; 21:13',
-       qs:[
-         {l:'Where do you see economic systems in your context most violating God\'s design — who is being exploited or forgotten?',p:'Not abstract economics. Your specific context...'},
-         {l:'What would your work look like if it was ordered around the Jubilee principle — that economic gain should distribute life rather than hoard it?',p:'One concrete structural change...'},
-         {l:'What Kingdom economic idea do you sense God has been giving you that you have not yet acted on?',p:'The idea that keeps returning...'}
-       ],pb:"Your kingdom come in the economic sphere. Let the wealth that flows through my hands enhance life, not just accumulate. Specifically I want to..."},
-      {n:'4',words:'"Give us today our daily bread..."',label:'Dependence · Trust',
-       meaning:"The greatest temptation in economics is believing your security comes from what you can build. This prayer resets that assumption daily.",
-       context:'God challenged his people to a generosity contest: "Put me to the test. Try to out-give me" (Malachi 3:10). <b class="god-name">El Shaddai</b> — often translated "God Almighty" — may be rooted in the Hebrew word shad, suggesting the one who nourishes and provides not from a distance but intimately. The economic sphere most needs people who operate from abundance rooted in God rather than from scarcity driven by fear.',
-       verse:'"You cannot serve both God and money. Therefore do not worry about your life..."',vref:'Matthew 6:24–25',
-       qs:[
-         {l:'Where do you experience the most financial anxiety in your work — and what does that anxiety reveal about what you are actually trusting?',p:'Specific, not general...'},
-         {l:'Is your giving — personally and through your work — currently expressing trust or hoarding?',p:'No judgement. Just honesty...'},
-         {l:'What would "today\'s bread" look like if you genuinely trusted God for tomorrow rather than securing everything yourself?',p:'What decision might look different today...'}
-       ],pb:"Give me what I need today, and free me from anxiety about tomorrow. I confess that I tend to trust... instead of you. Let my giving today be..."},
-      {n:'5',words:'"Forgive us our debts, as we also have forgiven our debtors..."',label:'Honesty · Integrity',
-       meaning:"The word 'debts' in the Lord\'s Prayer has a specific resonance for those called to the economic sphere.",
-       context:'The Hebrew economic laws were pervasive about <strong>integrity in the marketplace</strong> — honest scales, no overcharging, cancellation of debt in the Jubilee (Leviticus 19:35–36; 25:35–37). "Idolatrous efforts to prosper" (2 Kings 21:7–9) and "ungodly partnerships" (2 Chronicles 20:35–37) are specific categories of economic sin in Scripture. Small integrity failures accumulate. The confession this phrase invites is not just personal — it is also systemic.',
-       verse:'"Wealth gained dishonestly dwindles, but whoever gathers money little by little makes it grow."',vref:'Proverbs 13:11',
-       qs:[
-         {l:'Is there anywhere in your economic work where your integrity has been compromised — a small rationalised compromise?',p:'The thing you know about but have not named...'},
-         {l:'Is there anyone in your economic relationships with whom you hold an unresolved grievance?',p:'Forgiveness in economic relationships is part of faithfulness...'},
-         {l:'What systemic injustice in the economic sphere are you most tempted to accept as normal rather than work to change?',p:'Where have you made peace with something that should still disturb you...'}
-       ],pb:"Forgive me for the places where my economic decisions have not reflected your character. Specifically I need to address... And I choose to release..."},
-      {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrender · Vigilance',
-       meaning:"The specific vulnerabilities of the economic sphere — and why you need to be actively led, not just driven.",
-       context:'The Law of the King in Deuteronomy 17 warns those with economic power not to multiply horses (power), wives (indulgence), or gold (accumulation for its own sake). These map precisely onto the three persistent temptations of the economic sphere: <strong>power, pleasure, and accumulation</strong>. Solomon started well and ended catastrophically because he ignored all three — not in a sudden dramatic fall, but through gradual drift.',
-       verse:'"For the love of money is a root of all kinds of evil. Some, eager for money, have wandered from the faith."',vref:'1 Timothy 6:10',
-       qs:[
-         {l:'Which of the three temptations — accumulating power, personal indulgence, or hoarding wealth — is the greatest risk for you in this season?',p:'Be specific about which one pulls hardest...'},
-         {l:'What accountability or limit have you built into your life to ensure your economic ambitions serve the Kingdom rather than replace God?',p:'A structure, a person, a practice — not just a principle...'},
-         {l:'If your economic work succeeded beyond your expectations — what is the greatest spiritual risk you would face?',p:'Knowing this helps you prepare for it now...'}
-       ],pb:"Deliver me from the love of wealth for its own sake. Protect my integrity in the area of... Lead me specifically toward..."}
-    ]
-  },
-  gov:{
-    color:'#b89000',colorBg:'rgba(184,144,0,0.07)',colorMid:'rgba(184,144,0,0.18)',
-    name:'Government',purpose:'To safeguard justice and create a peaceful, safe environment where every citizen can thrive.',
-    godNames:['Lawgiver — Chaqaq','Judge — Shaphat','King of Kings','Yahweh Shalom — Peace'],
-    heroSub:'Praying Through the Sphere of Government',
-    intro:'God has appointed government to serve — not to control. The Law of the King in Deuteronomy 17 explicitly warns those in authority against the three great corruptions: power, pleasure, and accumulation. Because you are called to this sphere, you encounter God as Lawgiver, Judge, and King of Kings — the one whose authority exists entirely in the service of justice, peace, and the protection of the vulnerable.',
-    phrases:[
-      {n:'1',words:'"Our Father in heaven..."',label:'Identity · Servant Heart',
-       meaning:"Authority in the Kingdom flows downward in service, not upward in control. Before you govern anything, settle whose child you are.",
-       context:'Jesus\'s most direct teaching on governmental authority came at the Last Supper: "Those who are regarded as rulers of the Gentiles lord it over them... Not so with you. Whoever wants to become great among you must be your servant" (Mark 10:42–43). <b class="god-name">God as King</b> is simultaneously <b class="god-name">God as Servant</b>. You cannot govern others well if your identity is still rooted in the title rather than the calling.',
-       verse:'"He controls the course of world events; he removes kings and sets up other kings."',vref:'Daniel 2:21',
-       qs:[
-         {l:'Where do you feel the pull of status or recognition in your calling? When does authority feel more like a right than a responsibility?',p:'Honest self-examination...'},
-         {l:'What would change about how you operate if you genuinely saw your authority as God\'s delegated trust — not your earned right?',p:'Specific and practical...'},
-         {l:'What does it mean for you personally to be a child of God in the specific context of governmental power?',p:'Your WHO before your WHAT...'}
-       ],pb:"Father, I come to this work as your child, not as someone who owns this authority. Let me hold it with open hands today, especially in..."},
-      {n:'2',words:'"Hallowed be your name..."',label:'Character · Justice',
-       meaning:"God\'s character as Judge and Lawgiver is not punitive — it is the source of every just law and every righteous verdict.",
-       context:'<b class="god-name">Chaqaq</b> — Lawgiver — means to cut or inscribe. God himself carved the Ten Commandments. He wrote his law not just on stone but on hearts (Jeremiah 31:33). <b class="god-name">Shaphat</b> — Judge — is used 203 times in the Old Testament, 75 of which describe God himself as the actor. "The LORD is known for his justice; he is a shelter for the oppressed" (Psalm 9:7–9). Those called to this sphere carry the responsibility to make God\'s character visible in every decision — equity without corruption, mercy without permissiveness.',
-       verse:'"The LORD is righteous in everything he does; he is filled with kindness."',vref:'Psalm 145:17',
-       qs:[
-         {l:'Which attribute of God as Judge most needs to be expressed through your work — fairness, protection of the vulnerable, mercy, or consistency?',p:'The one most absent from the systems you work in...'},
-         {l:'Where is the government or institution you serve most departing from God\'s design — and what is your specific response?',p:'Not cynicism. Discernment about your role...'},
-         {l:'How do you personally hallow God\'s name through the way you govern, decide, or serve?',p:'What your colleagues notice about how you operate...'}
-       ],pb:"Hallowed be your name in every law, every verdict, every decision I participate in today. Let your justice be expressed through..."},
-      {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Mission · Transformation',
-       meaning:"What does governance look like when it genuinely reflects the Government of God?",
-       context:'Isaiah 9:6–7 describes the Messiah\'s government: "He will reign, establishing and upholding it with justice and righteousness from that time on and forever." <strong>Justice and righteousness are the two pillars of Kingdom governance.</strong> In Deuteronomy 17, the godly king is characterised by the opposite spirit of worldly kings — servanthood, purity, and generosity instead of power, indulgence, and accumulation. "On earth as it is in heaven" in this sphere means every citizen protected, no one exploited, the law applied without favouritism.',
-       verse:'"Do what is just and right. Rescue from the hand of the oppressor the one who has been robbed. Do no wrong or violence."',vref:'Jeremiah 22:3',
-       qs:[
-         {l:'What specific injustice in the system you serve most needs to change — and what is your responsibility in changing it?',p:'Not the whole system. One specific thing you can affect...'},
-         {l:'What would servant governance — power given away rather than accumulated — look like in your specific role?',p:'One structural expression, not just a principle...'},
-         {l:'Who are the most vulnerable people in your context that the current system is failing to protect?',p:'Name the people, not the category...'}
-       ],pb:"Your kingdom come in the systems I serve. Let justice roll down like water in the area of... and let my work today protect those who..."},
-      {n:'4',words:'"Give us today our daily bread..."',label:'Dependence · Integrity',
-       meaning:"The gravitational pull toward accumulation is strongest in government. This prayer is a daily counter-posture.",
-       context:'Corruption in the government sphere is almost always rooted in felt insufficiency — the belief that what has been given is not enough, so more must be taken. <b class="god-name">Yahweh Shalom</b> — the Lord is peace — was first named by Gideon at a moment when he had no army, no plan, and felt completely inadequate for the call (Judges 6:24). The peace God gives is not the absence of conflict. It is the deep sufficiency that does not need to steal what it has not been given.',
-       verse:'"The Lord is peace."',vref:'Judges 6:24 — Yahweh Shalom',
-       qs:[
-         {l:'What resource do you most feel the lack of in your current role? How does that sense of lack affect your decisions?',p:'Name the shortage honestly...'},
-         {l:'Where are you most tempted to secure for yourself what God has not given — reputation, position, favour, money?',p:'The specific form corruption would take in your situation...'},
-         {l:'What would "enough for today" look like — operating from sufficiency rather than scarcity?',p:'A specific decision you could make differently today...'}
-       ],pb:"Give me what I need today to serve with integrity. I confess the temptation to take what is not mine in the area of... Let your peace be enough for..."},
-      {n:'5',words:'"Forgive us our debts, as we also have forgiven our debtors..."',label:'Honesty · Accountability',
-       meaning:"Power without confession is the most dangerous combination in human society.",
-       context:'The system of confession and accountability described in Scripture stands against the default of the powerful: the belief that success justifies compromise, and that the rules apply differently to those with authority. God\'s judge holds himself to the same standard he applies to others — "no duplicity, no double-standard, no favouritism" (Deuteronomy 32:4). Those in government need this prayer more urgently than most, because the system itself often enables and rewards the lack of it.',
-       verse:'"Acquitting the guilty and condemning the innocent — the LORD detests them both."',vref:'Proverbs 17:15',
-       qs:[
-         {l:'Is there a decision you have made in your role that you have rationalised but not actually examined before God?',p:'The one you hope no one asks about...'},
-         {l:'Who do you hold a grievance against in your sphere — a political opponent, colleague, or institution — that is affecting your capacity for just action?',p:'Unforgiveness in governance shapes policy...'},
-         {l:'What accountability structure are you under that actually protects your integrity?',p:'Not a general commitment. Who specifically holds you accountable...'}
-       ],pb:"Forgive me for the places where I have used authority for my own benefit rather than those I serve. I need to confess... and I choose to forgive..."},
-      {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrender · Protection',
-       meaning:"Power, sex, and money are the three biblical corruptions that specifically destroy those in government.",
-       context:'Deuteronomy 17:16–17 explicitly warns the king not to multiply horses (military power), wives (sexual indulgence), or gold (wealth accumulation). These map precisely onto the three forms of corruption that have destroyed every government that has ignored them throughout history. Solomon ignored all three. His fall was not sudden — it was gradual drift. Then the kingdom tore apart. <strong>You need to be led, not just supervised.</strong>',
-       verse:'"The king must not take many wives, or his heart will be led astray."',vref:'Deuteronomy 17:17',
-       qs:[
-         {l:'Which of the three temptations — power, sexual compromise, or financial corruption — is the greatest risk for you in your current position?',p:'Naming it is the first defence...'},
-         {l:'What specific safeguard — transparency, accountability, limits — have you built into your life against these corruptions?',p:'The structure, not just the intention...'},
-         {l:'Who are you currently most at risk of failing to protect — because of fear, political pressure, or the desire to keep your position?',p:'The vulnerable person or group you are tempted to deprioritise...'}
-       ],pb:"Deliver me from the temptation to use what I have been given for my own benefit. Protect my integrity in the area of... Lead me specifically toward..."}
-    ]
-  },
-  rel:{
-    color:'#5a8a00',colorBg:'rgba(90,138,0,0.07)',colorMid:'rgba(90,138,0,0.18)',
-    name:'Religion',purpose:'To extend mercy and promote reconciliation — horizontally between people, and vertically between people and God.',
-    godNames:['Priest — Mediator','Prophet — Voice of God','Intercessor','Yahweh Raah — Shepherd'],
-    heroSub:'Praying Through the Sphere of Religion',
-    intro:'The religious sphere is the coaching staff, not the players. Its purpose is to help every person in every other sphere see their role as part of what God is doing in the nations. Because you are called here, you encounter God as Priest, Prophet, and Intercessor. The greatest danger in this sphere is turning what is meant to equip others into a system that keeps them dependent.',
-    phrases:[
-      {n:'1',words:'"Our Father in heaven..."',label:'Identity · Mediation',
-       meaning:"You stand between God and people. That is both a privilege and a burden. Begin here — who you are before God determines what you can authentically give.",
-       context:'A priest speaks to God on behalf of the people. A prophet speaks to the people on behalf of God. Jesus does both — uniquely <b class="god-name">Priest and Prophet</b>. You can only give what you have received. If your own relationship with God as Father has not been settled, your ministry will be built on performance rather than overflow.',
-       verse:'"Jesus is able, once and forever, to save those who come to God through him. He lives forever to intercede with God on their behalf."',vref:'Hebrews 7:25',
-       qs:[
-         {l:'How settled is your own sense of being loved and received by God — not as a minister, but as his child?',p:'Honest inventory of where you actually stand...'},
-         {l:'In your current ministry role, how much of what you give comes from genuine overflow versus obligation?',p:'This is not a question about productivity. It is about source...'},
-         {l:'What is the difference between interceding from intimacy and performing intercession from duty? Where are you right now?',p:'Name it without defensiveness...'}
-       ],pb:"Father, I come to you not as a minister today but as your child. Before I pray for anyone else, let me receive from you..."},
-      {n:'2',words:'"Hallowed be your name..."',label:'Character · Proclamation',
-       meaning:"The prophetic voice is only as accurate as the character of God it is rooted in.",
-       context:'The prophet\'s ministry has a threefold impact: it "strengthens others, encourages them, and comforts them" (1 Corinthians 14:3). <b class="god-name">Yahweh Raah</b> — the Shepherd — first appears in Psalm 23. The shepherd knows his sheep by name, goes ahead of them, lays down his life. When you hallow God\'s name in the religious sphere, you are declaring that the God being made known is this God — not a transactional deity or a rulebook, but a shepherd who gives everything.',
-       verse:'"My sheep listen to my voice; I know them, and they follow me."',vref:'John 10:27',
-       qs:[
-         {l:'Which aspect of God\'s character is most absent from the religious context you serve — his tenderness, justice, delight, or grief over the lost?',p:'What people in your community most need to encounter...'},
-         {l:'How do you ensure that what you proclaim about God actually reflects who he is — not just who is convenient or safe to present?',p:'A specific practice or accountability...'},
-         {l:'When you stand in the gap in intercession — who do you specifically carry before God right now?',p:'Name them...'}
-       ],pb:"Hallowed be your name through every word I speak and every prayer I pray today. Let the God people encounter through me be genuinely you — especially..."},
-      {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Mission · Equipping',
-       meaning:"The Kingdom comes through people living it out in every sphere. The religious sphere\'s mandate is to equip that — not to replicate itself.",
-       context:'The volleyball analogy captures it: the coach does not play the game. The coach helps each athlete find their unique gift and operate as part of a team. <strong>When the church puts coaches on the field and athletes on the sideline, the spheres suffer.</strong> Paul makes it explicit: God gave apostles, prophets, evangelists, pastors and teachers "to equip his people for works of service" (Ephesians 4:11–12). The equipping is the ministry. The release is the success.',
-       verse:'"To equip his people for works of service, so that the body of Christ may be built up."',vref:'Ephesians 4:12',
-       qs:[
-         {l:'Who in your community is called to a sphere outside the church — and are you equipping and releasing them, or hoping they will stay?',p:'Name specific people...'},
-         {l:'What would it look like for your community to declare success when its people are thriving in their spheres — rather than when services are full?',p:'What would change about your metrics...'},
-         {l:'Where has your religious community taught people, however unintentionally, that ministry matters more than other work?',p:'Name the specific message that was communicated...'}
-       ],pb:"Your kingdom come through every person I equip today. Let my ministry multiply into... Let me release rather than retain..."},
-      {n:'4',words:'"Give us today our daily bread..."',label:'Dependence · Intercession',
-       meaning:"Intercession is the daily work of standing in the gap — and you cannot do it without receiving daily from God.",
-       context:'Ezekiel 22:30 describes a moment when God wanted to show mercy but had to execute judgment because no one was willing to stand in the gap. The intercessory role of the religious sphere has direct consequence for society. But you cannot intercede from an empty place. <b class="god-name">Yahweh Raah</b> leads beside still waters and restores the soul. Before you stand in the gap for a nation, let him restore yours.',
-       verse:'"I searched for someone to stand in the gap so I would not have to destroy the land, but I found no one."',vref:'Ezekiel 22:30',
-       qs:[
-         {l:'What is currently depleting you in your ministry work — what is the specific source of your exhaustion?',p:'Name it specifically, not generally...'},
-         {l:'What practices are restoring your soul regularly? What is missing?',p:'Honest inventory...'},
-         {l:'Who specifically are you standing in the gap for right now — people, institutions, the spheres around you?',p:'Name them...'}
-       ],pb:"Restore my soul today, Lord. Give me what I need before I try to give to others. I specifically bring before you..."},
-      {n:'5',words:'"Forgive us our debts, as we also have forgiven our debtors..."',label:'Honesty · Reconciliation',
-       meaning:"The religious sphere is most powerful when it models what it preaches — and most dangerous when the gap between the two is rationalised.",
-       context:'The purpose of the religious sphere includes the extension of mercy and the promotion of reconciliation. But it also carries the most capacity for spiritual abuse, manipulation, and self-deception dressed as holiness. <strong>The confession this phrase demands is one of the most important safeguards against the specific corruptions of this sphere.</strong> Are you offering to others what you are actually receiving yourself?',
-       verse:'"If you forgive other people when they sin against you, your heavenly Father will also forgive you."',vref:'Matthew 6:14',
-       qs:[
-         {l:'Is there anyone in your ministry or faith community against whom you hold unresolved grievance?',p:'Name it...'},
-         {l:'Where has your ministry community caused harm — and has that been honestly acknowledged?',p:'As a practitioner of reconciliation, not defensively...'},
-         {l:'Are you currently experiencing the forgiveness and grace you preach — or is there a gap between what you offer and what you receive?',p:'This is a health question, not a performance question...'}
-       ],pb:"Forgive me for the gap between what I preach and what I practise. I need to receive your grace in... and I choose to release..."},
-      {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrender · Humility',
-       meaning:"The specific warfare and temptations of the religious sphere.",
-       context:'The religious sphere is simultaneously the most needed and the most capable of distortion. The temptations specific to this sphere include: the misuse of spiritual authority, the substitution of institutional growth for Kingdom growth, and the confusion of personal spiritual gifts with personal importance. <b class="god-name">Jesus the Intercessor</b> lives forever to intercede — he never stopped, never accumulated power, never confused his role with his identity.',
-       verse:'"Whoever wants to become great among you must be your servant."',vref:'Mark 10:43',
-       qs:[
-         {l:'What is the specific temptation of your position — how could power, recognition, or spiritual status corrupt your calling?',p:'Name the exact form it takes for you...'},
-         {l:'Are there people in your community who are dependent on you in ways that prevent their growth? What is your plan to change that?',p:'Releasing people is sometimes the most courageous act in ministry...'},
-         {l:'What accountability exists for your spiritual authority — who has permission to challenge your theology, decisions, and character?',p:'A real person, not a theoretical structure...'}
-       ],pb:"Deliver me from the misuse of the authority you have entrusted to me. Lead me away from... Protect the people I serve from my own blind spots, especially in..."}
-    ]
-  },
-  edu:{
-    color:'#1a9ab8',colorBg:'rgba(26,154,184,0.07)',colorMid:'rgba(26,154,184,0.18)',
-    name:'Education',purpose:'To develop the God-given gifts in every child for the service of their fellow human beings in society.',
-    godNames:['Teacher — Logos','Shepherd — Yahweh Raah','Warrior — 2 Cor 10','Wisdom — Sophia'],
-    heroSub:'Praying Through the Sphere of Education',
-    intro:'God designed education as discipleship and multiplication — the transformation of the student, not merely the transaction of knowledge. Because you are called to this sphere, you encounter God as Teacher, Shepherd, and Warrior — the one who transforms minds, sees each individual, and fights for truth against every false ideology that diminishes human dignity and potential.',
-    phrases:[
-      {n:'1',words:'"Our Father in heaven..."',label:'Identity · Calling',
-       meaning:"Before you can unlock potential in a student, you need to understand whose image that student bears.",
-       context:'Adam\'s first vocation was a research job — naming the animals (Genesis 2:19–20). An invitation to partnership with the Creator. Every student in your classroom is made in the image of that same innovating, creating, naming God. <b class="god-name">Jesus as Teacher</b> is addressed as Rabbi 19 times in the Gospels. He taught with authority — not from a position, but from character. The authority for a child\'s education belongs first to their parents (Deuteronomy 6:6–9), then to those who carry that trust faithfully.',
-       verse:'"The goal of education is to develop the God-given gifts in every child for the service of their fellow human beings."',vref:'Lois Lebar — cited in Spheres of Society teaching',
-       qs:[
-         {l:'Which student in your current context most needs someone to see the image of God in them — the one the system is most likely to write off?',p:'Name them or describe them specifically...'},
-         {l:'How does knowing every student bears God\'s image change how you respond to the most difficult or disengaged learner?',p:'Not abstract. What changes in practice...'},
-         {l:'What does it mean for your own identity that God is a teacher — and that you carry that character into your classroom?',p:'Your role is an image of God\'s own activity...'}
-       ],pb:"Father, help me see the image of God in every person I teach today. Especially help me to see... as someone you created for..."},
-      {n:'2',words:'"Hallowed be your name..."',label:'Character · Truth',
-       meaning:"Before you enter the classroom, meditate on which aspect of God\'s character most needs to be made known there.",
-       context:'Two Hebrew verbs describe God\'s teaching action: yarah and lamad. All three persons of the Trinity teach — Father, Son, and Spirit. <b class="god-name">God as Warrior</b> (2 Corinthians 10:3–5) is the specific character needed in education because it is "the arena where the war is most fiercely waged for the hearts and minds of the emerging generation." The weapons are not worldly — they are truth, faithfulness, and integrity.',
-       verse:'"We use God\'s mighty weapons to knock down the strongholds of human reasoning and to destroy false arguments."',vref:'2 Corinthians 10:4–5',
-       qs:[
-         {l:'What false ideologies or worldviews are most actively forming the students in your context right now?',p:'What your students are absorbing outside your classroom...'},
-         {l:'How do you hallow God\'s name as Truth through the way you teach — not just the content, but your character as a teacher?',p:'The thing students remember about how you treated them...'},
-         {l:'What does it mean to be God\'s Shepherd in your educational setting — seeing each student individually, going ahead of them?',p:'One student you are specifically shepherding right now...'}
-       ],pb:"Hallowed be your name in every lesson, every conversation today. Let your character as Teacher shape how I... especially with..."},
-      {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Mission · Transformation',
-       meaning:"What does education look like when it is ordered by God\'s design rather than industrial efficiency?",
-       context:'God designed education to be a family-first, individually focused, character-forming process. The shift that moved educational authority from family to government "has had a far more damaging impact than outlawing prayer in education." AI is now transforming what education is for — if AI provides all information, then education that teaches <strong>relational skills, character, and wisdom</strong> becomes the most important formation of the next generation.',
-       verse:'"In the future, your children will ask you... and you shall tell them."',vref:'Deuteronomy 6:20–21',
-       qs:[
-         {l:'What would your educational context look like if it measured success by the development of each individual student\'s gifts — rather than standardised output?',p:'One structural or methodological change...'},
-         {l:'How are you preparing students for a world where AI provides information — what distinctly human formation are you offering?',p:'What your teaching uniquely provides that AI cannot...'},
-         {l:'What family-school partnership could you strengthen — honouring the primary authority of parents in their child\'s formation?',p:'A concrete relationship or practice...'}
-       ],pb:"Your kingdom come in this place of learning. Let the gifts you placed in each student be discovered and developed. Today I want to invest in..."},
-      {n:'4',words:'"Give us today our daily bread..."',label:'Dependence · Insight',
-       meaning:"You cannot see into every student\'s situation. You need daily revelation — and daily renewal of your own sense of purpose.",
-       context:'When Jesus had compassion on the confused crowds, his response was to teach (Mark 6:34). <b class="god-name">Yahweh Raah</b> — the Shepherd — notices the one sheep that is missing. In education, this is daily bread: fresh eyes to see the student who is hiding, fresh wisdom for the situation you have not encountered before, fresh strength for the day that is harder than the last.',
-       verse:'"Teach me your ways, O LORD, that I may live according to your truth."',vref:'Psalm 86:11',
-       qs:[
-         {l:'What specific insight do you need from God today about a student or situation you are currently at a loss with?',p:'Name the specific situation...'},
-         {l:'What is currently depleting your sense of purpose in your work?',p:'Burnout in education is epidemic. Name yours honestly...'},
-         {l:'Are you regularly receiving formation yourself — being taught, shaped, challenged — or are you only giving?',p:'What you give comes from what you receive...'}
-       ],pb:"Give me today the wisdom and insight I need. Specifically show me how to serve... and give me fresh eyes to see..."},
-      {n:'5',words:'"Forgive us our debts, as we also have forgiven our debtors..."',label:'Honesty · Healing',
-       meaning:"Education sphere wounds are among the most formative that people carry.",
-       context:'A teacher who says "you will never amount to anything" causes deep pain — because teachers stand in for parents, and parents were designed to speak the hope of what a child could be. Many students carry specific educational wounds. <strong>Those called to teach carry both the power to wound and the power to heal.</strong> The confession this phrase requires is bidirectional — what wounds did you carry in, and what might you have passed on without noticing?',
-       verse:'"The tongue can bring death or life; those who love to talk will reap the consequences."',vref:'Proverbs 18:21',
-       qs:[
-         {l:'What wound from your own educational history might be shaping how you teach — the critical teacher, the system that missed your gifts?',p:'Naming it is the beginning of healing it...'},
-         {l:'Is there a student you may have discouraged or dismissed — intentionally or not?',p:'The one whose face comes to mind...'},
-         {l:'Is there a colleague, institution, or system you hold bitterness toward? How is that affecting how you serve?',p:'Unforgiveness in education affects every student...'}
-       ],pb:"Forgive me for the words I have spoken that diminished rather than drew out. I need to address... and I receive healing for..."},
-      {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrender · Courage',
-       meaning:"The specific warfare in the education sphere and the protection you need.",
-       context:'Paul describes education as the arena of spiritual warfare: "We use God\'s mighty weapons to knock down the strongholds of human reasoning." The temptations specific to this sphere include: teaching what is safe rather than what is true, conforming to ideological curriculums that diminish the dignity of students, and giving up on the students the system has written off. <strong>Faithfulness and integrity will win the day.</strong>',
-       verse:'"Cling to your faith in Christ, and keep your conscience clear. Fight well in the Lord\'s battles."',vref:'1 Timothy 1:18–19',
-       qs:[
-         {l:'What specific ideological pressure in your context is asking you to teach or model something that does not reflect God\'s truth about human dignity?',p:'Name the specific pressure, not the general culture...'},
-         {l:'Which students or colleagues are you most tempted to give up on — and what would it look like to stay?',p:'The specific face, not the general principle...'},
-         {l:'What accountability or community do you have for your integrity as an educator?',p:'The person who will tell you the truth...'}
-       ],pb:"Deliver me from the fear of standing for truth when it costs something. Lead me to stay with... Protect me from the temptation to..."}
-    ]
-  },
-  com:{
-    color:'#595ad3',colorBg:'rgba(89,90,211,0.07)',colorMid:'rgba(89,90,211,0.18)',
-    name:'Communication',purpose:'To transfer wisdom and promote healthy relationships — using every tool available to advance the Kingdom.',
-    godNames:['The Way — Method & Means','The Truth — Content & Clarity','The Life — Goal & Outcome','Light — Exposing Darkness'],
-    heroSub:'Praying Through the Sphere of Communication',
-    intro:'God\'s purpose for communication and media is the transfer of wisdom and the promotion of healthy relationships. Jesus described himself as "the Way, the Truth, and the Life" — which gives those in communication a remarkable framework: the means matters (the Way), the content must be true (the Truth), and the goal is life (the Life). Because you are called here, you carry the prophetic responsibility to name reality, expose darkness, and use every tool available to advance the Kingdom.',
-    phrases:[
-      {n:'1',words:'"Our Father in heaven..."',label:'Identity · Voice',
-       meaning:"Before you communicate anything to anyone, settle whose voice you are — and where the authority for your message comes from.",
-       context:'God spoke and created the universe. He then delegated that creative capacity to humanity. <b class="god-name">Dabar</b> — the Word — is not merely information. John 1:1 says "In the beginning was the Word, and the Word was with God, and the Word was God." Your calling in the communication sphere is not to broadcast your opinion. It is to be a vehicle for the truth that gives life. That authority comes from whose child you are, not from the platform you have.',
-       verse:'"In the beginning was the Word... Through him all things were made; without him nothing was made that has been made."',vref:'John 1:1–3',
-       qs:[
-         {l:'What is the actual source of your authority to speak? Is it your platform, training, experience — or something deeper?',p:'Trace where you believe your voice really comes from...'},
-         {l:'How do you ensure what you communicate is genuinely true — not just your truth, but the truth that leads to life?',p:'A specific practice or accountability...'},
-         {l:'Where do you feel pressure to speak in ways not aligned with who you actually are — to perform a voice rather than inhabit one?',p:'The specific context where authenticity costs most...'}
-       ],pb:"Father, let the words I speak and create today carry your authority, not just my own opinion. Especially in..."},
-      {n:'2',words:'"Hallowed be your name..."',label:'Character · Truth',
-       meaning:"Jesus is the Truth — not a truth. The communication sphere\'s greatest crisis is the collapse of truth. You are called to make God\'s character as Truth visible.",
-       context:'<b class="god-name">The Truth</b> — Pilate asked "What is truth?" while looking truth in the face (John 18:38). Truth is not a propositional abstraction — it is a person. <b class="god-name">The Way</b> — the means, method, and media. Wisdom is described as "pure, peace-loving, gentle, willing to yield, full of mercy and good deeds, showing no favouritism and always sincere" (James 3:17). Hallowing God\'s name in the communication sphere means bringing this character into your journalism, storytelling, and social presence — not just the message but the medium.',
-       verse:'"The tongue of the wise adorns knowledge, but the mouth of the fool gushes folly."',vref:'Proverbs 15:2',
-       qs:[
-         {l:'Where in your current work are you most tempted to distort, amplify, or simplify beyond what is actually true?',p:'Not theoretical integrity — specific current temptation...'},
-         {l:'Which characteristic of wisdom — purity, peace-loving, gentle, merciful, unbiased, sincere — is most needed in the specific communication context you work in?',p:'The one most absent from your industry...'},
-         {l:'How do you hallow God\'s name through the way you communicate — not just the content but the manner, tone, and medium?',p:'What would change if HOW you communicate was an act of worship...'}
-       ],pb:"Hallowed be your name as the Truth through everything I create and communicate today. Let my work carry the character of wisdom — specifically..."},
-      {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Mission · Transformation',
-       meaning:"The communication sphere has the highest influence of any sphere — and the least direct power to force change.",
-       context:'"Give me the songs of a nation and it matters not who writes its laws" (attributed to Plato). The communication sphere can influence what an entire society values over a generation — without a single law being passed. <b class="god-name">Light</b> is one of God\'s primary metaphors for himself in communication — "Your word is a lamp to my feet" (Psalm 119:105). <strong>To change a society you must first change the language.</strong> The communication sphere is where the battle over the meaning of words is fought — and where Christians have often vacated the field.',
-       verse:'"The tongue has the power of life and death, and those who love it will eat its fruit."',vref:'Proverbs 18:21',
-       qs:[
-         {l:'What story or truth is most under-told in your current context — the injustice, the person, the narrative that dominant media ignores?',p:'The thing you feel the weight of naming...'},
-         {l:'How are the meanings of important words being redefined in your cultural context right now — and what is your role in the battle for truthful language?',p:'Words like family, truth, community, justice in your specific context...'},
-         {l:'What would it look like for your communication work to give life — not just information — to those who receive it?',p:'One specific project, story, or piece of content...'}
-       ],pb:"Your kingdom come through the words I create and share. Let truth go where lies have taken ground — specifically in..."},
-      {n:'4',words:'"Give us today our daily bread..."',label:'Dependence · Discernment',
-       meaning:"The communication sphere is the most noise-saturated environment in human history. You need daily discernment to know what to say, what not to say, and when to listen.",
-       context:'You cannot make anyone receive what you offer. The daily bread in this sphere is discernment — knowing the right word for the right moment, the right story for the right audience, and the wisdom to stay silent when silence is truthful. <b class="god-name">The Life</b> — the goal of communication — is not engagement metrics. It is "a rich and satisfying life" (John 10:10).',
-       verse:'"The right word at the right time — beautiful! The tongue of the wise makes knowledge attractive."',vref:'Proverbs 15:23; 15:2',
-       qs:[
-         {l:'What specific discernment do you need today — what to create, what to withhold, where to focus?',p:'The specific decision hanging over you right now...'},
-         {l:'Where are you most consuming content that is not giving you life — and what would it look like to fast from it?',p:'The platform, the feed, the noise that depletes...'},
-         {l:'What rhythm of silence and listening protects your inner life so that what you give comes from genuine depth?',p:'Your actual practice, not your aspiration...'}
-       ],pb:"Give me daily discernment about what to create, share, and withhold. Today I specifically need wisdom about..."},
-      {n:'5',words:'"Forgive us our debts, as we also have forgiven our debtors..."',label:'Honesty · Integrity',
-       meaning:"The communication sphere\'s specific confession: the gap between what you say and what you do.",
-       context:'Biased journalism is other than journalism — it is propaganda. Communication that serves the communicator\'s agenda rather than the community\'s need is a betrayal of the sphere\'s purpose. The standard this sphere is called to — and rarely achieves — is "full of grace and truth" (John 1:14). Grace and truth together. Not grace instead of truth, and not truth without grace.',
-       verse:'"I tell you, on the day of judgment people will give account for every careless word they speak."',vref:'Matthew 12:36',
-       qs:[
-         {l:'Is there content you have created, shared, or amplified that you know distorted the truth — for engagement, influence, or your own narrative?',p:'Without defensiveness or minimising...'},
-         {l:'Is there someone you have publicly misrepresented, misquoted, or unfairly characterised?',p:'The face that comes to mind...'},
-         {l:'Where is your communication currently serving your own interests rather than your audience\'s?',p:'The gap between your stated mission and your actual motivation...'}
-       ],pb:"Forgive me for the words that harmed rather than healed. Forgive me for content that was not fully true. I specifically need to address..."},
-      {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrender · Clarity',
-       meaning:"The communication sphere\'s specific warfare — being led rather than driven by platform, audience, or algorithm.",
-       context:'Algorithms are now the primary shaping force of what information people receive. The enemies of truthful communication are: bias dressed as objectivity, the prioritisation of engagement over truth, and the gradual corruption of the communicator\'s own perception through the content they consume. <strong>Those called to this sphere need to be led toward truth and away from the seduction of reach.</strong>',
-       verse:'"The truth will set you free."',vref:'John 8:32',
-       qs:[
-         {l:'What pressure from algorithms, audiences, or platforms is most tempting you to compromise your communication?',p:'Be specific about the mechanism...'},
-         {l:'What content or platform is currently forming you in ways that make it harder to see and speak clearly?',p:'The input that corrupts the output...'},
-         {l:'Who provides honest critique of your communication work — someone who will tell you when you have overstepped or served yourself rather than others?',p:'A real person, not a general commitment to accountability...'}
-       ],pb:"Deliver me from the temptation to make truth serve my narrative. Lead me toward... and away from..."}
-    ]
-  },
-  cel:{
-    color:'#c44499',colorBg:'rgba(196,68,153,0.07)',colorMid:'rgba(196,68,153,0.18)',
-    name:'Celebration',purpose:'To strengthen hope and build community — creating spaces where people encounter God\'s joy, rest, and beauty.',
-    godNames:['Yahweh-Tsidkenu — Righteousness','Yahweh-Shalom — Peace & Wholeness','Yahweh-Nissi — Joy & Victory','Creator of Beauty'],
-    heroSub:'Praying Through the Sphere of Celebration',
-    intro:'The celebration sphere — arts, entertainment, sport, music, food, culture — is the sphere with the most power to influence society and the least power to force it. Because you are called here, you encounter God as the source of Righteousness, Peace, and Joy — the God who sings over his people (Zephaniah 3:17), who designed feasts, festivals, and Sabbath as central to human flourishing. You are called to create the spaces where people remember who they are.',
-    phrases:[
-      {n:'1',words:'"Our Father in heaven..."',label:'Identity · Worship',
-       meaning:"Before you create anything for others, you need to know what you are actually doing. You are not performing. You are participating in the creativity of God.",
-       context:'God creates beauty that no human will ever see — coral reefs in unexplored depths, birdsong in forests no one walks through. He creates beauty because it is who he is, not because it leads to a salvation outcome. <b class="god-name">Elohim</b> — the creator God — is the God you image when you make something beautiful. Your creativity is not a talent to monetise or a ministry to justify. It is an act of bearing the image of the one who first spoke beauty into existence.',
-       verse:'"God saw all that he had made, and it was very good."',vref:'Genesis 1:31',
-       qs:[
-         {l:'When do you feel most fully yourself in your creative or celebratory work? What is happening in those moments?',p:'The specific flow state — when you know this is why you exist...'},
-         {l:'Have you ever believed your creative work is spiritually less significant than ministry? Where did that idea come from?',p:'Name the source — the person, the teaching, the culture...'},
-         {l:'What would change about how you approach your craft if you genuinely saw it as bearing the image of the Creator?',p:'One specific practical change...'}
-       ],pb:"Father, I come as one made in the image of the Creator. What I make today is not separate from who you are. Let me create as an act of..."},
-      {n:'2',words:'"Hallowed be your name..."',label:'Character · Beauty',
-       meaning:"Which aspect of God\'s character does your creative work most uniquely make visible? This is your specific calling within the sphere.",
-       context:'<b class="god-name">Yahweh-Tsidkenu</b> — the Lord our Righteousness — represents God\'s ability to make right what has gone wrong. Art has always carried this capacity — to name the brokenness, hold up a mirror, point toward what could be. <b class="god-name">Yahweh-Shalom</b> promises peace, wholeness, welfare, and completion. <b class="god-name">Yahweh-Nissi</b> — the Lord my banner — is the source of joy that comes from genuine victory. "The LORD your God is with you. He will take great delight in you; in his love he will no longer rebuke you, but will rejoice over you with singing" (Zephaniah 3:17).',
-       verse:'"He will rejoice over you with singing."',vref:'Zephaniah 3:17 — God himself is a celebrant. You are his image.',
-       qs:[
-         {l:'Which of God\'s character — righteousness, peace, or joy — does your specific creative gift most uniquely make visible?',p:'Not all three. The one that is your particular calling...'},
-         {l:'What story, sound, image, or experience are you most capable of creating that would genuinely strengthen hope in your community?',p:'Specific and honest about your current capacity...'},
-         {l:'Where in your creative work do you sense God\'s delight — the place where you and he are most aligned in what you are making?',p:'The work that feels like worship even when no one is watching...'}
-       ],pb:"Hallowed be your name through everything I create. Let your peace, righteousness, and joy be made visible through... especially in..."},
-      {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Mission · Culture',
-       meaning:"Art, music, sport, and celebration are how a culture tells itself its own story. You are called to be part of writing the Kingdom into that story.",
-       context:'"If you want to know how the next generation will live, listen to the music of this generation." Secular artists can diagnose what is broken but cannot prescribe the Kingdom answer. They can name dystopia — Hunger Games, The Matrix — but their trilogies end with the destruction of the bad system, never the construction of the Kingdom alternative. <strong>You have the cheat sheet.</strong> When you hallow the name of the one who created the stars, he gives you ideas no algorithm has generated.',
-       verse:'"Give me the songs of a nation and it matters not who writes its laws."',vref:'Attributed to Plato — cited in Spheres of Society teaching',
-       qs:[
-         {l:'What does the art, music, or cultural content of your community most reveal about what it values and fears right now?',p:'Read the cultural water your community is swimming in...'},
-         {l:'What story does your community most need to hear — one that names the brokenness AND points toward the Kingdom answer?',p:'Not just an exposé. A vision of what could be...'},
-         {l:'Where have you held back from creating something significant because it did not feel spiritual enough for your faith community?',p:'The work the church would not commission but the world needs...'}
-       ],pb:"Your kingdom come through beauty and celebration. Let what I create today name something true and point toward something hopeful — specifically..."},
-      {n:'4',words:'"Give us today our daily bread..."',label:'Dependence · Rest',
-       meaning:"The celebration sphere\'s daily bread is rest, delight, and renewal. You cannot give what you have not received.",
-       context:'God designed the Sabbath as the first celebration — rest and delight built into the fabric of creation before there was work to rest from. <b class="god-name">Yahweh-Shalom</b>\'s shalom includes "rest, welfare, and wholeness." The creative sphere runs on something that cannot be manufactured: genuine inspiration. And inspiration requires receptivity, not just productivity. The Christian in the celebration sphere has an extraordinary advantage — access to the God whose creativity produced the universe. But that access requires stillness.',
-       verse:'"In his presence there is fullness of joy; at his right hand are pleasures forevermore."',vref:'Psalm 16:11',
-       qs:[
-         {l:'What feeds your creativity — the specific experiences, places, practices, or relationships that genuinely renew your imagination?',p:'Not what you think should feed you. What actually does...'},
-         {l:'Are you currently operating from genuine creative overflow — or creative depletion?',p:'Honest inventory of your current creative wellbeing...'},
-         {l:'When did you last experience genuine joy in your creative work — not professional satisfaction, but actual delight?',p:'If you cannot remember, that is important information...'}
-       ],pb:"Give me today the creativity, rest, and delight I need to give generously. I receive from you today... Let me create from fullness in..."},
-      {n:'5',words:'"Forgive us our debts, as we also have forgiven our debtors..."',label:'Honesty · Redemption',
-       meaning:"The celebration sphere\'s specific confession: the way art can celebrate what should be mourned, or isolate rather than build community.",
-       context:'The celebration sphere, when created separate from God, "replaces healthy relationships with God, with people, and within ourselves, with the worship of the art itself." A celebration can build community or exclude the very people most in need of it. Nehemiah 8:10 showed that genuine celebration includes sharing with "those who have nothing prepared." The confession in this sphere is often about the gap between what was created and what it actually produced in people.',
-       verse:'"The tongue can bring death or life; those who love to talk will reap the consequences."',vref:'Proverbs 18:21',
-       qs:[
-         {l:'Is there creative work you have produced or participated in that celebrated what God mourns — or that isolated rather than included?',p:'Without minimising. What do you carry...'},
-         {l:'Is there a community — the poor, the marginalised, the uncelebrated — that your creative world tends to exclude? What would inclusion look like?',p:'Nehemiah\'s feast sent portions to those who had none...'},
-         {l:'Who in your creative community have you held a grievance toward — a competitor, a critic, an institution that overlooked you?',p:'Unforgiveness in the creative sphere corrupts the work...'}
-       ],pb:"Forgive me for the times my creativity served my own narrative rather than building others up. I need to address... and I choose to release..."},
-      {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrender · Integrity',
-       meaning:"The celebration sphere is the most influential and the most seductive. It needs the most specific prayer for protection.",
-       context:'"Whenever we step out of the spheres and are not there as the light, the darkness is there." The creative sphere that Christians have abandoned has not stayed neutral — it has been filled. The temptations include: creating for applause rather than for life, entertaining in ways that isolate rather than build community, and the slow drift of excellence without integrity. <b class="god-name">Yahweh-Nissi</b> — the Lord my banner — is the victory that has already been won. Your presence in this sphere is not naive optimism. It is participation in a Kingdom that has already triumphed.',
-       verse:'"Let your light shine before others, that they may see your good deeds and glorify your Father in heaven."',vref:'Matthew 5:16',
-       qs:[
-         {l:'What content, collaboration, or creative environment in your sphere is pulling you toward compromise — slowly, not dramatically?',p:'The gradual drift is harder to see than the obvious boundary...'},
-         {l:'What does it cost you — relationally, professionally, financially — to create with integrity in your current context? Are you willing to pay it?',p:'Name the actual cost, not the theoretical one...'},
-         {l:'How do you maintain your distinctiveness as a creator — the quality that makes your work recognisably shaped by God\'s character?',p:'Not a boundary. A quality. What does Kingdom creativity look like in your hands...'}
-       ],pb:"Deliver me from the temptation to create what gets applause rather than what gives life. Lead me toward... and protect me from the slow drift of..."}
-    ]
-  }
-};
 
-let currentSphere='com';
+// ═══════════════════════════════════════════════════════════════
+// SIX-MOVEMENT PRAYER ARC
+// P1 RECEIVING   — Worship / Body-check / Receive sonship
+// P2 BEHOLDING   — Hold a name / Scripture reflection / Personal testimony
+// P3 IMAGINING   — Spirit-led Kingdom vision
+// P4 CO-CREATING — Limitation + Imago Dei + daily step
+// P5 CONFESSING  — Invitation to receive grace / Intercession for others
+// P6 SURRENDERING— Awareness of warfare / Vigilance / Victorious standing
+// ═══════════════════════════════════════════════════════════════
+
+const SPHERES = {
+
+fam:{
+  color:'#ff3a30',colorBg:'rgba(255,58,48,0.07)',colorMid:'rgba(255,58,48,0.18)',
+  name:'Family',purpose:'To multiply life and establish God-given destiny in every individual.',
+  godNames:['Father — Abba','El Roi — The God Who Sees','Parakletos — Comforter','El Shaddai — All-Sufficient'],
+  heroSub:'Praying Through the Sphere of Family',
+  intro:'You are called to a sphere where everything that matters about human beings first takes shape. Before you give anything to the families you serve, receive what family was always meant to provide: a Father who runs toward you before you have your speech ready. Begin here — not with what you will do in this sphere, but with who runs to meet you.',
+  phrases:[
+  {n:'1',words:'"Our Father who art in heaven..."',label:'Receiving · Sonship',arc:'RECEIVING — worship first, then come home',
+   meaning:'This phrase does not begin with a request. It begins with a declaration of who God is and whose you are. Worship before you work. Receive before you give.',
+   context:'The prodigal son comes home rehearsing a servant\'s speech. The father does not wait for the speech. He runs. He throws his arms around him. He calls for the robe and the ring before a single word of confession is complete (Luke 15:20–22). <strong>This is the posture this phrase is asking you to inhabit — not earned re-entry, but a welcome that was always waiting.</strong>\n\nYou are not an orphan in a universe of chance. You were ransomed at a cost that had nothing to do with your performance. The cross was not a reward for good behaviour. It was the Father\'s decision about your worth before you had demonstrated any. And he is not just near — he is above every pressure, every pattern, every earthly weight you carry into this work. <em>Who art in heaven</em> is an invitation to lift your gaze.',
+   verse:'"See what great love the Father has lavished on us, that we should be called children of God! And that is what we are!"',vref:'1 John 3:1',
+   qs:[
+     {l:'Begin with worship. Tell God — in your own words — what it means that he is your Father, that you are his, that you were worth the cross to him. Let it be specific and personal.',p:'Not a formula. What is genuinely true about who he is that moves you right now...'},
+     {l:'What is your body carrying right now — stress, the weight of someone else\'s pain, hurry, the need to fix something? Name it without judgement.',p:'These are often indicators that you are being fathered by pressure rather than by peace...'},
+     {l:'Receive this slowly: the Father ran toward the prodigal before the speech was finished. He is running toward you right now. You do not have to be the strong one today. What does it feel like to let that be the truest thing about you — before you do anything for anyone?',p:'Don\'t rush past this. Let it land in your body, not just your mind...'}
+   ],
+   pb:"Father, you are above everything I carry today — above every broken family, every impossible situation, every weight I feel. I am yours. You ran toward me. Before I do anything, I receive..."},
+
+  {n:'2',words:'"Hallowed be your name..."',label:'Beholding · God\'s Character',arc:'BEHOLDING — hold a name, find it in Scripture, then in your own story',
+   meaning:'This is not a compliment given to God. It is an act of slow, deliberate contemplation — dwelling on a specific facet of who he is until it becomes more real than the pressures around you. Then: find it in the Bible. Then: find it in your own life.',
+   context:'<b class="god-name">El Roi</b> — the God who sees — first appears in Genesis 16:13. Hagar is alone in the desert with a child she cannot feed. Nobody is coming for her. And then: "You are the God who sees me." This name was not given by a theologian or a prophet. It was given by a desperate woman who had been overlooked by everyone. <strong>God reveals his names to people in the place where they most need what that name provides.</strong>\n\nThis is also how he reveals himself through the family sphere. The names that belong to this sphere — Abba, El Roi, Parakletos — are the names discovered by people who were abandoned, unseen, and alone. Meditating on them is not just theological exercise. It is encounter with the God who has been present in the most hidden places of family life all along.',
+   verse:'"You are the God who sees me."',vref:'Genesis 16:13 — El Roi, named by Hagar in the desert',
+   qs:[
+     {l:'Sit with one name that belongs to the family sphere — El Roi, Abba, Parakletos. Hold it. Don\'t analyse it. What does it show you about who God is that you most need right now?',p:'Not what you know about the name. What you see as you hold it quietly...'},
+     {l:'Where do you see this character of God expressed in Scripture — a specific story, a moment in Jesus\'s ministry, a teaching, a Psalm? What does the Bible show you about how he actually behaves?',p:'Let one specific story or passage come to mind. What happened? What did it reveal about him?...'},
+     {l:'Where have you seen this character of God in your own life, in someone else\'s story, in your culture or history — a moment where El Roi saw, or Abba ran, or the Comforter came?',p:'Your own testimony matters here. Where have you actually experienced this?...'}
+   ],
+   pb:"Hallowed be your name — El Roi, Abba, Parakletos. You are the God who sees what no one else notices. I have seen you act like this in... and I declare that you are this in the family sphere too."},
+
+  {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Imagining · Kingdom Vision',arc:'IMAGINING — Spirit-led vision, not strategy',
+   meaning:'This is not a planning question. It is an invitation to Spirit-led imagination. What does a family that reflects God\'s character actually look like in your specific context?',
+   context:'God\'s design for family was given before work existed, before governments formed, before religions organised. <strong>When families function as God designed — with identity received not earned, love given not withheld, destiny spoken not crushed — every other sphere is strengthened.</strong>\n\nThe mandate is not someday and not theoretical. It is "on earth as it is in heaven." In the families within your reach. In the culture you are embedded in. The Holy Spirit does not give generic visions — he shows you specific people, specific households, specific wounds with specific Kingdom answers.',
+   verse:'"Teach them to your children, talking about them when you sit at home and when you walk along the road."',vref:'Deuteronomy 11:19',
+   qs:[
+     {l:'Sit quietly. Ask the Holy Spirit: what does a family shaped by your Kingdom look like in my specific context? What images or faces come?',p:'Let them be specific. Write what you actually see, not what you think you should see...'},
+     {l:'What is the most significant gap between "on earth as it is in heaven" in the families you know — and what does the Kingdom answer look like that only God can give?',p:'Not a programme. A vision of what restored looks like in a specific family or situation...'},
+     {l:'What would change in how you work with families if you genuinely believed the Kingdom was available and near — not distant or theoretical?',p:'One specific change in posture, approach, or expectation...'}
+   ],
+   pb:"Your kingdom come in the families I serve — specifically in... Let me see what you see, and believe what you believe is possible for..."},
+
+  {n:'4',words:'"Give us today our daily bread..."',label:'Co-Creating · Dependence & Imago Dei',arc:'CO-CREATING — finite and image-bearer both. Declare both.',
+   meaning:'You are limited — you cannot heal a broken family alone. And you carry the image of the God who restores. Both things are true. This phrase asks you to live in that paradox rather than resolve it.',
+   context:'In the Garden, God did not create the world and then manage it from a distance. He walked in it. He invited Adam into the work. He was present in the daily tasks. <strong>This is the model for your calling in the family sphere</strong> — not heroic effort followed by burnout, but daily bread, daily presence, daily partnership.\n\nThe families you serve do not need a saviour. They have one. They need someone who shows up, carries the image of the one who restores, and does the next faithful thing.',
+   verse:'"The Lord God took the man and put him in the Garden of Eden to work it and take care of it."',vref:'Genesis 2:15 — partnership before the Fall',
+   qs:[
+     {l:'What specific limitation do you need to acknowledge to God today — the thing you genuinely cannot do for the families you serve?',p:'Name your actual limit, not a humble-sounding one...'},
+     {l:'What specific capacity do you carry as someone made in God\'s image for this work — the thing only you, in this place, at this time, can bring?',p:'Not modest. Not overconfident. Honest about what you actually carry...'},
+     {l:'What is the one next faithful step God is asking you to take today — not the whole plan, just today\'s bread?',p:'Daily obedience is more powerful than annual strategies...'},
+     {l:'What would it look like to work today as a co-creator — staying close to God\'s voice through the day, adjusting as he speaks?',p:'A specific practice for today, not a general intention...'}
+   ],
+   pb:"I am limited and I carry your image. Today I need you to provide... and today I bring... Let me be your co-worker in this, taking just today\'s step toward..."},
+
+  {n:'5',words:'"Forgive us our trespasses, as we forgive those who trespass against us..."',label:'Receiving Grace · Standing in the Gap',arc:'INVITATION — receive grace if needed. Then intercede for others.',
+   meaning:'This is not a demand for confession. It is an open door. If the Holy Spirit brings something to mind, this is a safe place to name it and receive grace. Then: stand in the gap for those who need what only prayer can provide.',
+   context:'Jesus builds this phrase into the Lord\'s Prayer not to produce guilt but to keep access to God unobstructed. Grace is always available. The door is always open. <strong>This is the moment to receive it if you need it — and then to use that same grace on behalf of others.</strong>\n\nEzekiel 22:30 describes a moment when God wanted to show mercy to a nation but needed someone to stand in the gap. The family sphere carries extraordinary need for intercession — families that are breaking, children who carry wounds not of their making, parents who are trying to give what they never received. You can stand between the brokenness and the God who heals.',
+   verse:'"I searched for someone to stand in the gap — someone who would build up the wall and stand before me in the breach — but I found no one."',vref:'Ezekiel 22:30',
+   qs:[
+     {l:'If the Holy Spirit is bringing anything to mind — a way you have not represented God\'s love well in the family sphere, in your own family, or in the families you serve — this is a safe place to name it and receive grace. No pressure. Just an open door.',p:'You don\'t have to have something to confess. But if something surfaces, receive grace for it here...'},
+     {l:'Now stand in the gap. Which family, community, or situation in your sphere needs you to pray on their behalf — to ask God to do what only he can do, in a place where his Kingdom is not yet visible?',p:'Name them specifically. Intercede for them now...'}
+   ],
+   pb:"I receive your grace where I need it today. And I stand in the gap for... Lord, let your love, your healing, your Kingdom come into this situation where I cannot go but you can."},
+
+  {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrendering · Spiritual Warfare',arc:'SURRENDERING — aware, vigilant, and victorious. Led through the battle.',
+   meaning:'This phrase is not primarily about what you have done wrong. It is about what you need to see clearly and stand against. The family sphere has specific battlegrounds. Name them. Then stand.',
+   context:'The enemy knows that when families break, every other sphere suffers. <strong>The warfare in this sphere is both personal and systemic</strong> — there are pressures on your own family and on the families you serve that are not merely cultural but actively spiritual. The temptations of this sphere are predictable: compassion fatigue that hardens into indifference, a saviour complex that creates dependency, and the carrying of spiritual weight that belongs to God alone.\n\nYou are not going into this sphere unprotected. "The one who is in you is greater than the one who is in the world" (1 John 4:4). But victory requires awareness. You cannot stand against what you have not named.',
+   verse:'"The one who is in you is greater than the one who is in the world."',vref:'1 John 4:4',
+   qs:[
+     {l:'What are the specific temptations and traps of the family sphere — compassion fatigue, saviour thinking, emotional enmeshment, carrying generational wounds that are not yours? Name the ones most active in your context.',p:'Naming them specifically is the beginning of standing against them...'},
+     {l:'Where do you feel most vulnerable to these right now — the specific area where a foothold could form if you are not watchful?',p:'Not general vulnerability. The specific current pressure point...'},
+     {l:'Declare your position in Christ over this sphere. What does standing firm look like for you today — the specific act of resistance or the specific decision that keeps the ground?',p:'Victory posture is active, not passive. What does it look like in practice today?...'}
+   ],
+   pb:"I stand against the specific warfare of this sphere — against... Lead me away from every trap and temptation, and let me stand firm today in... The one who is in me is greater than anything that comes against this work."}
+  ]
+},
+
+eco:{
+  color:'#ff9600',colorBg:'rgba(255,150,0,0.07)',colorMid:'rgba(255,150,0,0.18)',
+  name:'Economics',purpose:'To release provision and model stewardship — glorifying the Creator who works with humans as co-creators.',
+  godNames:['Elohim — Creator','Yahweh Jireh — Provider','El Shaddai — All-Sufficient','Rapha — Healer'],
+  heroSub:'Praying Through the Sphere of Economics',
+  intro:'You are called to a sphere where God\'s creativity was first expressed on earth. Before you produce, create, or steward anything today — receive the truth that you are not a self-made person in a competitive market. You are a co-creator with the God who made everything from nothing and is still innovating.',
+  phrases:[
+  {n:'1',words:'"Our Father who art in heaven..."',label:'Receiving · Sonship',arc:'RECEIVING — worship first, then come home',
+   meaning:'This phrase does not begin with a request. It begins with worship — declaring who God is and what it means that you belong to him. Then: receive the rest that only a child can receive.',
+   context:'The economic sphere\'s deepest identity trap is worth equals output. It is so embedded in the culture that you likely absorbed it without noticing. The feeling that rest is wasteful, that a slow day is a failed day, that your value rises and falls with the market — <strong>these are the patterns of a world that has forgotten whose child you are.</strong>\n\nYou are ransomed at a cost that had nothing to do with your productivity. The cross was not a return on investment. It was the Father\'s declaration that you are worth everything — before you built anything, earned anything, or delivered on any expectation. <em>Who art in heaven</em> lifts you above the earnings report, above the quarterly pressure, above the competitor\'s success. The God of economics is above all of it.',
+   verse:'"And by him we cry, Abba, Father. The Spirit himself testifies with our spirit that we are God\'s children."',vref:'Romans 8:15',
+   qs:[
+     {l:'Begin with worship. Tell God — in your own words — what it means that he is Creator, Provider, the source of every good thing. What moves you about who he is in this sphere?',p:'Not a formula. What genuinely stirs you about this God who creates from nothing and gives generously...'},
+     {l:'What is your body carrying right now — financial anxiety, performance pressure, comparison with others in your field, the weight of a decision? Name it.',p:'These are often indicators of being fathered by market pressure rather than by God...'},
+     {l:'Receive this slowly: your Father is not watching your metrics. He is looking at you. You are not a self-made person — you are his child and his co-creator. What does it feel like to let that be the truest thing about you today, before the markets open?',p:'Let it land before you open your laptop or check your phone...'}
+   ],
+   pb:"Father, you are above every financial pressure, every competitive threat, every performance expectation I carry. I am yours — not because I earned it. Before I create anything today, I receive..."},
+
+  {n:'2',words:'"Hallowed be your name..."',label:'Beholding · God\'s Character',arc:'BEHOLDING — hold a name, find it in Scripture, then in your own story',
+   meaning:'Before you do anything economic today, dwell on who God is in this sphere. Hold a name. Let it open. Find it in the Bible. Then find it in your own experience.',
+   context:'David Hamilton notes that God used four creation words: <em>bara\'</em> (create from nothing), <em>nawtaw</em> (stretch and amplify), <em>raca\'</em> (form and shape), <em>nathan</em> (give generously). <b class="god-name">Elohim</b> — the creating God — does not hoard his creativity. He creates, he amplifies, he forms, and he gives. He is not an extractive economy. He is an overflowing generative one.\n\n<b class="god-name">Yahweh Jireh</b> was named on a mountain where Abraham\'s worst fear became the location of God\'s provision. The name means "the Lord who sees and therefore provides." <strong>He provides because he sees.</strong> He does not provide from a spreadsheet. He provides from relationship.',
+   verse:'"God, the LORD, created the heavens and stretched them out. He created the earth and everything in it — giving breath and life to everyone."',vref:'Isaiah 42:5',
+   qs:[
+     {l:'Sit with one name — Elohim (Creator), Yahweh Jireh (Provider who sees), El Shaddai (All-Sufficient). Hold it. What does it show you about God\'s character in the economic sphere that you most need right now?',p:'Not what you know. What you see as you hold it quietly...'},
+     {l:'Where do you see this character of God expressed in Scripture — in creation, in how Jesus handled money and provision, in the Jubilee laws, in how God provided for Israel in the desert?',p:'Let one specific story come to mind. What did God actually do? What did it reveal about him?...'},
+     {l:'Where have you seen this character of God — his generosity, his provision, his creative problem-solving — in your own economic life, your community, or someone else\'s story?',p:'Your testimony matters. Where has Yahweh Jireh actually shown up?...'}
+   ],
+   pb:"Hallowed be your name — Elohim, Yahweh Jireh, the God who creates and provides generously. I have seen you act like this in... and I declare that you are this in my economic work today."},
+
+  {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Imagining · Kingdom Vision',arc:'IMAGINING — Spirit-led vision of Kingdom economics in your context',
+   meaning:'Let the Holy Spirit show you what economics looks like when God\'s character freely shapes it. Not strategy — vision. Not a Christian business model — something genuinely different.',
+   context:'God\'s economic vision is fundamentally generative and distributive. The Jubilee laws (Leviticus 25) were economic architecture built into the national calendar — debt cancelled, land returned, freedom restored. <strong>He designed economic systems that prevented permanent poverty and permanent inequality.</strong>\n\nThe first responsibility for those in poverty in Scripture belongs to family, then to the economic sphere — those who can create businesses and employment. "On earth as it is in heaven" in this sphere means wealth that gives life, not just profit. Innovation that solves real problems. Generosity that is structural, not occasional.',
+   verse:'"Build... plant... pray for the prosperity of the city — because if it prospers, you too will prosper."',vref:'Jeremiah 29:5–7',
+   qs:[
+     {l:'Ask the Holy Spirit: what does Kingdom economics look like in my specific industry, city, or context? What images or ideas come?',p:'Let them be concrete — a specific business model, a specific problem with a Kingdom solution, a specific person...'},
+     {l:'What economic problem in your context has no current solution — and what would the answer look like if God\'s character of generosity and provision were freely applied to it?',p:'Not what exists. What could exist if his will was done here...'},
+     {l:'What would you do differently in your economic work this week if "on earth as in heaven" was your actual mandate — not your Sunday aspiration?',p:'One specific change in how you approach your work...'}
+   ],
+   pb:"Your kingdom come in the economic sphere — in my specific work of... Let me see what a Kingdom solution looks like for... and give me courage to build toward it."},
+
+  {n:'4',words:'"Give us today our daily bread..."',label:'Co-Creating · Dependence & Imago Dei',arc:'CO-CREATING — finite and image-bearer. Daily bread as daily creative partnership.',
+   meaning:'You carry the image of the most creative being in the universe. You were made for this. And you cannot do it alone. Declare both. Then take today\'s step.',
+   context:'Adam\'s first job was a research assignment — naming the animals. Before there was commerce, industry, or a market, there was <strong>partnership with the Creator in the act of understanding, naming, and ordering the world.</strong> God gave Adam a problem and invited him into solving it together.\n\n<b class="god-name">El Shaddai</b> — the all-sufficient God — challenged his people to a generosity contest: "Try to out-give me" (Malachi 3:10). The economic sphere needs people who operate from abundance rooted in God rather than from scarcity driven by fear. Daily bread means: I listen today. I receive the idea God has. I take the next step he shows me.',
+   verse:'"Now the Lord God had formed out of the ground all the wild animals... He brought them to the man to see what he would name them."',vref:'Genesis 2:19 — the first research partnership',
+   qs:[
+     {l:'What specific limitation do you need to acknowledge to God today about your economic work — the problem that is genuinely beyond your current capacity?',p:'The honest admission before you try to solve it alone...'},
+     {l:'What specific creative capacity do you carry as someone made in God\'s image for this sphere? What does Elohim look like working through your particular gifts?',p:'Not modest. Honest about what you actually carry...'},
+     {l:'What is the one idea, insight, or step God has been showing you — that you have been carrying but not yet acting on? What is today\'s bread?',p:'Daily partnership often means acting on what he has already shown you...'},
+     {l:'How would your work today change if you approached each task as a co-creative conversation with God — listening as you work, adjusting as he speaks?',p:'A specific practice for today, not a general aspiration...'}
+   ],
+   pb:"I am finite and I carry your creative image. Today I need you to provide... Today I bring... Let me be your co-creator in this sphere, taking today\'s step toward..."},
+
+  {n:'5',words:'"Forgive us our trespasses, as we forgive those who trespass against us..."',label:'Receiving Grace · Standing in the Gap',arc:'INVITATION — receive grace if needed. Then intercede for economic systems and people.',
+   meaning:'This is not a demand for confession. It is an open door. If the Holy Spirit surfaces anything, receive grace. Then use that same grace to stand in the gap for the economic systems, businesses, and people who need what only prayer can provide.',
+   context:'God\'s economic vision — provision for all, no permanent poverty, generosity as the norm — is far from expressed in most of the world\'s economic systems. <strong>Someone needs to stand in the gap between what is and what God intends.</strong> That is part of what it means to be called to this sphere.\n\nThis is also a place to receive grace if the Holy Spirit surfaces anything — a compromise in integrity, a decision made from fear rather than faith, a way of treating money that has not reflected God\'s character. Grace is not expensive. It is free. The door is open.',
+   verse:'"If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness."',vref:'1 John 1:9',
+   qs:[
+     {l:'If the Holy Spirit is bringing anything to mind — an area of your economic life where you have not reflected God\'s character of generosity or integrity — this is a safe place to name it and receive grace. No pressure. Just an open door.',p:'You don\'t have to have something to confess. But if something surfaces, receive grace here...'},
+     {l:'Now stand in the gap. Which business, economic system, city, or person in your sphere needs intercession — where God\'s Kingdom of provision, justice, and generosity is not yet visible?',p:'Name them specifically. Ask God to move in what you cannot change on your own...'}
+   ],
+   pb:"I receive your grace where I need it today. And I stand in the gap for... Lord, let your economy of generosity and provision break through in... where only you can change what is broken."},
+
+  {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrendering · Spiritual Warfare',arc:'SURRENDERING — aware, vigilant, and victorious in the economic sphere',
+   meaning:'The economic sphere has predictable temptations. Name them. Know where you are vulnerable. Then stand in the authority God has given you — not in fear, but in victory.',
+   context:'The Law of the King in Deuteronomy 17 names the three persistent economic corruptions precisely: multiplying power, personal indulgence, and hoarding wealth. These are not ancient curiosities. <strong>Every economic failure of character follows one of these three paths.</strong> Solomon — the wisest man in the world — fell through all three, not suddenly but through gradual drift.\n\n"The one who is in you is greater than the one who is in the world" (1 John 4:4). You are not going into the marketplace unprotected or unequipped. But the enemy\'s strategy is patience and incrementalism. Awareness is your first line of defence.',
+   verse:'"No one can serve two masters. Either you will hate the one and love the other, or you will be devoted to the one and despise the other."',vref:'Matthew 6:24',
+   qs:[
+     {l:'What are the specific temptations of the economic sphere — greed, the love of money, dishonest gain, ungodly partnerships, worth measured by net worth? Which ones are most active in your context right now?',p:'Name them specifically. What forms do they take in your industry, your culture, your current season?...'},
+     {l:'Where do you feel most vulnerable to these right now — the specific pressure point where a foothold could form if you are not watchful?',p:'Not general vulnerability. The specific current weak point...'},
+     {l:'Declare your position in Christ over the economic sphere. What does standing firm look like for you today — the specific decision or posture that keeps the ground and refuses the enemy a foothold?',p:'Victory in the economic sphere is active. What is your specific act of standing today?...'}
+   ],
+   pb:"I stand against the specific temptations of this sphere — against... Lead me away from every economic trap, and let me stand firm today in... The one who is in me is greater than any pull toward..."}
+  ]
+},
+
+gov:{
+  color:'#b89000',colorBg:'rgba(184,144,0,0.07)',colorMid:'rgba(184,144,0,0.18)',
+  name:'Government',purpose:'To safeguard justice and create a peaceful, safe environment where every citizen can thrive.',
+  godNames:['Lawgiver — Chaqaq','Righteous Judge — Shaphat','King of Kings','Yahweh Shalom — Peace'],
+  heroSub:'Praying Through the Sphere of Government',
+  intro:'You are called to exercise authority in the sphere where power is the most intoxicating and the most corrupting. Before you govern anything, you need to be governed — to come as a child before a Father whose authority has never once been used for himself. Begin here.',
+  phrases:[
+  {n:'1',words:'"Our Father who art in heaven..."',label:'Receiving · Sonship',arc:'RECEIVING — worship first, then come as a child before you act as an authority',
+   meaning:'The most dangerous person in government is the one who does not know they are loved apart from their position. Begin with worship. Then receive the identity that holds steady when the position does not.',
+   context:'Jesus\'s most direct teaching on governmental authority came the night of his arrest, when his disciples were arguing about who would be greatest. He said: "Those who are regarded as rulers of the Gentiles lord it over them... Not so with you. Whoever wants to become great among you must be your servant" (Mark 10:42–43).\n\nYou hold authority in trust. <strong>You are accountable to a King above all kings — one whose governance has never been corrupted because it has never been for himself.</strong> This is not a pious addition to your work. It is the entire foundation of it. Governments that forget this become the thing they were supposed to prevent.',
+   verse:'"He controls the course of world events; he removes kings and sets up other kings."',vref:'Daniel 2:21',
+   qs:[
+     {l:'Begin with worship. Tell God — in your own words — what it means that he is the King above all kings, that his authority is perfectly just, that he governs with mercy and truth. What moves you about the way he holds power?',p:'Not a formula. What genuinely stirs you about this God whose authority has never been corrupted...'},
+     {l:'What is your body carrying right now — political pressure, fear of losing influence, the exhaustion of trying to hold things together, the weight of a decision? Name it.',p:'These are often indicators of an identity fused with position rather than with sonship...'},
+     {l:'Receive this slowly: you are a child before you are a person with authority. The King above all kings is your Father. Your authority is borrowed and temporary. What does it feel like to let that be the truest thing about you right now — before you make any decision today?',p:'Not as a threat to your effectiveness. As the foundation of your integrity...'}
+   ],
+   pb:"Father — King above all kings — I come as your child before I come as someone with authority. Your governance is perfect. Mine is borrowed. Before I decide anything today, I receive..."},
+
+  {n:'2',words:'"Hallowed be your name..."',label:'Beholding · God\'s Character',arc:'BEHOLDING — hold a name, find it in Scripture, then in your own story',
+   meaning:'Before you exercise any authority today, dwell on how God exercises his. Hold a name. Let it open. Find it in the Bible. Then find it in your own experience.',
+   context:'<b class="god-name">Chaqaq</b> — Lawgiver — means to cut or inscribe. God carved his own law into stone. He did not delegate it. He did not outsource it. And then he wrote it on hearts (Jeremiah 31:33). His laws are not for control — they are for flourishing.\n\n<b class="god-name">Shaphat</b> — Judge — is used 203 times in the Old Testament, 75 describing God himself as the actor. "The LORD is known for his justice; he is a shelter for the oppressed" (Psalm 9:7–9). <strong>God\'s governance is always on behalf of the vulnerable. The purpose of law is to give the weak access to justice.</strong> Meditating on this — really dwelling in it — is the most subversive act a person in government can perform.',
+   verse:'"The Lord is righteous in everything he does; he is filled with kindness."',vref:'Psalm 145:17',
+   qs:[
+     {l:'Sit with one name — Chaqaq (Lawgiver), Shaphat (Righteous Judge), Yahweh Shalom (Peace), King of Kings. Hold it. What does it show you about how God governs that you most need to carry into your work today?',p:'Not what you know. What you see as you hold it quietly...'},
+     {l:'Where do you see this character of God expressed in Scripture — in the way Jesus interacted with the powerful, in the Law\'s protection of the poor, in the prophets\' calls for justice? What specific moment comes to mind?',p:'What did God actually do? What did it reveal about how he governs?...'},
+     {l:'Where have you seen this character of God — his justice, his protection of the vulnerable, his peace-making — expressed in history, in someone\'s story, or in your own life in governance?',p:'Where has this God actually shown up in the sphere of government?...'}
+   ],
+   pb:"Hallowed be your name — Chaqaq, Shaphat, Yahweh Shalom. You govern with justice and kindness. I have seen you act like this in... and I declare that you are this in the governance sphere today."},
+
+  {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Imagining · Kingdom Vision',arc:'IMAGINING — Spirit-led vision of Kingdom governance in your specific context',
+   meaning:'Let the Holy Spirit show you what governance shaped by God\'s character looks like in your specific system or institution. Not utopia — something real, something possible, something near.',
+   context:'Isaiah 9:6–7 describes the Messiah\'s government: "He will reign, establishing and upholding it with justice and righteousness." <strong>Justice and righteousness are the two pillars.</strong> Not efficiency and power. Not growth and stability. Justice — every person having access to what is right — and righteousness — the character of the one governing aligned with God\'s own character.\n\nThe specific mandate is in Jeremiah 22:3: rescue from oppression, no wrong or violence to the foreigner, the fatherless, or the widow. This is not aspirational. It is the job description.',
+   verse:'"Do what is just and right. Rescue from the hand of the oppressor. Do no wrong or violence to the foreigner, the fatherless, or the widow."',vref:'Jeremiah 22:3',
+   qs:[
+     {l:'Ask the Holy Spirit: what does Kingdom governance look like in the specific system or institution I serve? What specific changes would make it more like heaven and less like the fallen version?',p:'Let the images be concrete — specific policies, specific people, specific decisions...'},
+     {l:'Who are the most vulnerable people in your specific context that the current system is failing to protect? What does the Kingdom answer look like for them?',p:'Name the people, not the category...'},
+     {l:'What would you need to do or risk — politically, professionally, relationally — to move your work one step closer to "on earth as it is in heaven" this week?',p:'Not the whole transformation. One step. What does it cost and what does it look like?...'}
+   ],
+   pb:"Your kingdom come in the governance system I serve — specifically in... Let justice and righteousness shape the decision I face today. Let me see the vulnerable you see."},
+
+  {n:'4',words:'"Give us today our daily bread..."',label:'Co-Creating · Dependence & Imago Dei',arc:'CO-CREATING — delegated authority, daily wisdom, daily partnership',
+   meaning:'You hold delegated authority — finite, temporary, accountable. And you bear the image of the God whose governance is perfect. Declare both. Ask for what only God can give today.',
+   context:'Gideon was called to lead when he had no army, no plan, and felt completely inadequate. His first act was to ask for a sign — not from arrogance but from honest awareness of his smallness. God did not despise this. He met it. And he named the place <b class="god-name">Yahweh Shalom</b> — the Lord is peace (Judges 6:24). The peace God gives is not the absence of conflict. It is the sufficiency that does not need to accumulate more than it needs.\n\n<strong>The daily bread of governance is daily wisdom: for today\'s decision, for today\'s encounter with complexity, for today\'s moment when power could corrupt and integrity could hold.</strong>',
+   verse:'"For lack of guidance a nation falls, but victory is won through many advisers."',vref:'Proverbs 11:14',
+   qs:[
+     {l:'What specific wisdom or courage do you need from God today — for a decision, a relationship, or a situation in your governance work that is beyond your current capacity?',p:'The specific thing you cannot navigate alone...'},
+     {l:'What specific capacity do you carry as someone made in God\'s image for this sphere — what does righteous governance look like through your particular gifts and role?',p:'Honest about what you actually carry into this work...'},
+     {l:'What is today\'s one faithful act — the decision or action that would reflect Kingdom governance rather than self-protective governance?',p:'Daily obedience in governance is often smaller and more specific than we expect...'},
+     {l:'How would your day change if you approached each decision as co-governance with God — checking with him as you go?',p:'A specific practice for today, not a general intention...'}
+   ],
+   pb:"I hold this authority in trust. Today I need your wisdom for... Today I bring... Let me govern as a co-worker with the King of Kings, taking today\'s step toward..."},
+
+  {n:'5',words:'"Forgive us our trespasses, as we forgive those who trespass against us..."',label:'Receiving Grace · Standing in the Gap',arc:'INVITATION — receive grace if needed. Then intercede for the systems and people who need justice.',
+   meaning:'This is not a demand. It is an open door — receive grace if the Spirit surfaces anything. Then stand in the gap for the people and systems in your sphere that need what only prayer can reach.',
+   context:'The greatest need in the governance sphere is not better strategy — it is intercession. <strong>Someone needs to stand between the brokenness of human systems and the God who governs with perfect justice and mercy.</strong> That is part of your calling in this sphere.\n\nIf the Holy Spirit surfaces anything — a decision that did not reflect God\'s justice, a silence when your voice was needed, a way your authority was used for self rather than service — grace is available. The door is open. There is no condemnation for those in Christ Jesus.',
+   verse:'"There is now no condemnation for those who are in Christ Jesus."',vref:'Romans 8:1',
+   qs:[
+     {l:'If the Holy Spirit is bringing anything to mind — a decision made for self rather than service, a silence when justice required your voice, a way power was used that did not reflect God\'s character — this is a safe place to name it and receive grace. No pressure. Just an open door.',p:'You don\'t have to have something to confess. But if something surfaces, receive grace here...'},
+     {l:'Now stand in the gap. Which person, community, or system in your governance sphere needs intercession — where injustice persists, where the vulnerable have no voice, where God\'s will is not yet done?',p:'Name them specifically. Pray on their behalf now...'}
+   ],
+   pb:"I receive your grace where I need it today. And I stand in the gap for... Lord, let your justice, your peace, your Kingdom come into this governance situation where only you can reach."},
+
+  {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrendering · Spiritual Warfare',arc:'SURRENDERING — aware, vigilant, and standing firm against the specific warfare of governance',
+   meaning:'The governance sphere has ancient and well-documented temptations. Name them. Know where you are vulnerable. Then stand in the authority of Christ — not fearfully, but victoriously.',
+   context:'Deuteronomy 17 names the three governance corruptions precisely: military power for its own sake, personal indulgence, and financial accumulation. <strong>Every governmental failure follows one of these three paths.</strong> Solomon fell through all three — not suddenly, but through gradual, incrementally rationalised drift.\n\nYou are not in this sphere without protection. "The God of peace will soon crush Satan under your feet" (Romans 16:20). But the enemy\'s strategy in governance is patience and incremental compromise. Awareness is not paranoia — it is the beginning of standing firm.',
+   verse:'"Be self-controlled and alert. Your enemy the devil prowls around like a roaring lion looking for someone to devour. Resist him, standing firm in the faith."',vref:'1 Peter 5:8–9',
+   qs:[
+     {l:'What are the specific temptations of the governance sphere — the love of power, political compromise of conscience, financial conflict of interest, protecting position over protecting people? Which are most active in your context?',p:'Name them specifically in the context of your current role and season...'},
+     {l:'Where do you feel most vulnerable to these right now — the specific pressure point where the enemy could gain a foothold if you are not watchful?',p:'Not general vulnerability. The specific current weak point in your position or context...'},
+     {l:'Declare your position in Christ over this sphere. What does standing firm look like for you today — the specific decision, boundary, or act of accountability that keeps the ground?',p:'Standing firm in governance is active and specific. What is your act of resistance today?...'}
+   ],
+   pb:"I stand against the specific warfare of the governance sphere — against the temptations of power, compromise, and self-protection. Lead me away from every trap, and let me stand firm today in... The King of Kings governs through me, and I will not give the enemy a foothold in..."}
+  ]
+},
+
+rel:{
+  color:'#5a8a00',colorBg:'rgba(90,138,0,0.07)',colorMid:'rgba(90,138,0,0.18)',
+  name:'Religion',purpose:'To extend mercy, promote reconciliation, and equip God\'s people for every sphere of society.',
+  godNames:['Priest — Mediator','Prophet — Voice of God','Intercessor','Yahweh Raah — Shepherd'],
+  heroSub:'Praying Through the Sphere of Religion',
+  intro:'You are called to the sphere that is the coaching staff for all the others. Before you lead anyone else into the Father\'s presence — before you speak a word, stand in the gap, or release anyone into their calling — receive what you are trying to give. Begin here.',
+  phrases:[
+  {n:'1',words:'"Our Father who art in heaven..."',label:'Receiving · Sonship',arc:'RECEIVING — worship first, then come as a child before you minister',
+   meaning:'The most dangerous version of religious ministry is the one that knows all the right words about sonship but operates from orphan-spirit anxiety. Begin with worship. Then actually receive.',
+   context:'A priest speaks to God on behalf of the people. A prophet speaks to the people on behalf of God. Both functions require one thing first: you have actually been to the Father yourself. <strong>You cannot mediate what you have not received.</strong>\n\nThe religious sphere\'s specific earthly pattern is performance — the need to produce spiritual results, to be needed, to measure your worth by the transformation of others. These are the patterns of a world that has confused the ministry with the minister. <em>Who art in heaven</em> lifts you above your programme, your congregation\'s response, your denomination\'s expectations. God is above your metrics. You are his child, not his employee.',
+   verse:'"Jesus is able, once and forever, to save those who come to God through him. He lives forever to intercede with God on their behalf."',vref:'Hebrews 7:25',
+   qs:[
+     {l:'Begin with worship. Tell God — in your own words — what it means that he is your Shepherd, your Priest, your Intercessor. What moves you about who he is in the ministry sphere?',p:'Not a formula. What genuinely stirs you about this God who mediates, who stands in the gap, who laid down his life for the sheep...'},
+     {l:'What is your body carrying right now — the pressure of others\' expectations, ministry exhaustion, the anxiety of whether your work is working? Name it.',p:'These are often indicators that identity is fused with ministry output rather than sonship...'},
+     {l:'Receive this slowly: you are a child before you are a minister. The Father is not grading your intercession. He is holding you. What does it feel like to let that be the truest thing about you today, before you give anything to anyone?',p:'Don\'t move past this to ministry tasks. Let it land...'}
+   ],
+   pb:"Father, you are my Shepherd before I shepherd anyone else. I am yours — not because of my ministry results. Before I give anything today, I receive..."},
+
+  {n:'2',words:'"Hallowed be your name..."',label:'Beholding · God\'s Character',arc:'BEHOLDING — hold a name, find it in Scripture, then in your own story',
+   meaning:'Before you proclaim anything about God, dwell in who he actually is. Hold a specific name. Let it open. Find it in Scripture. Then find it in your own experience.',
+   context:'<b class="god-name">Yahweh Raah</b> — the Shepherd — first appears in Psalm 23 and reaches its fullest expression in John 10. The shepherd knows his sheep by name (v.3). He goes ahead of them (v.4). He lays down his life (v.11). He leaves the ninety-nine for the one (Luke 15:4–5). <strong>This God does not maintain a system. He pursues people.</strong>\n\nThis is the God of the religious sphere. Mediating on him — really dwelling in who he is — is the foundation that prevents the religious sphere from becoming an institution that manages access to God rather than providing it.',
+   verse:'"My sheep listen to my voice; I know them, and they follow me."',vref:'John 10:27',
+   qs:[
+     {l:'Sit with one name — Yahweh Raah (Shepherd), Priest, Prophet, Intercessor. Hold it. What does it show you about God\'s character in ministry that you most need right now?',p:'Not what you know. What you see as you hold it quietly...'},
+     {l:'Where do you see this character of God expressed in Scripture — in how Jesus ministered to individuals, in how he treated the religious leaders versus the outsiders, in the way the early church lived?',p:'Let one specific story come to mind. What did God actually do? What did it reveal about him?...'},
+     {l:'Where have you seen this character of God — his pursuit of the one, his laying down of status, his restoration of the broken — in your own ministry, in someone else\'s story, in your community?',p:'Where has Yahweh Raah actually shown up as Shepherd in your experience?...'}
+   ],
+   pb:"Hallowed be your name — Yahweh Raah, the Shepherd who pursues and restores. I have seen you act like this in... and I declare that you are this in the ministry sphere today."},
+
+  {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Imagining · Kingdom Vision',arc:'IMAGINING — what does Kingdom ministry look like in your specific context?',
+   meaning:'Let the Holy Spirit show you what the religious sphere looks like when it is actually doing its job — coaching staff, not players; releasing people into every sphere, not recruiting them into religious activity.',
+   context:'Paul makes the mandate explicit: God gave apostles, prophets, evangelists, pastors and teachers "to equip his people for works of service" (Ephesians 4:11–12). <strong>The equipping is the ministry. The release is the success.</strong>\n\nThe volleyball analogy: the coach does not play the game. When the church puts coaches on the field and athletes on the sideline, both the game and the players suffer. "On earth as it is in heaven" in this sphere means every believer empowered for their sphere — not recruited for more religious activity.',
+   verse:'"To equip his people for works of service, so that the body of Christ may be built up."',vref:'Ephesians 4:12',
+   qs:[
+     {l:'Ask the Holy Spirit: what does a Kingdom-shaped religious community look like in my specific context? What images of genuinely equipped and released people come to mind?',p:'Let them be concrete. Specific people, specific spheres they are being released into...'},
+     {l:'Who in your community is called to a sphere outside the church — and are you genuinely equipping and releasing them, or hoping they will stay?',p:'Name specific people. What does release actually look like for them?...'},
+     {l:'What would it look like for your community to measure success primarily by the impact its people are having in their spheres? What would change?',p:'One specific metric or practice that would shift if this were true...'}
+   ],
+   pb:"Your kingdom come through the people I equip today. Let my ministry multiply into the spheres through... Give me grace to release rather than retain..."},
+
+  {n:'4',words:'"Give us today our daily bread..."',label:'Co-Creating · Dependence & Imago Dei',arc:'CO-CREATING — you cannot transform anyone. Only the Spirit can. And you are the vessel. Declare both.',
+   meaning:'You are entirely dependent on God — you cannot save, heal, or transform anyone. And you bear his image as Priest, Prophet, and Intercessor. Both are true. Daily bread in this sphere is daily anointing.',
+   context:'Ezekiel 22:30 describes a moment when God wanted to show mercy but needed someone to stand in the gap. <strong>Your presence and your prayer matter.</strong> But you cannot intercede from an empty place.\n\n<b class="god-name">Yahweh Raah</b> leads beside still waters and restores the soul (Psalm 23:2–3). Before you stand in the gap for a nation, let him restore yours. Daily bread in ministry is first received, then distributed.',
+   verse:'"I searched for someone to stand in the gap — but I found no one."',vref:'Ezekiel 22:30',
+   qs:[
+     {l:'What specific anointing, wisdom, or renewal do you need from God today — for a person, a service, a community you are responsible for?',p:'The specific thing only God can provide for today\'s work...'},
+     {l:'What specific capacity do you carry as someone made in God\'s image as Priest, Prophet, or Intercessor? What does that look like through your particular gifts?',p:'Not modest. Honest about what you carry...'},
+     {l:'Who specifically are you standing in the gap for right now? Name them.',p:'Daily intercession is most powerful when it is specific and personal...'},
+     {l:'How would your ministry change if you received from God first, every day, before you attempted to give to others?',p:'A specific daily practice — not a general aspiration...'}
+   ],
+   pb:"I cannot do this work alone. And I carry your image for this sphere. Today I need... Today I bring... Let me stand in the gap for... and receive before I give."},
+
+  {n:'5',words:'"Forgive us our trespasses, as we forgive those who trespass against us..."',label:'Receiving Grace · Standing in the Gap',arc:'INVITATION — receive grace if needed. Then intercede for the church and the spheres.',
+   meaning:'This is not a demand for confession. It is an open door. If the Holy Spirit surfaces anything, receive grace. Then use that same grace to intercede for the institutions, communities, and people in your sphere who need what only prayer can provide.',
+   context:'The purpose of the religious sphere is the extension of mercy and the promotion of reconciliation — horizontally between people and vertically between people and God. <strong>Intercession is the specific act of standing between the brokenness of the world and the God who heals.</strong>\n\nIf the Spirit surfaces something — a way performance crept in, a word that was more about you than about God, a way your ministry served your own need — grace is immediately and freely available. The door is always open.',
+   verse:'"If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness."',vref:'1 John 1:9',
+   qs:[
+     {l:'If the Holy Spirit is bringing anything to mind — a way you have not represented God\'s grace and truth well in this sphere, a way ministry became performance — this is a safe place to name it and receive grace. No pressure. Just an open door.',p:'You don\'t have to have something to confess. But if something surfaces, receive grace here...'},
+     {l:'Now stand in the gap. Which church, community, institution, or person in the religious sphere needs intercession — where God\'s mercy and truth are not yet visible, where healing is needed, where reconciliation is still far off?',p:'Name them specifically. Intercede on their behalf now...'}
+   ],
+   pb:"I receive your grace where I need it today. And I stand in the gap for... Lord, let your mercy, your reconciliation, your Kingdom break through in this corner of the religious sphere."},
+
+  {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrendering · Spiritual Warfare',arc:'SURRENDERING — aware and standing firm against the specific warfare of religious ministry',
+   meaning:'The religious sphere is simultaneously the most needed and the most capable of distortion. Its temptations wear the language of faithfulness — which makes them much harder to see than those of other spheres.',
+   context:'The temptations specific to this sphere include: the misuse of spiritual authority, the substitution of institutional growth for Kingdom growth, and the confusion of spiritual gifts with spiritual importance. <strong>These are not dramatic failures. They are the slow drift that happens below the level of conscious decision.</strong>\n\n<b class="god-name">Jesus the Intercessor</b> lives forever to intercede — he never stopped, never accumulated power, never confused his role with his identity. That is both the model and the impossible standard that keeps us dependent on grace.',
+   verse:'"Whoever wants to become great among you must be your servant."',vref:'Mark 10:43',
+   qs:[
+     {l:'What are the specific temptations of the religious sphere — spiritual authority misused, institutional loyalty over Kingdom faithfulness, confusing your gift with your importance, needing to be needed? Which are most active in your context?',p:'Name them specifically in the language of your own ministry context...'},
+     {l:'Where do you feel most vulnerable to these right now — the specific area where the enemy could gain a foothold in your ministry if you are not watchful?',p:'Not general vulnerability. The specific current pressure point...'},
+     {l:'Declare your position in Christ over this sphere. What does standing firm look like for you today — the specific act of humility, accountability, or surrender that keeps the ground?',p:'Standing firm in ministry is often smaller and more specific than we expect. What is your act today?...'}
+   ],
+   pb:"I stand against the specific warfare of this sphere — against the temptations of spiritual pride, institutional loyalty over Kingdom faithfulness, and confusing my gift with my identity. Lead me away from every trap and let me stand firm today in..."}
+  ]
+},
+
+edu:{
+  color:'#1a9ab8',colorBg:'rgba(26,154,184,0.07)',colorMid:'rgba(26,154,184,0.18)',
+  name:'Education',purpose:'To develop the God-given gifts in every child for the service of their fellow human beings in society.',
+  godNames:['Teacher — Logos','Shepherd — Yahweh Raah','Warrior — 2 Cor 10','Wisdom — Sophia'],
+  heroSub:'Praying Through the Sphere of Education',
+  intro:'You are called to the sphere where the next generation\'s understanding of reality is formed. Before you form anyone else, you need to be formed — to come as a learner to the Teacher who calls things by their true names and sees every student the way the Shepherd sees every sheep. Begin here.',
+  phrases:[
+  {n:'1',words:'"Our Father who art in heaven..."',label:'Receiving · Sonship',arc:'RECEIVING — worship first, then come as a learner before you come as a teacher',
+   meaning:'The teacher who has stopped being a learner is the most dangerous person in the classroom. Begin with worship. Then receive your own identity as a child of the God who is himself a Teacher.',
+   context:'The word disciple — <em>mathetes</em> in Greek — means learner. Jesus was called Rabbi (Teacher) 19 times in the Gospels, and his followers were called learners. <strong>The entire Christian life is structured as a learning relationship with God.</strong> Before you teach, you learn.\n\nThe educator\'s specific earthly pattern is standardisation — the pressure to produce measurable outcomes, to conform students to a system, to measure worth by test scores. <em>Who art in heaven</em> lifts your gaze above all of it. The God who made every student is not interested in their standardised performance. He is interested in the specific, irreplaceable gift he placed in each one.',
+   verse:'"The goal of education is to develop the God-given gifts in every child for the service of their fellow human beings."',vref:'Lois Lebar — cited in Spheres of Society teaching',
+   qs:[
+     {l:'Begin with worship. Tell God — in your own words — what it means that he is the Teacher, the Shepherd of individual souls, the Warrior for truth in every mind. What moves you about who he is in the educational sphere?',p:'Not a formula. What genuinely stirs you about this God who sees every student the way the shepherd sees every sheep...'},
+     {l:'What is your body carrying right now — the pressure of outcomes, the weight of a struggling student, the exhaustion of a system that does not support what you know good education is? Name it.',p:'These are often indicators that identity is fused with student performance rather than sonship...'},
+     {l:'Receive this slowly: you are a learner before you are a teacher. The Father who teaches you is endlessly patient, personally invested, and sees gifts in you that you cannot see in yourself. What does it feel like to receive that today, before you enter a classroom?',p:'Let it land before you go to work...'}
+   ],
+   pb:"Father — Teacher, Shepherd, Warrior for truth — I come as your student before I teach anyone today. Before I unlock anyone else\'s potential, I receive..."},
+
+  {n:'2',words:'"Hallowed be your name..."',label:'Beholding · God\'s Character',arc:'BEHOLDING — hold a name, find it in Scripture, then in your own story',
+   meaning:'Before you enter the classroom, dwell on who God is as Teacher, Shepherd, and Warrior. Hold a specific name. Let it open. Find it in Scripture. Then find it in your own experience.',
+   context:'Two Hebrew verbs describe God\'s teaching action: <em>yarah</em> (used 24 times with God as teacher) and <em>lamad</em> (used 23 times). All three persons of the Trinity teach. <b class="god-name">God as Warrior</b> (2 Corinthians 10:3–5) is the specific character needed in education because Paul identifies it as the arena where the war is most fiercely waged for the hearts and minds of the emerging generation.\n\n<b class="god-name">Sophia</b> — the Wisdom of God — is described in Proverbs 8 as present at creation, delighting in human beings. <strong>God\'s wisdom does not just transfer information — it forms character, unlocks potential, and delights in the learner.</strong> This is what hallowing his name looks like in the educational sphere.',
+   verse:'"The fear of the Lord is the beginning of wisdom, and knowledge of the Holy One is understanding."',vref:'Proverbs 9:10',
+   qs:[
+     {l:'Sit with one name — Logos (Teacher), Yahweh Raah (Shepherd who sees each student), Sophia (Wisdom that forms character). Hold it. What does it show you about education that you most need to carry into your teaching today?',p:'Not what you know. What you see as you hold it quietly...'},
+     {l:'Where do you see this character of God expressed in Scripture — in how Jesus taught, in the way wisdom is described in Proverbs, in how God formed the great figures of the Bible?',p:'Let one specific story or passage come to mind. What did God actually do as Teacher?...'},
+     {l:'Where have you seen this character of God — his patient formation of a student, his truth that transformed a mind — in your own life, in a student\'s story, in someone who shaped you?',p:'Your testimony matters here. Where has God the Teacher actually shown up?...'}
+   ],
+   pb:"Hallowed be your name — Logos, Shepherd, Warrior for truth. You form people, not just inform them. I have seen you act like this in... and I declare that you are this in my classroom today."},
+
+  {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Imagining · Kingdom Vision',arc:'IMAGINING — what does Kingdom education look like in your specific context?',
+   meaning:'Let the Holy Spirit show you what education shaped by God\'s character looks like in your specific classroom, school, or context. Not a theory — specific students, specific transformation.',
+   context:'God designed education to be individually-focused, character-forming, and family-rooted (Deuteronomy 6:6–9). AI is now transforming what education is for — if AI provides all information, then education that forms <strong>relational capacity, character, wisdom, and the discovery of God-given gifts</strong> becomes the most important formation of the next generation.\n\n"On earth as it is in heaven" in this sphere means every child\'s God-given gifts developed to their God-given potential. It is the most ambitious educational vision imaginable — and the only one worth working toward.',
+   verse:'"In the future your children will ask you... and you shall tell them."',vref:'Deuteronomy 6:20–21',
+   qs:[
+     {l:'Ask the Holy Spirit: what does Kingdom education look like in my specific classroom or institution? What images of genuinely formed students come to mind?',p:'Let them be concrete. A specific student. A specific moment of genuine formation...'},
+     {l:'What would education in your context look like if it measured success by the development of each student\'s God-given gifts rather than standardised outcomes?',p:'One structural or methodological change — not theoretical, but practical for this week...'},
+     {l:'What are you prepared to do differently — in how you teach, in what you prioritise — to move your classroom one step closer to "on earth as it is in heaven"?',p:'Not the whole reform. One step. What specifically?...'}
+   ],
+   pb:"Your kingdom come in this place of learning — specifically for... Let the gifts you placed in [specific student] be unlocked today. Give me courage to prioritise formation over compliance."},
+
+  {n:'4',words:'"Give us today our daily bread..."',label:'Co-Creating · Dependence & Imago Dei',arc:'CO-CREATING — you cannot unlock potential alone. Only God can. And you bear his image as Teacher.',
+   meaning:'You are genuinely dependent on God for the work of formation — you cannot cause transformation, you can only create conditions for it. And you bear the image of the one who first named the animals\' gifts. Both are true. Declare both.',
+   context:'Adam\'s naming of the animals was, at its heart, an act of education — seeing something, understanding it, and giving it the name that revealed its nature. God invited Adam into this before there was a curriculum, because <strong>education is fundamentally an act of co-creation with the God who made every learner in his image.</strong>\n\nThe daily bread of the education sphere is daily revelation: fresh eyes for the student who is hiding, fresh wisdom for the situation you have not encountered before, fresh strength for the day that is harder than the last.',
+   verse:'"Teach me your ways, O Lord, that I may live according to your truth."',vref:'Psalm 86:11',
+   qs:[
+     {l:'What specific insight or wisdom do you need from God today — for a student, a class, or a situation in your educational work that you are currently at a loss with?',p:'Name the specific person or situation...'},
+     {l:'What specific capacity do you carry as someone made in God\'s image for this sphere — the gift that makes God\'s teaching visible through your particular approach?',p:'The thing that is distinctively yours...'},
+     {l:'What is today\'s one faithful act of formation — not the whole student\'s transformation, just today\'s bread?',p:'The specific thing God is asking you to do for a specific student today...'},
+     {l:'How would your teaching change if you listened to God before and during each lesson — staying in conversation with him about what he wants to do in this room today?',p:'A specific practice for today, not a general aspiration...'}
+   ],
+   pb:"I cannot form anyone alone. And I carry your image as Teacher. Today I need insight for... Today I bring... Let me be your co-educator with..."},
+
+  {n:'5',words:'"Forgive us our trespasses, as we forgive those who trespass against us..."',label:'Receiving Grace · Standing in the Gap',arc:'INVITATION — receive grace if needed. Then intercede for students and systems.',
+   meaning:'This is not a demand. It is an open door. If the Holy Spirit surfaces anything, receive grace. Then intercede for the students, families, and educational systems that need what only prayer can reach.',
+   context:'The Holy Spirit knows the deepest needs of every student in your care — the wounds they carry, the gifts they have not yet found, the lies about their worth they have believed. <strong>You can stand in the gap for them.</strong> Prayer in the educational sphere is not supplementary to teaching — it is the most powerful educational act available to you.\n\nIf the Spirit surfaces something — a word that diminished rather than drew out, a student you have given up on, a way the system\'s pressure caused you to prioritise compliance over formation — grace is immediately and freely available.',
+   verse:'"The Spirit helps us in our weakness. We do not know what we ought to pray for, but the Spirit himself intercedes for us."',vref:'Romans 8:26',
+   qs:[
+     {l:'If the Holy Spirit is bringing anything to mind — a word spoken that diminished rather than drew out, a student you have mentally written off, a way institutional pressure overrode your better instincts — this is a safe place to name it and receive grace. No pressure. Just an open door.',p:'You don\'t have to have something to confess. But if something surfaces, receive grace here...'},
+     {l:'Now stand in the gap. Which student, class, school, or educational system needs intercession — where God\'s design for individual formation and dignity is not being expressed?',p:'Name them specifically. Pray on their behalf right now...'}
+   ],
+   pb:"I receive your grace where I need it today. And I stand in the gap for... Lord, let your wisdom, your dignity for every learner, your Kingdom design for education break through in..."},
+
+  {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrendering · Spiritual Warfare',arc:'SURRENDERING — aware and standing firm against the specific warfare of education',
+   meaning:'Paul identifies the education sphere as a site of spiritual warfare. Name the specific temptations and battlegrounds. Know where you are vulnerable. Then stand — not fearfully, but in the authority of Christ.',
+   context:'The temptations of this sphere include: teaching what is institutionally safe rather than true, conforming to ideological curriculums that diminish human dignity, giving up on the students the system has written off, and allowing the industrial educational model to define success in ways that conflict with God\'s design.\n\n<strong>"Faithfulness and integrity will win the day" — not cleverness, not position, not volume.</strong> But faithfulness in education requires being actively led through moments of institutional pressure, because the temptation to comply rather than confront is constant and usually rationalised as pragmatism.',
+   verse:'"We use God\'s mighty weapons to knock down the strongholds of human reasoning and to destroy false arguments."',vref:'2 Corinthians 10:4',
+   qs:[
+     {l:'What are the specific temptations of the educational sphere — ideological pressure, giving up on difficult students, teaching for compliance rather than formation, institutional loyalty over truth? Which are most active in your context?',p:'Name them specifically in your current teaching context and season...'},
+     {l:'Where do you feel most vulnerable right now — the specific student, situation, or institutional pressure where a foothold could form if you are not watchful?',p:'Not general vulnerability. The specific current weak point...'},
+     {l:'Declare your position in Christ over this sphere. What does standing firm look like for you today — the specific decision, boundary, or act of faithfulness that keeps the ground?',p:'Standing firm in education is specific. What is your act of resistance or faithfulness today?...'}
+   ],
+   pb:"I stand against the specific warfare of the education sphere — against ideological pressure, against giving up on any student, against choosing safe over true. Lead me away from every trap and let me stand firm today in..."}
+  ]
+},
+
+com:{
+  color:'#595ad3',colorBg:'rgba(89,90,211,0.07)',colorMid:'rgba(89,90,211,0.18)',
+  name:'Communication',purpose:'To transfer wisdom and promote healthy relationships — naming reality truthfully in every medium.',
+  godNames:['The Way — Method & Means','The Truth — Content & Clarity','The Life — Goal & Outcome','Dabar — The Living Word'],
+  heroSub:'Praying Through the Sphere of Communication',
+  intro:'You are called to the sphere where reality is named, stories are told, and the meaning of words is contested daily. Before you speak anything, before you create anything — receive the Word that was spoken before you existed. Come as one who has heard before you speak.',
+  phrases:[
+  {n:'1',words:'"Our Father who art in heaven..."',label:'Receiving · Sonship',arc:'RECEIVING — worship first, then come as one who has heard before they speak',
+   meaning:'Every form of communication the world most needs right now requires people who have received something before they broadcast it. Begin in worship. Come as a child. Listen before you create.',
+   context:'God spoke and creation came into being. Then he gave humanity the capacity for speech — the most God-like thing in the human repertoire. <b class="god-name">Dabar</b> — the Word — in Hebrew means both word and deed simultaneously. <strong>What God speaks, he enacts. What he names, comes to be.</strong> This is the weight of what you carry as someone called to communication.\n\nThe communicator\'s specific earthly pattern is platform — who is watching, how many, what is the reach, what is the engagement. You are not your reach. You are not your analytics. You are a child of the one whose word creates worlds.',
+   verse:'"In the beginning was the Word, and the Word was with God, and the Word was God."',vref:'John 1:1',
+   qs:[
+     {l:'Begin with worship. Tell God — in your own words — what it means that he is the Truth, the Way, the Life, that his word is alive and active. What moves you about this God who communicates with such power and such grace?',p:'Not a formula. What genuinely stirs you about the God who speaks and things come to be...'},
+     {l:'What is your body carrying right now — the pressure to create, to post, to respond, to maintain your presence? Name it.',p:'These are often indicators that identity is fused with audience rather than with sonship...'},
+     {l:'Receive this slowly: you are a child before you are a communicator. The Father speaks over you before you speak to anyone. What does it feel like to receive that today — before you create anything?',p:'Don\'t move past this into content planning. Let it land...'}
+   ],
+   pb:"Father, you spoke before I did and your word is alive. I receive before I broadcast. My worth is not my reach. Before I create anything today, I receive..."},
+
+  {n:'2',words:'"Hallowed be your name..."',label:'Beholding · God\'s Character',arc:'BEHOLDING — hold a name, find it in Scripture, then in your own story',
+   meaning:'Before you say or create anything, sit with who God is as the communicating God. Hold a specific name. Let it open. Find it in Scripture. Then find it in your own experience.',
+   context:'<b class="god-name">The Truth</b> — Pilate asked "What is truth?" while looking truth in the face (John 18:38). Truth in Jesus\'s understanding is not a propositional system — it is a person. It is living and active. It is "full of grace and truth" together (John 1:14) — not grace instead of truth, not truth without grace.\n\n<b class="god-name">The Way</b> — the medium and manner of communication matters as much as the message. <b class="god-name">The Life</b> — the goal of communication is life, not engagement. <strong>Meditating on these names reorders what you create and why you create it.</strong>',
+   verse:'"The word of God is alive and active. Sharper than any double-edged sword."',vref:'Hebrews 4:12',
+   qs:[
+     {l:'Sit with one name — The Truth, The Way, The Life, Dabar (the Living Word). Hold it. What does it show you about how God communicates that you most need to embody right now?',p:'Not what you know. What you see as you hold it quietly...'},
+     {l:'Where do you see this character of God expressed in Scripture — in how Jesus communicated, in the way truth was spoken to power by the prophets, in how the Word became flesh?',p:'Let one specific story come to mind. What did God actually do? What did it reveal about how he communicates?...'},
+     {l:'Where have you seen this character of God — his truth that gave life, his word that broke through a defended heart — in your own communication, in someone else\'s story, in your culture?',p:'Where has the Living Word actually shown up in the communication sphere?...'}
+   ],
+   pb:"Hallowed be your name — The Truth, The Way, The Life, Dabar. You are the standard of all true communication. I have seen you act like this in... and I declare that you are this in my work today."},
+
+  {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Imagining · Kingdom Vision',arc:'IMAGINING — what does Kingdom communication look like in your specific medium or context?',
+   meaning:'Let the Holy Spirit show you what truthful, life-giving communication looks like in your specific medium and context. Not a general principle — a specific story, a specific act of naming truth where it is currently absent.',
+   context:'"To change a society you must first change the language." The communication sphere can influence what an entire society believes — over a generation, without a single law being passed. <b class="god-name">Light</b> — God\'s primary metaphor for his communication — reveals and illuminates. It does not force sight. It makes seeing possible.\n\n<strong>Secular communicators can expose what is broken. They diagnose dystopia brilliantly.</strong> But the communication that says "here is what is wrong AND here is what the Kingdom offers instead" requires someone who has seen the Kingdom from the inside. You have the perspective the world is missing.',
+   verse:'"Your word is a lamp to my feet and a light for my path."',vref:'Psalm 119:105',
+   qs:[
+     {l:'Ask the Holy Spirit: what truth is most needed in my specific context right now — the story untold, the injustice unnamed, the Kingdom perspective absent from the conversation?',p:'Let it be specific. A story, a voice, a perspective, a medium...'},
+     {l:'What would Kingdom communication look like in your specific medium — not just accurate content but alive content, content that gives light and gives life?',p:'One specific project, story, or piece of content you sense is yours to create...'},
+     {l:'What would you need to risk — professionally, relationally, in terms of platform — to communicate the truth your context most needs?',p:'Not theoretical courage. The specific cost of this specific act of truth-telling...'}
+   ],
+   pb:"Your kingdom come through the words I create today. Let truth go where lies have taken ground — specifically through... Give me courage to say what needs to be said about..."},
+
+  {n:'4',words:'"Give us today our daily bread..."',label:'Co-Creating · Dependence & Imago Dei',arc:'CO-CREATING — you cannot change a mind alone. Only God can. And you carry his voice.',
+   meaning:'You are finite — you cannot make anyone receive what you create, and you cannot manufacture the anointing that makes words carry weight. And you bear the image of the God whose word creates worlds. Daily bread here is daily discernment.',
+   context:'You cannot force anyone to receive what you offer. <b class="god-name">Dabar</b> — the Word — was spoken at the beginning and continues to be spoken. You participate in this ongoing creative speech act every time you communicate truthfully with life-giving intention.\n\n<strong>The daily bread of the communication sphere is discernment</strong> — knowing which story to tell today, which truth to name in which way for which audience, and when silence is the most truthful communication of all.',
+   verse:'"The right word at the right time — beautiful!"',vref:'Proverbs 15:23',
+   qs:[
+     {l:'What specific discernment do you need from God today — about what to create, what to withhold, what to say and what to leave unsaid?',p:'The specific decision hanging over your communication work right now...'},
+     {l:'What specific capacity do you carry as someone made in God\'s image for communication — the particular voice, perspective, or medium that makes truth visible through you?',p:'Not generic communication skill. The thing that is distinctively yours...'},
+     {l:'What is today\'s one act of communication — the specific word, conversation, or piece of content that today\'s bread is asking you to offer?',p:'Daily obedience in communication is specific, not general...'},
+     {l:'How would your creative practice change if you listened to God before and during the creative process — staying in conversation with him rather than just starting there?',p:'A specific practice for today, not a general aspiration...'}
+   ],
+   pb:"I cannot change minds or cultures alone. And I carry your voice. Today I need discernment about... Today I bring... Let me co-create with you in..."},
+
+  {n:'5',words:'"Forgive us our trespasses, as we forgive those who trespass against us..."',label:'Receiving Grace · Standing in the Gap',arc:'INVITATION — receive grace if needed. Then intercede for the media sphere and the people in it.',
+   meaning:'This is not a demand for confession. It is an open door. Receive grace if the Spirit surfaces anything. Then intercede for the communicators, platforms, and cultural narratives that need what only prayer can provide.',
+   context:'The communication sphere shapes what entire generations believe about themselves, about God, about what is real. <strong>Someone needs to stand in the gap for the communicators who do not yet know the truth, for the platforms that are shaping minds in ways that are not giving life, for the cultures whose stories are being written without the Kingdom\'s voice.</strong>\n\nGrace is also available if the Spirit surfaces anything — content that distorted rather than illuminated, words that served self rather than truth, the gap between stated mission and actual motivation.',
+   verse:'"Let your speech always be gracious, seasoned with salt, so that you may know how you ought to answer each person."',vref:'Colossians 4:6',
+   qs:[
+     {l:'If the Holy Spirit is bringing anything to mind — content created for engagement rather than truth, words that served your narrative more than your audience\'s need — this is a safe place to name it and receive grace. No pressure. Just an open door.',p:'You don\'t have to have something to confess. But if something surfaces, receive grace here...'},
+     {l:'Now stand in the gap. Which communicator, media platform, cultural narrative, or community in your sphere needs intercession — where truth is absent, where life is not being given, where the Kingdom\'s voice is silent?',p:'Name them specifically. Pray on their behalf now...'}
+   ],
+   pb:"I receive your grace where I need it today. And I stand in the gap for... Lord, let your truth, your life, your Kingdom voice break through in the communication sphere — specifically in..."},
+
+  {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrendering · Spiritual Warfare',arc:'SURRENDERING — aware and standing firm against the warfare of the communication sphere',
+   meaning:'The communication sphere\'s specific temptation is the seduction of reach — the belief that more engagement equals more value. You need to be actively led away from this logic, because it shapes creative decisions below the level of conscious choice.',
+   context:'Algorithms optimise for engagement, not truth. They do not care whether what they amplify gives life or takes it. <strong>The communicator who lets the platform determine the message has already been captured.</strong>\n\n"Deliver us from evil" in the communication sphere means: deliver me from content I know is technically true but designed to inflame, from the story I tell because it will perform well rather than because it gives life, from the slow drift toward saying what my audience wants to hear rather than what they need to hear.',
+   verse:'"The truth will set you free."',vref:'John 8:32',
+   qs:[
+     {l:'What are the specific temptations of the communication sphere — reach over truth, engagement over integrity, platform as identity, algorithm-shaped content? Which are most active in your work right now?',p:'Name them specifically in the context of your current medium and context...'},
+     {l:'Where do you feel most vulnerable right now — the specific pressure point where the enemy could gain a foothold in your creative work if you are not watchful?',p:'Not general vulnerability. The specific current pull...'},
+     {l:'Declare your position in Christ over this sphere. What does standing firm look like for you today — the specific decision about what to create, what to withhold, or what to refuse that keeps the ground?',p:'Standing firm in communication is specific. What is your act of faithfulness today?...'}
+   ],
+   pb:"I stand against the specific warfare of the communication sphere — against reach over truth, engagement over integrity, platform over faithfulness. Lead me today toward... and away from... The truth will set this sphere free, and I am a carrier of it."}
+  ]
+},
+
+cel:{
+  color:'#c44499',colorBg:'rgba(196,68,153,0.07)',colorMid:'rgba(196,68,153,0.18)',
+  name:'Celebration',purpose:'To strengthen hope and build community — creating beauty that tells the Kingdom story the world cannot tell itself.',
+  godNames:['Yahweh-Tsidkenu — Righteousness','Yahweh-Shalom — Peace & Wholeness','Yahweh-Nissi — Joy & Victory','Creator of Beauty'],
+  heroSub:'Praying Through the Sphere of Celebration',
+  intro:'You are called to the sphere where the world forms its most powerful stories about what life is for. Before you create anything, receive the truth that creativity is not self-expression, not a career, not a ministry programme — it is the act of bearing the image of the God who made beauty because it is who he is. Begin here.',
+  phrases:[
+  {n:'1',words:'"Our Father who art in heaven..."',label:'Receiving · Sonship',arc:'RECEIVING — worship first, then receive the song God sings over you',
+   meaning:'Zephaniah 3:17 says God rejoices over you with singing. Before you create anything for anyone — receive his song. You are the audience of God\'s delight before you are the creator of anything.',
+   context:'The celebration sphere\'s deepest identity trap is that worth equals the response of the audience. A standing ovation means you have value. A bad review means you do not. <strong>These are the patterns of a world that has separated beauty from the Creator of beauty.</strong>\n\nGod creates beauty that no human will ever see — coral reefs in unexplored depths, mathematical precision in a snowflake. He creates because it is who he is, not because anyone is watching. <em>Who art in heaven</em> — your creativity is not earthbound and your worth is not audience-dependent. You are a child of the Creator before you are a creator of anything.',
+   verse:'"He will take great delight in you; in his love he will no longer rebuke you, but will rejoice over you with singing."',vref:'Zephaniah 3:17',
+   qs:[
+     {l:'Begin with worship. Tell God — in your own words — what it means that he is the Creator of beauty, the source of all joy, the one who sings over you. What moves you about this God who delights in his creation?',p:'Not a formula. What genuinely stirs you about the God who made the sunset and the birdsong and who sings over you...'},
+     {l:'What is your body carrying right now — the pressure of an audience\'s response, creative anxiety, comparison with others in your field, the weight of a project? Name it.',p:'These are often indicators that worth is fused with creative output rather than sonship...'},
+     {l:'Receive this slowly: God is singing over you right now. Not over your best work. Over you. What does it feel like to let that be the foundation of your creating today — before anyone sees anything you make?',p:'Don\'t rush past this. Let it land before you open your creative tools...'}
+   ],
+   pb:"Father, you sing over me before I create anything. My worth is not my audience\'s response — it is your delight in me. Before I make anything today, I receive..."},
+
+  {n:'2',words:'"Hallowed be your name..."',label:'Beholding · God\'s Character',arc:'BEHOLDING — hold a name, find it in Scripture, then in your own story',
+   meaning:'Before you create anything today, dwell on who God is as the Creator of beauty. Hold a specific name. Let it open. Find it in Scripture. Then find it in your own experience.',
+   context:'<b class="god-name">Yahweh-Tsidkenu</b> — the Lord our Righteousness — represents God\'s capacity to make right what has gone wrong, to restore what has been broken. Art at its most powerful has always done this. <b class="god-name">Yahweh-Nissi</b> — the Lord my banner — is the source of the specific joy that comes from genuine victory. "The joy of the Lord is your strength" (Nehemiah 8:10) — not entertainment, not temporary pleasure, but joy rooted in who God is.\n\n<strong>God himself is a celebrant.</strong> Zephaniah 3:17 shows God singing. Psalm 16:11 says in his presence is fullness of joy. The celebration sphere does not just reflect culture — it reflects the character of a God who delights in his creation and in his people.',
+   verse:'"The Lord your God is with you, the Mighty Warrior who saves. He will take great delight in you; in his love he will rejoice over you with singing."',vref:'Zephaniah 3:17',
+   qs:[
+     {l:'Sit with one name — Yahweh-Tsidkenu (Righteousness that restores), Yahweh-Shalom (Peace and wholeness), Yahweh-Nissi (Joy and victory), Creator of Beauty. Hold it. What does it show you about God\'s character that you most need to carry into your creative work today?',p:'Not what you know. What you see as you hold it quietly...'},
+     {l:'Where do you see this character of God expressed in Scripture — in how he designed the tabernacle with extraordinary beauty, in the feasts and festivals he created, in the Psalms of celebration?',p:'Let one specific story or moment come to mind. What did God actually create or celebrate? What did it reveal about him?...'},
+     {l:'Where have you seen this character of God — his beauty, his joy, his restoration — expressed through art, music, sport, or culture that stopped you in your tracks?',p:'Your testimony matters. Where has the Creator of Beauty actually shown up in the celebration sphere?...'}
+   ],
+   pb:"Hallowed be your name — Yahweh-Nissi, Creator of Beauty, the God who sings. I have seen your character in... and I declare that you are this in my creative work today."},
+
+  {n:'3',words:'"Your kingdom come, your will be done, on earth as it is in heaven..."',label:'Imagining · Kingdom Vision',arc:'IMAGINING — what does Kingdom creativity look like in your specific art form or context?',
+   meaning:'Let the Holy Spirit show you what the celebration sphere looks like when God\'s character freely shapes it. Not a Christian subculture version — something genuinely beautiful, present in the mainstream, telling the story the world cannot tell itself.',
+   context:'"If you want to know how the next generation will live, listen to the music of this generation." <strong>Secular artists diagnose dystopia brilliantly — they name what is broken.</strong> Their trilogies end with the destruction of the bad system, never the construction of the Kingdom alternative. You have seen the Kingdom from the inside. You have the story they cannot tell.\n\nGod designed the Sabbath as the first celebration — rest and delight built into the fabric of creation as its first rhythm. The celebration sphere carries this purpose: to create spaces where people rest, recover, remember who they are, and are strengthened to go back into the world.',
+   verse:'"He has made everything beautiful in its time. He has also set eternity in the human heart."',vref:'Ecclesiastes 3:11',
+   qs:[
+     {l:'Ask the Holy Spirit: what Kingdom story needs to be told through my specific art form or creative medium right now? What image or idea comes?',p:'Let it be specific. A theme, a project, a perspective the culture is missing...'},
+     {l:'What does celebration that "strengthens hope and builds community" look like in your specific context — genuine Kingdom presence in mainstream culture, not just Christian subculture?',p:'One specific creative project or direction that captures this...'},
+     {l:'What would you create if commercial pressure, audience approval, and critical reception were removed from the equation — and the only measure was whether it reflected God\'s character?',p:'The work you sense is yours to make, independent of its reception...'}
+   ],
+   pb:"Your kingdom come through what I create. Let my art tell the story the world cannot tell itself — specifically the story of... Give me courage to create it even if the cost is..."},
+
+  {n:'4',words:'"Give us today our daily bread..."',label:'Co-Creating · Dependence & Imago Dei',arc:'CO-CREATING — you cannot force beauty to heal. Only God can. And you carry the image of the Creator.',
+   meaning:'You cannot manufacture the anointing that makes beauty break through a defended heart. And you bear the image of the God whose creativity produced the universe. Daily bread here is daily inspiration — received, not manufactured.',
+   context:'God designed Sabbath into creation before work began: receive, then create. Rest, then work. <strong>The creative sphere runs on something that cannot be manufactured — genuine inspiration.</strong> And inspiration requires receptivity, not just productivity.\n\n<b class="god-name">Yahweh-Shalom</b>\'s shalom includes rest, welfare, and wholeness. The Christian creator has an extraordinary advantage — access to the God whose creativity produced the universe. But that access requires stillness. Daily bread in the celebration sphere is first received in quiet, then expressed in work.',
+   verse:'"In his presence there is fullness of joy; at his right hand are pleasures forevermore."',vref:'Psalm 16:11',
+   qs:[
+     {l:'What feeds your creativity right now — the specific experiences, places, practices, or relationships that genuinely renew your creative imagination?',p:'Not what should feed you. What actually does in this season...'},
+     {l:'What specific creative capacity do you carry as someone made in God\'s image? What does the Creator of Beauty look like working through your particular medium and gift?',p:'The thing that is distinctively yours...'},
+     {l:'What is today\'s one creative act of obedience — not the whole project, just today\'s bread? What is God asking you to make, or to rest from making, today?',p:'Daily co-creation is specific and often smaller than we expect...'},
+     {l:'Are you currently creating from overflow or from depletion? What would receiving "daily bread" look like before you try to give from your creativity today?',p:'Honest inventory of your current creative and spiritual state...'}
+   ],
+   pb:"I cannot force beauty to heal alone. And I carry your creative image. Today I need... Today I bring... Let me receive before I create, and then co-create with you in..."},
+
+  {n:'5',words:'"Forgive us our trespasses, as we forgive those who trespass against us..."',label:'Receiving Grace · Standing in the Gap',arc:'INVITATION — receive grace if needed. Then intercede for the creative sphere and the people in it.',
+   meaning:'This is not a demand. It is an open door. Receive grace if the Spirit surfaces anything. Then intercede for the artists, creators, and cultural makers who need what only prayer can provide.',
+   context:'The celebration sphere has the most power to shape culture and the most need for people who carry the Kingdom inside it. <strong>Most creative people in mainstream culture are making extraordinary things without knowing the God whose image they bear.</strong> Someone needs to stand in the gap for them.\n\nIf the Spirit surfaces something — creating for applause rather than as an offering, participating in content that celebrated what God mourns, the isolation of comparison — grace is immediately and freely available.',
+   verse:'"The joy of the Lord is your strength."',vref:'Nehemiah 8:10',
+   qs:[
+     {l:'If the Holy Spirit is bringing anything to mind — creating for your own validation, participating in something that did not reflect God\'s character, the isolation that comparison creates — this is a safe place to name it and receive grace. No pressure. Just an open door.',p:'You don\'t have to have something to confess. But if something surfaces, receive grace here...'},
+     {l:'Now stand in the gap. Which artist, creative community, cultural movement, or person in the celebration sphere needs intercession — where God\'s joy, beauty, and life-giving creativity is absent or is being distorted?',p:'Name them specifically. Pray on their behalf right now...'}
+   ],
+   pb:"I receive your grace where I need it today. And I stand in the gap for... Lord, let your joy, your beauty, your Kingdom creativity break through in the celebration sphere — specifically for..."},
+
+  {n:'6',words:'"Lead us not into temptation, but deliver us from evil..."',label:'Surrendering · Spiritual Warfare',arc:'SURRENDERING — aware and standing firm against the seductions of the celebration sphere',
+   meaning:'The celebration sphere is the most influential and the most seductive. Its temptations feel most like artistic freedom and personal expression. You need to be actively led — because the drift is always gradual, never sudden.',
+   context:'"Whenever we step out of the spheres and are not there as the light, the darkness is there." The creative sphere Christians have abandoned has not stayed neutral — it has been filled. <strong>The enemy\'s strategy in this sphere is incremental erosion of integrity under commercial and social pressure.</strong>\n\n<b class="god-name">Yahweh-Nissi</b> — the Lord my banner — is the banner under which you create. Your presence in this sphere is not naive optimism. It is participation in a Kingdom that has already won. You are not going in unprotected. But you need to be led.',
+   verse:'"Let your light shine before others, that they may see your good deeds and glorify your Father in heaven."',vref:'Matthew 5:16',
+   qs:[
+     {l:'What are the specific temptations of the celebration sphere — creating for applause rather than as an offering, commercial pressure over creative integrity, comparison and isolation, participating in content that numbs rather than gives life? Which are most active in your context?',p:'Name them specifically in your current creative field and season...'},
+     {l:'Where do you feel most vulnerable right now — the specific collaboration, platform, or creative environment where a foothold could form if you are not watchful?',p:'Not general vulnerability. The specific current pull or pressure...'},
+     {l:'Declare your position in Christ over this sphere. What does standing firm look like for you today — the specific decision about what to create, what to refuse, or what integrity to maintain that keeps the ground?',p:'Standing firm in the celebration sphere is specific. What is your act of faithfulness today?...'}
+   ],
+   pb:"I stand against the specific warfare of the celebration sphere — against creating for applause rather than for life, against the slow drift of commercial compromise. Lead me today toward... Under the banner of Yahweh-Nissi, I stand firm in..."}
+  ]
+}
+
+}; // end SPHERES
+
+let currentSphere=null;
+let introShown=true;
+
+function showIntro(){
+  introShown=true;
+  currentSphere=null;
+  document.querySelectorAll('.ss-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('heroSub').textContent='Through the Sphere God Made You For';
+  document.getElementById('footerTag').textContent='The Lord\'s Prayer';
+  document.getElementById('worksheetBody').innerHTML=buildIntro();
+  document.getElementById('worksheetBody').style.opacity='1';
+  document.getElementById('worksheetBody').style.transform='translateY(0)';
+}
 
 function selectSphere(key){
   if(key===currentSphere)return;
   const body=document.getElementById('worksheetBody');
-  body.style.opacity='0';
-  body.style.transform='translateY(8px)';
-  body.style.transition='opacity .25s,transform .25s';
+  body.style.opacity='0';body.style.transform='translateY(8px)';body.style.transition='opacity .25s,transform .25s';
   setTimeout(()=>{
-    currentSphere=key;
-    renderSphere(key);
-    body.style.opacity='1';
-    body.style.transform='translateY(0)';
+    introShown=false;
+    currentSphere=key;renderSphere(key);
+    body.style.opacity='1';body.style.transform='translateY(0)';
     document.getElementById('worksheetBody').scrollIntoView({behavior:'smooth',block:'start'});
   },260);
   document.querySelectorAll('.ss-btn').forEach(b=>b.classList.remove('active'));
@@ -678,14 +805,74 @@ function selectSphere(key){
 function renderSphere(key){
   const s=SPHERES[key];
   const r=document.documentElement;
-  r.style.setProperty('--ac',s.color);
-  r.style.setProperty('--ac-bg',s.colorBg);
-  r.style.setProperty('--ac-mid',s.colorMid);
+  r.style.setProperty('--ac',s.color);r.style.setProperty('--ac-bg',s.colorBg);r.style.setProperty('--ac-mid',s.colorMid);
   document.getElementById('heroSub').textContent=s.heroSub;
-  document.getElementById('footerTag').textContent='The Lord\'s Prayer · '+s.name;
+  document.getElementById('footerTag').textContent='The Lord\'s Prayer \u00b7 '+s.name;
   document.getElementById('worksheetBody').innerHTML=buildBody(s);
-  document.getElementById('worksheetBody').style.opacity='1';
-  document.getElementById('worksheetBody').style.transform='translateY(0)';
+  document.getElementById('worksheetBody').style.opacity='1';document.getElementById('worksheetBody').style.transform='translateY(0)';
+}
+
+function buildIntro(){
+  return `<div class="intro-landing">
+  <div class="intro-icon-row">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="var(--ac)" stroke-width="2" opacity=".25"/><circle cx="24" cy="24" r="14" stroke="var(--ac)" stroke-width="1.5" opacity=".15"/><circle cx="24" cy="24" r="5" fill="var(--ac)" opacity=".35"/></svg>
+  </div>
+
+  <h2 class="intro-landing-title">A Daily Practice for Kingdom Ambassadors</h2>
+  <p class="intro-landing-sub">This is not a ritual. It is not something you have to do to earn God\'s love.<br>His love is already given — freely, completely, before you opened this page.</p>
+
+  <div class="intro-section">
+    <h3>What is this?</h3>
+    <p>This is a prayer and reflection tool built on the Lord\'s Prayer — the prayer Jesus gave his disciples when they asked him how to pray. It takes each phrase and opens it into your specific sphere of calling: the place where God has put you to be his incarnational ambassador in the world.</p>
+    <p>It is designed to help you <strong>abide in the vine</strong> (John 15:4–5) so that fruit grows naturally from connection, not from striving. Jesus said, <em>“Apart from me you can do nothing.”</em> This tool exists to keep you close to him — not as a duty, but as a daily rhythm of receiving before you give.</p>
+  </div>
+
+  <div class="intro-section">
+    <h3>This is not about works</h3>
+    <p>Nothing on this page earns you anything. God\'s grace is not a reward for spiritual discipline — it is the atmosphere you already breathe as his child. You are already loved. You are already accepted. The cross settled that before you were born.</p>
+    <p>What this tool does is <strong>help you remember what is already true</strong> — and to live from that truth rather than from the pressure of performance, productivity, or religious obligation. It is closer to <em>lectio divina</em> — the ancient practice of slow, prayerful reading — than to a checklist. You are not filling in a form. You are having a conversation with the God who knows you by name.</p>
+  </div>
+
+  <div class="intro-section">
+    <h3>Why the spheres?</h3>
+    <p>God reveals different facets of his character through different areas of society — family, economics, government, religion, education, communication, and celebration. Each sphere reflects something specific about who he is. When you pray the Lord\'s Prayer through your sphere, you encounter the God who is not just “out there” but present in the mundane, the gritty, the ordinary moments of your daily work.</p>
+    <p>He wants to be involved. Not just in the church service or the prayer meeting — but in the spreadsheet, the classroom, the difficult conversation, the creative block, the policy decision. <strong>He wants to redeem and resurrect the parts of life that feel least spiritual</strong> — because those are often the places where his Kingdom most needs to come.</p>
+  </div>
+
+  <div class="intro-section">
+    <h3>How it works</h3>
+    <p>The Lord\'s Prayer is structured here as <strong>six movements</strong>:</p>
+    <ol class="intro-movements">
+      <li><strong>Receiving</strong> — Worship first. Come home to the Father before you do anything.</li>
+      <li><strong>Beholding</strong> — Hold a name of God. Find it in Scripture. Find it in your own story.</li>
+      <li><strong>Imagining</strong> — Let the Holy Spirit show you what the Kingdom looks like in your context.</li>
+      <li><strong>Co-Creating</strong> — You are limited and you carry God\'s image. Declare both. Take today\'s step.</li>
+      <li><strong>Receiving Grace</strong> — An open door, not a demand. Then stand in the gap for others.</li>
+      <li><strong>Surrendering</strong> — Name the warfare. Stand firm. You are not unprotected.</li>
+    </ol>
+    <p>Each movement includes teaching, a Scripture anchor, honest reflection questions with space to write, and a prayer-builder at the end where you compose your own prayer shaped by what you\'ve received.</p>
+  </div>
+
+  <div class="intro-section">
+    <h3>The Great Commission — lived daily</h3>
+    <p>Jesus said, <em>“Go and make disciples of all nations”</em> (Matthew 28:19). But the Great Commission is not only for missionaries and pastors. It is for every person who carries God\'s image into the sphere where they spend their days. <strong>Your daily work — done in connection with God, shaped by his character, responsive to his voice — is the Great Commission in action.</strong></p>
+    <p>Your life gives glory to the Father not through dramatic heroics but through <strong>simple, radical steps of obedience</strong> — the kind that happen when you are listening, when you are present, when you let the vine feed the branch before the branch tries to produce the fruit.</p>
+    <p>This is what it means to be an incarnational ambassador: God\'s character made visible through your specific life, in your specific sphere, today.</p>
+  </div>
+
+  <div class="intro-begin">
+    <p class="intro-begin-prompt">Select your sphere above to begin — or start here:</p>
+    <div class="intro-sphere-grid">
+      <button class="intro-sphere-btn" style="--sc:#ff3a30" onclick="selectSphere('fam')">Family</button>
+      <button class="intro-sphere-btn" style="--sc:#ff9600" onclick="selectSphere('eco')">Economics</button>
+      <button class="intro-sphere-btn" style="--sc:#b89000" onclick="selectSphere('gov')">Government</button>
+      <button class="intro-sphere-btn" style="--sc:#5a8a00" onclick="selectSphere('rel')">Religion</button>
+      <button class="intro-sphere-btn" style="--sc:#1a9ab8" onclick="selectSphere('edu')">Education</button>
+      <button class="intro-sphere-btn" style="--sc:#595ad3" onclick="selectSphere('com')">Communication</button>
+      <button class="intro-sphere-btn" style="--sc:#c44499" onclick="selectSphere('cel')">Celebration</button>
+    </div>
+  </div>
+</div>`;
 }
 
 function buildBody(s){
@@ -695,42 +882,44 @@ function buildBody(s){
   let cards='';
   s.phrases.forEach(p=>{
     const qs=p.qs.map(q=>'<div class="q-row"><div class="q-label">'+q.l+'</div><textarea class="q-input tall" placeholder="'+q.p.replace(/"/g,'&quot;')+'"></textarea></div>').join('');
+    const arcBadge=p.arc?'<div class="arc-badge">'+p.arc+'</div>':'';
     cards+=`<div class="phrase-card">
-      <div class="ph-head"><div class="ph-num">${p.n}</div><div><div class="ph-words">${p.words}</div><div class="ph-meaning">${p.meaning}</div></div></div>
-      <div class="ph-context">${p.context}</div>
-      <div class="va"><div class="va-q">"</div><div class="va-text">${p.verse}</div><div class="va-ref">${p.vref}</div></div>
-      <div class="ph-reflect"><div class="pr-lbl">Reflect honestly — then write your prayer below</div>${qs}</div>
+      <div class="ph-head"><div class="ph-num">${p.n}</div><div>${arcBadge}<div class="ph-words">${p.words}</div><div class="ph-meaning">${p.meaning}</div></div></div>
+      <div class="ph-context">${p.context.replace(/\n/g,'<br>')}</div>
+      <div class="va"><div class="va-q">\u201c</div><div class="va-text">${p.verse}</div><div class="va-ref">${p.vref}</div></div>
+      <div class="ph-reflect"><div class="pr-lbl">Reflect honestly \u2014 then write your prayer below</div>${qs}</div>
     </div>`;
   });
   let builderRows=s.phrases.map(p=>`<div class="pb-row">
-    <div class="pb-phrase-cell"><div class="pb-phrase-words">${p.words}</div><div class="pb-phrase-tag">${p.label.split(' · ')[0]}</div></div>
+    <div class="pb-phrase-cell"><div class="pb-phrase-words">${p.words}</div><div class="pb-phrase-tag">${p.label.split(' \u00b7 ')[0]}</div></div>
     <div class="pb-input-cell"><textarea class="pb-input" rows="4" placeholder="${(p.pb).replace(/"/g,'&quot;')}"></textarea></div>
   </div>`).join('');
   return `<div class="sphere-intro visible">
-    <div class="si-head">${iconSvg}<div><div class="si-overline">The Sphere of ${s.name}</div><div class="si-title">The Lord\'s Prayer Through ${s.name}</div><div class="si-purpose">${s.purpose}</div></div></div>
+    <div class="si-head">${iconSvg}<div><div class="si-overline">The Sphere of ${s.name}</div><div class="si-title">The Lord\u2019s Prayer Through ${s.name}</div><div class="si-purpose">${s.purpose}</div></div></div>
     <div class="si-names"><span class="si-names-label">God reveals himself as:</span>${pills}</div>
   </div>
   <p class="intro-lede">${s.intro}</p>
   <hr class="div" style="margin-top:0;">
-  <div class="sec-lbl">The Lord\'s Prayer · ${s.name} Sphere</div>
-  <p class="intro-headline">Six phrases. One journey. For you.</p>
-  <p class="intro-sub">Each phrase opens onto a specific dimension of your life and calling in the ${s.name.toLowerCase()} sphere. Work through them slowly. This is not a form to complete — it is a conversation to have.</p>
+  <div class="sec-lbl">The Lord\u2019s Prayer \u00b7 ${s.name} Sphere</div>
+  <p class="intro-headline">Six movements. One journey. For you.</p>
+  <p class="intro-sub">Each phrase is a movement \u2014 worship, beholding, imagining, co-creating, receiving grace, standing firm. Work through them slowly. This is not a form to complete. It is a conversation to have.</p>
   ${cards}
   <hr class="div">
   <div class="prayer-builder">
-    <div class="pb-head"><div class="pb-head-title">Your Complete Prayer — ${s.name} Sphere</div><div class="pb-head-sub">Write as much as you need for each phrase — a sentence or a short paragraph — shaped by what you reflected on above.</div></div>
+    <div class="pb-head"><div class="pb-head-title">Your Complete Prayer \u2014 ${s.name} Sphere</div><div class="pb-head-sub">Write as much as you need for each movement \u2014 a sentence or a short paragraph \u2014 shaped by what you reflected on above.</div></div>
     ${builderRows}
   </div>
   <div class="enc-block">
-    <div class="enc-text">The Lord\'s Prayer does not change. But the way it lands in you is shaped by who God made you — the problems that break your heart, the gifts he placed in you, the sphere where his Kingdom needs to come through your specific life.<br><br><strong>You are not praying a generic prayer. You are praying as someone God specifically made for the ${s.name.toLowerCase()} sphere — and that changes what every phrase means.</strong></div>
+    <div class="enc-text">The Lord\u2019s Prayer does not change. But the way it lands in you is shaped by who God made you \u2014 the problems that break your heart, the gifts he placed in you, the sphere where his Kingdom needs to come through your specific life.<br><br><strong>You are not praying a generic prayer. You are praying the prayer of someone God specifically made for the ${s.name.toLowerCase()} sphere \u2014 and that changes what every movement means.</strong></div>
     <div class="enc-foot"><div class="enc-url">nathanielbaldock.com</div>
     <button class="cta-btn" onclick="window.print()"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1.5" y="1" width="10" height="6.5" rx="1" stroke="white" stroke-width="1.2"/><path d="M1.5 7.5v3.5a1 1 0 001 1h8a1 1 0 001-1V7.5" stroke="white" stroke-width="1.2"/><rect x="3.5" y="8.5" width="6" height="1" rx=".5" fill="white"/><rect x="3.5" y="10" width="4" height="1" rx=".5" fill="white"/></svg>Print / Save PDF</button>
     </div>
   </div>
-  <div class="tags"><span class="tag">The Lord\'s Prayer</span><span class="tag">${s.name} Sphere</span><span class="tag">Biblical Worldview</span><span class="tag">Prayer &amp; Calling</span><span class="tag">Nelson DTS 2026</span></div>`;
+  <div class="tags"><span class="tag">The Lord\u2019s Prayer</span><span class="tag">${s.name} Sphere</span><span class="tag">Biblical Worldview</span><span class="tag">Prayer &amp; Calling</span><span class="tag">Nelson DTS 2026</span></div>`;
 }
 
-renderSphere('com');
+showIntro();
+
 </script>
 </body>
 </html>
