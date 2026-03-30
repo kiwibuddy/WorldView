@@ -36,7 +36,12 @@ body{font-family:var(--font-sans);color:var(--fg);padding:0;margin:0;min-height:
 .hero-sub{font-family:var(--font-serif);font-size:clamp(16px,2.4vw,24px);font-weight:400;font-style:italic;color:rgba(255,255,255,.42);line-height:1.2;margin-bottom:20px;}
 .hero-desc{font-size:14px;font-weight:300;color:rgba(255,255,255,.5);line-height:1.75;max-width:min(52rem,100%);margin-bottom:26px;}
 .hero-desc strong{color:rgba(255,255,255,.75);font-weight:400;}
-.sphere-selector{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid rgba(255,255,255,.08);}
+.sphere-selector{display:grid;grid-template-columns:auto repeat(7,1fr);border-top:1px solid rgba(255,255,255,.08);}
+.ss-home{padding:14px 16px 16px;display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;background:transparent;border:none;border-right:1px solid rgba(255,255,255,.07);transition:background .2s;}
+.ss-home:hover{background:rgba(255,255,255,.05);}
+.ss-home svg{width:20px;height:20px;opacity:.4;transition:opacity .2s;}
+.ss-home:hover svg{opacity:.7;}
+.ss-home-lbl{font-size:8px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:rgba(255,255,255,.4);}
 .ss-btn{padding:14px 4px 16px;display:flex;flex-direction:column;align-items:center;gap:7px;cursor:pointer;background:transparent;border:none;border-right:1px solid rgba(255,255,255,.07);transition:background .2s;position:relative;}
 .ss-btn:last-child{border-right:none;}
 .ss-btn:hover{background:rgba(255,255,255,.05);}
@@ -201,6 +206,7 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
   <div class="hero-sub" id="heroSub">Through the Sphere God Made You For</div>
   <div class="hero-desc">A daily prayer and reflection practice for those called to be incarnational ambassadors of the Kingdom — in family, economics, government, religion, education, communication, and celebration. <strong>Scroll down to begin</strong>, or select your sphere above.</div>
   <div class="sphere-selector" id="sphereSelector">
+    <button class="ss-home" onclick="showIntro()" title="Welcome"><svg viewBox="0 0 20 20" fill="none"><path d="M3 8.5L10 3l7 5.5V16a1 1 0 01-1 1h-3.5v-4.5a1 1 0 00-1-1h-3a1 1 0 00-1 1V17H4a1 1 0 01-1-1V8.5z" fill="#fff"/></svg><span class="ss-home-lbl">Home</span></button>
     <button class="ss-btn" data-sphere="fam" style="--btn-color:#ff3a30" onclick="selectSphere('fam')">
       <svg class="ss-icon" viewBox="0 0 231 231"><path fill="#ff3a30" d="M 5.88 88.43 C 15.90 47.82 46.54 17.67 86.21 6.38 Q 89.68 5.39 95.44 4.58 C 99.66 3.99 103.66 2.97 107.89 2.99 C 114.15 3.01 121.74 2.26 127.81 3.45 Q 129.28 3.74 131.51 3.97 Q 143.32 5.17 156.23 10.38 Q 201.39 28.58 220.14 73.53 Q 225.26 85.79 226.90 99.01 C 227.29 102.12 227.87 104.99 228.01 108.03 Q 230.36 159.98 194.77 195.52 C 178.43 211.85 153.62 224.90 129.61 227.02 C 127.64 227.19 125.83 227.96 123.95 227.97 C 117.47 228.02 110.22 228.61 103.85 227.50 C 96.32 226.19 88.91 225.39 80.58 222.62 C 43.70 210.34 17.29 181.53 6.39 144.37 Q 5.45 141.17 4.70 135.45 C 4.17 131.42 3.06 127.42 3.01 123.46 C 2.93 116.05 2.61 108.80 3.73 101.37 C 4.38 97.04 4.88 92.48 5.88 88.43 Z M 221.07 115.38 A 105.54 105.54 0.0 0 0 115.53 9.84 A 105.54 105.54 0.0 0 0 9.99 115.38 A 105.54 105.54 0.0 0 0 115.53 220.92 A 105.54 105.54 0.0 0 0 221.07 115.38 Z" /><path fill="#ffffff" d="M 221.07 115.38 A 105.54 105.54 0.0 0 1 115.53 220.92 A 105.54 105.54 0.0 0 1 9.99 115.38 A 105.54 105.54 0.0 0 1 115.53 9.84 A 105.54 105.54 0.0 0 1 221.07 115.38 Z M 216.82 115.41 A 101.31 101.31 0.0 0 0 115.51 14.10 A 101.31 101.31 0.0 0 0 14.20 115.41 A 101.31 101.31 0.0 0 0 115.51 216.72 A 101.31 101.31 0.0 0 0 216.82 115.41 Z" /><path fill="#ff3a30" d="M 216.82 115.41 A 101.31 101.31 0.0 0 1 115.51 216.72 A 101.31 101.31 0.0 0 1 14.20 115.41 A 101.31 101.31 0.0 0 1 115.51 14.10 A 101.31 101.31 0.0 0 1 216.82 115.41 Z M 155.95 78.93 C 143.22 72.75 131.45 70.96 117.65 74.43 A 1.31 1.30 -34.8 0 1 116.58 74.24 Q 95.48 59.48 72.36 65.81 C 55.16 70.51 41.80 83.16 36.97 100.50 Q 31.92 118.58 39.22 134.96 C 46.52 151.35 61.19 162.68 79.02 164.76 Q 90.01 166.05 101.05 163.18 Q 102.67 162.76 103.48 163.28 Q 112.24 168.90 122.11 170.83 Q 131.59 172.69 141.77 170.37 C 174.79 162.85 189.72 127.90 174.62 97.94 A 1.38 1.38 0.0 0 1 175.42 96.01 L 194.28 89.89 A 0.77 0.77 0.0 0 0 194.77 88.91 L 187.52 67.25 A 2.02 2.01 -89.4 0 0 186.30 66.00 Q 176.62 62.46 166.25 59.27 C 161.60 57.84 162.43 62.39 161.59 64.83 Q 159.21 71.74 156.73 78.61 Q 156.51 79.21 155.95 78.93 Z" /><path fill="#ff3a30" d="M 85.84 102.33 Q 82.05 111.46 82.02 115.25 C 81.98 121.09 81.59 127.52 82.77 132.87 C 84.47 140.59 88.37 146.31 91.99 153.16 A 1.17 1.16 -16.3 0 1 91.05 154.87 C 68.96 156.53 50.65 143.28 45.97 121.54 Q 44.68 115.55 45.70 109.46 Q 49.78 85.10 73.42 76.28 C 76.71 75.06 80.41 74.89 83.98 74.36 C 87.57 73.83 90.79 75.00 94.39 75.33 Q 98.52 75.72 104.90 79.32 Q 105.40 79.60 104.93 79.91 Q 91.37 88.98 85.84 102.33 Z" /><path fill="#ff3a30" d="M 134.28 128.81 C 138.35 113.26 135.94 96.38 125.83 83.46 Q 125.14 82.58 124.81 81.77 Q 124.60 81.23 125.18 81.17 Q 148.86 78.62 163.55 96.20 C 168.67 102.32 171.78 109.58 172.11 117.57 C 172.22 120.35 172.49 123.19 172.32 125.80 C 171.11 144.36 156.78 159.11 139.04 162.88 Q 132.30 164.32 125.37 163.13 Q 118.53 161.97 112.09 158.97 Q 111.55 158.72 112.03 158.35 C 122.61 150.24 130.92 141.62 134.28 128.81 Z" /><path fill="#ff3a30" d="M 93.25 105.10 Q 99.20 91.89 112.16 85.55 Q 112.61 85.33 113.00 85.64 Q 118.06 89.69 121.50 96.49 Q 128.74 110.85 124.23 125.72 Q 118.92 143.26 102.69 151.09 A 1.07 1.07 0.0 0 1 101.43 150.85 Q 94.16 143.05 91.06 132.80 C 89.41 127.33 89.94 121.13 90.02 115.24 Q 90.06 112.18 93.25 105.10 Z" /></svg>
       <span class="ss-label">Family</span></button>
@@ -818,50 +824,51 @@ function buildIntro(){
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="var(--ac)" stroke-width="2" opacity=".25"/><circle cx="24" cy="24" r="14" stroke="var(--ac)" stroke-width="1.5" opacity=".15"/><circle cx="24" cy="24" r="5" fill="var(--ac)" opacity=".35"/></svg>
   </div>
 
-  <h2 class="intro-landing-title">A Daily Practice for Kingdom Ambassadors</h2>
-  <p class="intro-landing-sub">This is not a ritual. It is not something you have to do to earn God\'s love.<br>His love is already given — freely, completely, before you opened this page.</p>
+  <h2 class="intro-landing-title">Abide in Me, and I in You</h2>
+  <p class="intro-landing-sub">Before you do anything today, receive what has already been done for you.<br>You are loved. You are held. The vine is already feeding the branch.</p>
 
   <div class="intro-section">
-    <h3>What is this?</h3>
-    <p>This is a prayer and reflection tool built on the Lord\'s Prayer — the prayer Jesus gave his disciples when they asked him how to pray. It takes each phrase and opens it into your specific sphere of calling: the place where God has put you to be his incarnational ambassador in the world.</p>
-    <p>It is designed to help you <strong>abide in the vine</strong> (John 15:4–5) so that fruit grows naturally from connection, not from striving. Jesus said, <em>“Apart from me you can do nothing.”</em> This tool exists to keep you close to him — not as a duty, but as a daily rhythm of receiving before you give.</p>
+    <h3>What this is</h3>
+    <p>When the disciples asked Jesus how to pray, he did not give them a technique. He gave them a relationship \u2014 a pattern of coming home to the Father, beholding his character, receiving his Kingdom vision, and walking through the day as someone who belongs to him.</p>
+    <p>This tool opens each phrase of the Lord\'s Prayer into the specific sphere of society where God has placed you \u2014 the place where you carry his image, bear his name, and serve as his incarnational ambassador. It is built on the conviction that <strong>every sphere of human life reflects a different facet of who God is</strong>, and that praying through the lens of your calling changes what every phrase means.</p>
+    <p>The approach draws on the tradition of <em>lectio divina</em> \u2014 the ancient Christian practice of slow, prayerful, Spirit-led reading \u2014 applied not only to Scripture but to the prayer Jesus himself taught. You read. You sit. You listen. You respond. The goal is not completion. It is communion.</p>
   </div>
 
   <div class="intro-section">
-    <h3>This is not about works</h3>
-    <p>Nothing on this page earns you anything. God\'s grace is not a reward for spiritual discipline — it is the atmosphere you already breathe as his child. You are already loved. You are already accepted. The cross settled that before you were born.</p>
-    <p>What this tool does is <strong>help you remember what is already true</strong> — and to live from that truth rather than from the pressure of performance, productivity, or religious obligation. It is closer to <em>lectio divina</em> — the ancient practice of slow, prayerful reading — than to a checklist. You are not filling in a form. You are having a conversation with the God who knows you by name.</p>
+    <h3>Grace, not performance</h3>
+    <p>Nothing on this page is something you must do. There is no spiritual credit for finishing it, no deficit for leaving it unfinished. The cross has already settled the question of your standing before God \u2014 completely, irreversibly, and at infinite cost. You are not earning access. You already have it.</p>
+    <p>This practice exists because Jesus said, <em>\u201cAbide in me, and I in you. As the branch cannot bear fruit by itself, unless it abides in the vine, neither can you, unless you abide in me\u201d</em> (John 15:4). Fruit grows from connection, not effort. What you will find here is simply a way to stay connected \u2014 to remain in the place where the life flows, so that what God produces through you is genuinely his work and not your anxious striving.</p>
+    <p>If you feel pressure as you use this, set it down. The Father is not disappointed. He is for you.</p>
   </div>
 
   <div class="intro-section">
-    <h3>Why the spheres?</h3>
-    <p>God reveals different facets of his character through different areas of society — family, economics, government, religion, education, communication, and celebration. Each sphere reflects something specific about who he is. When you pray the Lord\'s Prayer through your sphere, you encounter the God who is not just “out there” but present in the mundane, the gritty, the ordinary moments of your daily work.</p>
-    <p>He wants to be involved. Not just in the church service or the prayer meeting — but in the spreadsheet, the classroom, the difficult conversation, the creative block, the policy decision. <strong>He wants to redeem and resurrect the parts of life that feel least spiritual</strong> — because those are often the places where his Kingdom most needs to come.</p>
+    <h3>God in the ordinary</h3>
+    <p>The incarnation means God entered the most physical, mundane, unglamorous conditions of human life and declared them worthy of his presence. He was born in an animal shelter. He worked with his hands. He ate with people the religious establishment had written off. He wept at a funeral. He cooked breakfast on a beach.</p>
+    <p>The same God who did all of that is present in your Monday morning, your difficult colleague, your budget meeting, your classroom full of restless students, your creative block, your family dinner. <strong>He does not wait for you in the sacred spaces. He walks with you through the gritty ones</strong> \u2014 and it is precisely there that his Kingdom comes: not in dramatic interventions, but in the steady, daily, faithful presence of someone who is listening to him while doing their work.</p>
   </div>
 
   <div class="intro-section">
-    <h3>How it works</h3>
-    <p>The Lord\'s Prayer is structured here as <strong>six movements</strong>:</p>
+    <h3>Six movements of prayer</h3>
+    <p>The Lord\'s Prayer is structured here as a journey through six movements \u2014 not steps to complete, but postures to inhabit:</p>
     <ol class="intro-movements">
-      <li><strong>Receiving</strong> — Worship first. Come home to the Father before you do anything.</li>
-      <li><strong>Beholding</strong> — Hold a name of God. Find it in Scripture. Find it in your own story.</li>
-      <li><strong>Imagining</strong> — Let the Holy Spirit show you what the Kingdom looks like in your context.</li>
-      <li><strong>Co-Creating</strong> — You are limited and you carry God\'s image. Declare both. Take today\'s step.</li>
-      <li><strong>Receiving Grace</strong> — An open door, not a demand. Then stand in the gap for others.</li>
-      <li><strong>Surrendering</strong> — Name the warfare. Stand firm. You are not unprotected.</li>
+      <li><strong>Receiving</strong> \u2014 Begin with worship. Come as a child to the Father before you come as anything else. Let your identity be settled before you act.</li>
+      <li><strong>Beholding</strong> \u2014 Dwell on a specific name of God. Find it in Scripture. Then find where you have seen it in your own story. This is contemplation \u2014 slow, unhurried, open to the Spirit.</li>
+      <li><strong>Imagining</strong> \u2014 Ask the Holy Spirit to show you what the Kingdom looks like in your specific context. Not strategy \u2014 vision. What does \u201con earth as it is in heaven\u201d look like where you are?</li>
+      <li><strong>Co-Creating</strong> \u2014 You are finite \u2014 you cannot do this alone. And you carry the image of God \u2014 you were made for this. Hold both truths. Then take today\'s one step of faithful obedience.</li>
+      <li><strong>Receiving Grace</strong> \u2014 An invitation, not a demand. If the Spirit surfaces something, receive grace. Then stand in the gap for those who cannot pray for themselves.</li>
+      <li><strong>Surrendering</strong> \u2014 Name the specific warfare of your sphere. Stand firm \u2014 not in fear, but in the victory that has already been won. You are not unprotected.</li>
     </ol>
-    <p>Each movement includes teaching, a Scripture anchor, honest reflection questions with space to write, and a prayer-builder at the end where you compose your own prayer shaped by what you\'ve received.</p>
   </div>
 
   <div class="intro-section">
-    <h3>The Great Commission — lived daily</h3>
-    <p>Jesus said, <em>“Go and make disciples of all nations”</em> (Matthew 28:19). But the Great Commission is not only for missionaries and pastors. It is for every person who carries God\'s image into the sphere where they spend their days. <strong>Your daily work — done in connection with God, shaped by his character, responsive to his voice — is the Great Commission in action.</strong></p>
-    <p>Your life gives glory to the Father not through dramatic heroics but through <strong>simple, radical steps of obedience</strong> — the kind that happen when you are listening, when you are present, when you let the vine feed the branch before the branch tries to produce the fruit.</p>
-    <p>This is what it means to be an incarnational ambassador: God\'s character made visible through your specific life, in your specific sphere, today.</p>
+    <h3>Your life as the Great Commission</h3>
+    <p>Jesus said, <em>\u201cAs the Father has sent me, I am sending you\u201d</em> (John 20:21). The sending is not only to foreign fields or pulpits. It is into the sphere where you spend your days \u2014 the place where your presence, your character, your faithfulness, and your obedience make God\'s nature visible to people who may never step inside a church.</p>
+    <p>The Great Commission is fulfilled not only through proclamation but through incarnation \u2014 God\'s character made tangible through ordinary people doing their daily work in the power of the Spirit. <strong>Your life gives glory to the Father when you live with him, listen to him, and accomplish what he has placed in front of you</strong> \u2014 not in dramatic heroics, but in simple, radical, daily steps of obedience.</p>
+    <p>That is what this tool is for. Not to add a spiritual task to your day. To help you live the day you already have \u2014 with the God who is already in it.</p>
   </div>
 
   <div class="intro-begin">
-    <p class="intro-begin-prompt">Select your sphere above to begin — or start here:</p>
+    <p class="intro-begin-prompt">Choose the sphere where God has placed you:</p>
     <div class="intro-sphere-grid">
       <button class="intro-sphere-btn" style="--sc:#ff3a30" onclick="selectSphere('fam')">Family</button>
       <button class="intro-sphere-btn" style="--sc:#ff9600" onclick="selectSphere('eco')">Economics</button>
