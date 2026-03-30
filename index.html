@@ -835,7 +835,7 @@ function buildIntro(){
     {key:'com',label:'Communication',color:'#595ad3'},
     {key:'cel',label:'Celebration',color:'#c44499'}
   ];
-  const sphereBtns=spheres.map(sp=>'<button class="intro-sphere-btn" style="--sc:'+sp.color+'" onclick="selectSphere('+apo+sp.key+apo+')">'+(sphereIcons[sp.key]||'')+'<span>'+sp.label+'</span></button>').join('');
+  const sphereBtns=spheres.map(sp=>'<button class="intro-sphere-btn" style="--sc:'+sp.color+'" onclick="selectSphere(\''+sp.key+'\')">'+(sphereIcons[sp.key]||'')+'<span>'+sp.label+'</span></button>').join('');
 
   return `<div class="intro-landing">
 
