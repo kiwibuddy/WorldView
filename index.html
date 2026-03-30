@@ -110,27 +110,29 @@ hr.div{border:none;border-top:1px solid var(--border);margin:28px 0;}
 .intro-headline{font-family:var(--font-serif);font-size:clamp(19px,2.2vw,24px);font-weight:600;color:var(--fg);margin-bottom:6px;max-width:min(52rem,100%);}
 .intro-sub{font-size:14px;font-weight:300;color:var(--fg-muted);line-height:1.7;max-width:min(52rem,100%);margin-bottom:clamp(20px,2.5vw,28px);}
 .arc-badge{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ac);opacity:.7;margin-bottom:4px;}
-.intro-landing{max-width:min(52rem,100%);}
-.intro-icon-row{margin-bottom:clamp(16px,2vw,24px);}
-.intro-landing-title{font-family:var(--font-serif);font-size:clamp(24px,3.5vw,36px);font-weight:500;color:var(--fg);line-height:1.15;margin-bottom:10px;}
-.intro-landing-sub{font-size:15px;font-weight:300;color:var(--fg-muted);line-height:1.7;margin-bottom:clamp(28px,4vw,44px);}
-.intro-section{margin-bottom:clamp(24px,3vw,36px);}
-.intro-section h3{font-family:var(--font-serif);font-size:clamp(17px,2vw,21px);font-weight:600;color:var(--fg);margin-bottom:8px;}
-.intro-section p{font-size:15px;font-weight:300;color:var(--fg-med);line-height:1.8;margin-bottom:10px;}
-.intro-section p:last-child{margin-bottom:0;}
-.intro-section strong{font-weight:500;color:var(--fg);}
-.intro-section em{font-style:italic;color:var(--fg-muted);}
-.intro-movements{list-style:none;counter-reset:mv;padding:0;margin:12px 0 14px;}
+.intro-landing{}
+.intro-card{border:1px solid var(--bcard);border-radius:var(--r);overflow:hidden;margin-bottom:clamp(18px,2vw,28px);}
+.intro-card-head{padding:14px 20px 12px;border-left:4px solid var(--ac);background:var(--ac-bg);transition:background .5s,border-color .5s;}
+.intro-card-overline{font-size:8.5px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ac);margin-bottom:2px;transition:color .5s;}
+.intro-card-title{font-family:var(--font-serif);font-size:clamp(17px,2vw,21px);font-weight:600;color:var(--fg);line-height:1.2;margin-bottom:2px;}
+.intro-card-sub{font-size:13px;font-weight:300;color:var(--fg-muted);line-height:1.6;margin-top:4px;}
+.intro-card-body{padding:clamp(18px,2.5vw,26px) clamp(18px,3vw,36px) clamp(22px,3vw,32px);background:var(--bg-warm);border-top:1px solid var(--bcard);}
+.intro-card-body p{font-size:14.5px;font-weight:300;color:var(--fg-med);line-height:1.8;margin-bottom:10px;}
+.intro-card-body p:last-child{margin-bottom:0;}
+.intro-card-body strong{font-weight:500;color:var(--fg);}
+.intro-card-body em{font-style:italic;color:var(--fg-muted);}
+.intro-movements{list-style:none;counter-reset:mv;padding:0;margin:12px 0 4px;}
 .intro-movements li{counter-increment:mv;font-size:14px;font-weight:300;color:var(--fg-med);line-height:1.65;padding:8px 0 8px 40px;position:relative;border-bottom:1px solid var(--bcard);}
 .intro-movements li:last-child{border-bottom:none;}
 .intro-movements li::before{content:counter(mv);position:absolute;left:0;top:8px;width:26px;height:26px;border-radius:50%;background:var(--ac-bg);color:var(--ac);font-family:var(--font-serif);font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;}
 .intro-movements li strong{font-weight:600;color:var(--fg);}
-.intro-begin{margin-top:clamp(28px,4vw,48px);padding:clamp(24px,3vw,36px);background:var(--bg-warm);border-radius:var(--r);border:1px solid var(--bcard);}
-.intro-begin-prompt{font-size:14px;font-weight:500;color:var(--fg-med);margin-bottom:16px;text-align:center;}
-.intro-sphere-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;}
-.intro-sphere-btn{background:var(--bg);border:1px solid var(--bcard);border-radius:10px;padding:14px 12px;font-family:var(--font-sans);font-size:13px;font-weight:600;color:var(--fg);cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .15s;text-align:center;}
+.intro-begin{border:1px solid var(--bcard);border-radius:var(--r);overflow:hidden;margin-bottom:clamp(18px,2vw,28px);}
+.intro-begin-prompt{font-size:14px;font-weight:500;color:var(--fg-med);padding:16px 20px 0;text-align:center;}
+.intro-sphere-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;padding:16px 20px 20px;}
+.intro-sphere-btn{background:var(--bg);border:1px solid var(--bcard);border-radius:10px;padding:16px 10px 14px;font-family:var(--font-sans);font-size:11px;font-weight:600;color:var(--fg);cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .15s;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;}
 .intro-sphere-btn:hover{border-color:var(--sc,var(--ac));box-shadow:0 2px 8px rgba(0,0,0,.06);transform:translateY(-1px);}
 .intro-sphere-btn:active{transform:translateY(0);}
+.intro-sphere-icon{width:36px;height:36px;flex-shrink:0;}
 .page-footer{background:var(--bg-muted);padding:16px var(--pad-x);display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--bcard);flex-shrink:0;}
 .footer-l{font-size:10px;color:var(--fg-muted);}
 .footer-r{display:flex;align-items:center;gap:10px;}
@@ -818,69 +820,97 @@ function renderSphere(key){
 }
 
 function buildIntro(){
+  const sphereIcons={};
+  document.querySelectorAll('.ss-btn').forEach(b=>{
+    const key=b.dataset.sphere;
+    const svg=b.querySelector('.ss-icon');
+    if(key&&svg) sphereIcons[key]=svg.outerHTML.replace('class="ss-icon"','class="intro-sphere-icon"');
+  });
+  const spheres=[
+    {key:'fam',label:'Family',color:'#ff3a30'},
+    {key:'eco',label:'Economics',color:'#ff9600'},
+    {key:'gov',label:'Government',color:'#b89000'},
+    {key:'rel',label:'Religion',color:'#5a8a00'},
+    {key:'edu',label:'Education',color:'#1a9ab8'},
+    {key:'com',label:'Communication',color:'#595ad3'},
+    {key:'cel',label:'Celebration',color:'#c44499'}
+  ];
+  const sphereBtns=spheres.map(sp=>'<button class="intro-sphere-btn" style="--sc:'+sp.color+'" onclick="selectSphere('+apo+sp.key+apo+')">'+(sphereIcons[sp.key]||'')+'<span>'+sp.label+'</span></button>').join('');
+
   return `<div class="intro-landing">
-  <div class="intro-icon-row">
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="var(--ac)" stroke-width="2" opacity=".25"/><circle cx="24" cy="24" r="14" stroke="var(--ac)" stroke-width="1.5" opacity=".15"/><circle cx="24" cy="24" r="5" fill="var(--ac)" opacity=".35"/></svg>
+
+  <div class="intro-card">
+    <div class="intro-card-head">
+      <div class="intro-card-overline">Welcome</div>
+      <h2 class="intro-card-title">Abide in Me, and I in You</h2>
+      <p class="intro-card-sub">Before you do anything today, receive what has already been done for you. You are loved. You are held. The vine is already feeding the branch.</p>
+    </div>
+    <div class="intro-card-body">
+      <p>When the disciples asked Jesus how to pray, he did not give them a technique. He gave them a relationship \u2014 a pattern of coming home to the Father, beholding his character, receiving his Kingdom vision, and walking through the day as someone who belongs to him.</p>
+      <p>This tool opens each phrase of the Lord\'s Prayer into the specific sphere of society where God has placed you \u2014 the place where you carry his image, bear his name, and serve as his incarnational ambassador. It is built on the conviction that <strong>every sphere of human life reflects a different facet of who God is</strong>, and that praying through the lens of your calling changes what every phrase means.</p>
+      <p>The approach draws on the tradition of <em>lectio divina</em> \u2014 the ancient Christian practice of slow, prayerful, Spirit-led reading \u2014 applied not only to Scripture but to the prayer Jesus himself taught. You read. You sit. You listen. You respond. The goal is not completion. It is communion.</p>
+    </div>
   </div>
 
-  <h2 class="intro-landing-title">Abide in Me, and I in You</h2>
-  <p class="intro-landing-sub">Before you do anything today, receive what has already been done for you.<br>You are loved. You are held. The vine is already feeding the branch.</p>
-
-  <div class="intro-section">
-    <h3>What this is</h3>
-    <p>When the disciples asked Jesus how to pray, he did not give them a technique. He gave them a relationship \u2014 a pattern of coming home to the Father, beholding his character, receiving his Kingdom vision, and walking through the day as someone who belongs to him.</p>
-    <p>This tool opens each phrase of the Lord\'s Prayer into the specific sphere of society where God has placed you \u2014 the place where you carry his image, bear his name, and serve as his incarnational ambassador. It is built on the conviction that <strong>every sphere of human life reflects a different facet of who God is</strong>, and that praying through the lens of your calling changes what every phrase means.</p>
-    <p>The approach draws on the tradition of <em>lectio divina</em> \u2014 the ancient Christian practice of slow, prayerful, Spirit-led reading \u2014 applied not only to Scripture but to the prayer Jesus himself taught. You read. You sit. You listen. You respond. The goal is not completion. It is communion.</p>
+  <div class="intro-card">
+    <div class="intro-card-head">
+      <div class="intro-card-overline">Foundation</div>
+      <h2 class="intro-card-title">Grace, Not Performance</h2>
+    </div>
+    <div class="intro-card-body">
+      <p>Nothing on this page is something you must do. There is no spiritual credit for finishing it, no deficit for leaving it unfinished. The cross has already settled the question of your standing before God \u2014 completely, irreversibly, and at infinite cost. You are not earning access. You already have it.</p>
+      <p>This practice exists because Jesus said, <em>\u201cAbide in me, and I in you. As the branch cannot bear fruit by itself, unless it abides in the vine, neither can you, unless you abide in me\u201d</em> (John 15:4). Fruit grows from connection, not effort. What you will find here is simply a way to stay connected \u2014 to remain in the place where the life flows, so that what God produces through you is genuinely his work and not your anxious striving.</p>
+      <p>If you feel pressure as you use this, set it down. The Father is not disappointed. He is for you.</p>
+    </div>
   </div>
 
-  <div class="intro-section">
-    <h3>Grace, not performance</h3>
-    <p>Nothing on this page is something you must do. There is no spiritual credit for finishing it, no deficit for leaving it unfinished. The cross has already settled the question of your standing before God \u2014 completely, irreversibly, and at infinite cost. You are not earning access. You already have it.</p>
-    <p>This practice exists because Jesus said, <em>\u201cAbide in me, and I in you. As the branch cannot bear fruit by itself, unless it abides in the vine, neither can you, unless you abide in me\u201d</em> (John 15:4). Fruit grows from connection, not effort. What you will find here is simply a way to stay connected \u2014 to remain in the place where the life flows, so that what God produces through you is genuinely his work and not your anxious striving.</p>
-    <p>If you feel pressure as you use this, set it down. The Father is not disappointed. He is for you.</p>
+  <div class="intro-card">
+    <div class="intro-card-head">
+      <div class="intro-card-overline">Incarnation</div>
+      <h2 class="intro-card-title">God in the Ordinary</h2>
+    </div>
+    <div class="intro-card-body">
+      <p>The incarnation means God entered the most physical, mundane, unglamorous conditions of human life and declared them worthy of his presence. He was born in an animal shelter. He worked with his hands. He ate with people the religious establishment had written off. He wept at a funeral. He cooked breakfast on a beach.</p>
+      <p>The same God who did all of that is present in your Monday morning, your difficult colleague, your budget meeting, your classroom full of restless students, your creative block, your family dinner. <strong>He does not wait for you in the sacred spaces. He walks with you through the gritty ones</strong> \u2014 and it is precisely there that his Kingdom comes: not in dramatic interventions, but in the steady, daily, faithful presence of someone who is listening to him while doing their work.</p>
+    </div>
   </div>
 
-  <div class="intro-section">
-    <h3>God in the ordinary</h3>
-    <p>The incarnation means God entered the most physical, mundane, unglamorous conditions of human life and declared them worthy of his presence. He was born in an animal shelter. He worked with his hands. He ate with people the religious establishment had written off. He wept at a funeral. He cooked breakfast on a beach.</p>
-    <p>The same God who did all of that is present in your Monday morning, your difficult colleague, your budget meeting, your classroom full of restless students, your creative block, your family dinner. <strong>He does not wait for you in the sacred spaces. He walks with you through the gritty ones</strong> \u2014 and it is precisely there that his Kingdom comes: not in dramatic interventions, but in the steady, daily, faithful presence of someone who is listening to him while doing their work.</p>
+  <div class="intro-card">
+    <div class="intro-card-head">
+      <div class="intro-card-overline">Structure</div>
+      <h2 class="intro-card-title">Six Movements of Prayer</h2>
+    </div>
+    <div class="intro-card-body">
+      <p>The Lord\'s Prayer is structured here as a journey through six movements \u2014 not steps to complete, but postures to inhabit:</p>
+      <ol class="intro-movements">
+        <li><strong>Receiving</strong> \u2014 Begin with worship. Come as a child to the Father before you come as anything else. Let your identity be settled before you act.</li>
+        <li><strong>Beholding</strong> \u2014 Dwell on a specific name of God. Find it in Scripture. Then find where you have seen it in your own story. This is contemplation \u2014 slow, unhurried, open to the Spirit.</li>
+        <li><strong>Imagining</strong> \u2014 Ask the Holy Spirit to show you what the Kingdom looks like in your specific context. Not strategy \u2014 vision. What does \u201con earth as it is in heaven\u201d look like where you are?</li>
+        <li><strong>Co-Creating</strong> \u2014 You are finite \u2014 you cannot do this alone. And you carry the image of God \u2014 you were made for this. Hold both truths. Then take today\'s one step of faithful obedience.</li>
+        <li><strong>Receiving Grace</strong> \u2014 An invitation, not a demand. If the Spirit surfaces something, receive grace. Then stand in the gap for those who cannot pray for themselves.</li>
+        <li><strong>Surrendering</strong> \u2014 Name the specific warfare of your sphere. Stand firm \u2014 not in fear, but in the victory that has already been won. You are not unprotected.</li>
+      </ol>
+    </div>
   </div>
 
-  <div class="intro-section">
-    <h3>Six movements of prayer</h3>
-    <p>The Lord\'s Prayer is structured here as a journey through six movements \u2014 not steps to complete, but postures to inhabit:</p>
-    <ol class="intro-movements">
-      <li><strong>Receiving</strong> \u2014 Begin with worship. Come as a child to the Father before you come as anything else. Let your identity be settled before you act.</li>
-      <li><strong>Beholding</strong> \u2014 Dwell on a specific name of God. Find it in Scripture. Then find where you have seen it in your own story. This is contemplation \u2014 slow, unhurried, open to the Spirit.</li>
-      <li><strong>Imagining</strong> \u2014 Ask the Holy Spirit to show you what the Kingdom looks like in your specific context. Not strategy \u2014 vision. What does \u201con earth as it is in heaven\u201d look like where you are?</li>
-      <li><strong>Co-Creating</strong> \u2014 You are finite \u2014 you cannot do this alone. And you carry the image of God \u2014 you were made for this. Hold both truths. Then take today\'s one step of faithful obedience.</li>
-      <li><strong>Receiving Grace</strong> \u2014 An invitation, not a demand. If the Spirit surfaces something, receive grace. Then stand in the gap for those who cannot pray for themselves.</li>
-      <li><strong>Surrendering</strong> \u2014 Name the specific warfare of your sphere. Stand firm \u2014 not in fear, but in the victory that has already been won. You are not unprotected.</li>
-    </ol>
-  </div>
-
-  <div class="intro-section">
-    <h3>Your life as the Great Commission</h3>
-    <p>Jesus said, <em>\u201cAs the Father has sent me, I am sending you\u201d</em> (John 20:21). The sending is not only to foreign fields or pulpits. It is into the sphere where you spend your days \u2014 the place where your presence, your character, your faithfulness, and your obedience make God\'s nature visible to people who may never step inside a church.</p>
-    <p>The Great Commission is fulfilled not only through proclamation but through incarnation \u2014 God\'s character made tangible through ordinary people doing their daily work in the power of the Spirit. <strong>Your life gives glory to the Father when you live with him, listen to him, and accomplish what he has placed in front of you</strong> \u2014 not in dramatic heroics, but in simple, radical, daily steps of obedience.</p>
-    <p>That is what this tool is for. Not to add a spiritual task to your day. To help you live the day you already have \u2014 with the God who is already in it.</p>
+  <div class="intro-card">
+    <div class="intro-card-head">
+      <div class="intro-card-overline">Calling</div>
+      <h2 class="intro-card-title">Your Life as the Great Commission</h2>
+    </div>
+    <div class="intro-card-body">
+      <p>Jesus said, <em>\u201cAs the Father has sent me, I am sending you\u201d</em> (John 20:21). The sending is not only to foreign fields or pulpits. It is into the sphere where you spend your days \u2014 the place where your presence, your character, your faithfulness, and your obedience make God\'s nature visible to people who may never step inside a church.</p>
+      <p>The Great Commission is fulfilled not only through proclamation but through incarnation \u2014 God\'s character made tangible through ordinary people doing their daily work in the power of the Spirit. <strong>Your life gives glory to the Father when you live with him, listen to him, and accomplish what he has placed in front of you</strong> \u2014 not in dramatic heroics, but in simple, radical, daily steps of obedience.</p>
+      <p>That is what this tool is for. Not to add a spiritual task to your day. To help you live the day you already have \u2014 with the God who is already in it.</p>
+    </div>
   </div>
 
   <div class="intro-begin">
     <p class="intro-begin-prompt">Choose the sphere where God has placed you:</p>
-    <div class="intro-sphere-grid">
-      <button class="intro-sphere-btn" style="--sc:#ff3a30" onclick="selectSphere('fam')">Family</button>
-      <button class="intro-sphere-btn" style="--sc:#ff9600" onclick="selectSphere('eco')">Economics</button>
-      <button class="intro-sphere-btn" style="--sc:#b89000" onclick="selectSphere('gov')">Government</button>
-      <button class="intro-sphere-btn" style="--sc:#5a8a00" onclick="selectSphere('rel')">Religion</button>
-      <button class="intro-sphere-btn" style="--sc:#1a9ab8" onclick="selectSphere('edu')">Education</button>
-      <button class="intro-sphere-btn" style="--sc:#595ad3" onclick="selectSphere('com')">Communication</button>
-      <button class="intro-sphere-btn" style="--sc:#c44499" onclick="selectSphere('cel')">Celebration</button>
-    </div>
+    <div class="intro-sphere-grid">${sphereBtns}</div>
   </div>
 </div>`;
 }
-
 function buildBody(s){
   const iconEl=document.querySelector('[data-sphere="'+currentSphere+'"] .ss-icon');
   const iconSvg=iconEl?iconEl.outerHTML.replace('class="ss-icon"','class="si-icon"'):'';
